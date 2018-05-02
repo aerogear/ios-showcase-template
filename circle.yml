@@ -6,7 +6,6 @@ machine:
     XCODE_SCHEME: "secure-ios-app"
     SIMULATOR: "iPhone 8"
     OS: "11.1"
-    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Red Hat, Inc."
 
 dependencies:
   pre:

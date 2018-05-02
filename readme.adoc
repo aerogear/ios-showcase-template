@@ -1,4 +1,4 @@
-image:https://circleci.com/gh/feedhenry/mobile-security-ios-template.svg?style=svg["CircleCI", link="https://circleci.com/gh/feedhenry/mobile-security-ios-template"]
+image:https://circleci.com/gh/aerogear/ios-showcase-template.svg?style=svg["CircleCI", link="https://circleci.com/gh/aerogear/ios-showcase-template"]
 image:https://img.shields.io/badge/Swift%20Version-4.0-green.svg[]
 
 = Secure iOS Swift Template
