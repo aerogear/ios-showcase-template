@@ -42,6 +42,24 @@ DEPENDENCIES:
   - SwiftKeychainWrapper
   - TrustKit
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AGSAuth
+    - AGSCore
+    - Alamofire
+    - AppAuth
+    - DTTJailbreakDetection
+    - Floaty
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - ObjcExceptionBridging
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftKeychainWrapper
+    - TrustKit
+    - XCGLogger
+
 EXTERNAL SOURCES:
   SCLAlertView:
     :branch: master
@@ -70,6 +88,6 @@ SPEC CHECKSUMS:
   TrustKit: b2bd5cb6a69cb17a95af87af327ecaa93c8da4bd
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 24acdc3a020d768c1efbbb38967fdb207c51081e
+PODFILE CHECKSUM: 3501f58821810a0d8c536f855eb91c2b5fe9769a
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.0
