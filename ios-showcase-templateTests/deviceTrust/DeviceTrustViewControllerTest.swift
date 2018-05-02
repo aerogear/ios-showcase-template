@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import secure_ios_app
+@testable import ios_showcase_template
 
 class FakeDeviceTrustListener: DeviceTrustListener {
     func performTrustChecks() -> [Detector] {

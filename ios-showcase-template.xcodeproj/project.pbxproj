@@ -138,17 +138,17 @@
 		B3A410B21FFE9F2400A32FF0 /* AuthenticationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewControllerTest.swift; sourceTree = "<group>"; };
 		B3A410B41FFEA0A600A32FF0 /* AuthenticationDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDetailsViewControllerTest.swift; sourceTree = "<group>"; };
 		B3A410B71FFEDCF100A32FF0 /* DeviceTrustViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTrustViewControllerTest.swift; sourceTree = "<group>"; };
-		B3E21B3F1FAC956E00082CF7 /* secure-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "secure-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E21B3F1FAC956E00082CF7 /* ios-showcase-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-showcase-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E21B421FAC956E00082CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3E21B471FAC956E00082CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3E21B4A1FAC956E00082CF7 /* secure_ios_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = secure_ios_app.xcdatamodel; sourceTree = "<group>"; };
 		B3E21B4C1FAC956E00082CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E21B4F1FAC956E00082CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E21B511FAC956E00082CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3E21B561FAC956E00082CF7 /* secure-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "secure-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E21B561FAC956E00082CF7 /* ios-showcase-templateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-showcase-templateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secure_ios_appTests.swift; sourceTree = "<group>"; };
 		B3E21B5C1FAC956E00082CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3E21B611FAC956E00082CF7 /* secure-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "secure-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E21B611FAC956E00082CF7 /* ios-showcase-templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-showcase-templateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E21B651FAC956E00082CF7 /* secure_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secure_ios_appUITests.swift; sourceTree = "<group>"; };
 		B3E21B671FAC956E00082CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE92F9E3F9D3C5BEBF24DA86 /* Pods_secure_ios_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,9 +376,9 @@
 		B3E21B361FAC956E00082CF7 = {
 			isa = PBXGroup;
 			children = (
-				B3E21B411FAC956E00082CF7 /* secure-ios-app */,
-				B3E21B591FAC956E00082CF7 /* secure-ios-appTests */,
-				B3E21B641FAC956E00082CF7 /* secure-ios-appUITests */,
+				B3E21B411FAC956E00082CF7 /* ios-showcase-template */,
+				B3E21B591FAC956E00082CF7 /* ios-showcase-templateTests */,
+				B3E21B641FAC956E00082CF7 /* ios-showcase-templateUITests */,
 				B3E21B401FAC956E00082CF7 /* Products */,
 				CBA54E12DCD79F72333AD07B /* Pods */,
 				5C13C1B8C244C094E76A2FCE /* Frameworks */,
@@ -388,14 +388,14 @@
 		B3E21B401FAC956E00082CF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3E21B3F1FAC956E00082CF7 /* secure-ios-app.app */,
-				B3E21B561FAC956E00082CF7 /* secure-ios-appTests.xctest */,
-				B3E21B611FAC956E00082CF7 /* secure-ios-appUITests.xctest */,
+				B3E21B3F1FAC956E00082CF7 /* ios-showcase-template.app */,
+				B3E21B561FAC956E00082CF7 /* ios-showcase-templateTests.xctest */,
+				B3E21B611FAC956E00082CF7 /* ios-showcase-templateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B3E21B411FAC956E00082CF7 /* secure-ios-app */ = {
+		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
 				117FC229206CEB68002FDC0E /* mobile-services.json */,
@@ -419,10 +419,10 @@
 				B30BEBA51FB229C40008A171 /* AppConfig.plist */,
 				B30BEBE91FB4ABFF0008A171 /* secure-ios-app-Bridging-Header.h */,
 			);
-			path = "secure-ios-app";
+			path = "ios-showcase-template";
 			sourceTree = "<group>";
 		};
-		B3E21B591FAC956E00082CF7 /* secure-ios-appTests */ = {
+		B3E21B591FAC956E00082CF7 /* ios-showcase-templateTests */ = {
 			isa = PBXGroup;
 			children = (
 				B3A410B61FFEDCD300A32FF0 /* deviceTrust */,
@@ -436,16 +436,16 @@
 				B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */,
 				B3E21B5C1FAC956E00082CF7 /* Info.plist */,
 			);
-			path = "secure-ios-appTests";
+			path = "ios-showcase-templateTests";
 			sourceTree = "<group>";
 		};
-		B3E21B641FAC956E00082CF7 /* secure-ios-appUITests */ = {
+		B3E21B641FAC956E00082CF7 /* ios-showcase-templateUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B3E21B651FAC956E00082CF7 /* secure_ios_appUITests.swift */,
 				B3E21B671FAC956E00082CF7 /* Info.plist */,
 			);
-			path = "secure-ios-appUITests";
+			path = "ios-showcase-templateUITests";
 			sourceTree = "<group>";
 		};
 		CBA54E12DCD79F72333AD07B /* Pods */ = {
@@ -464,9 +464,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B3E21B3E1FAC956E00082CF7 /* secure-ios-app */ = {
+		B3E21B3E1FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3E21B6A1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-app" */;
+			buildConfigurationList = B3E21B6A1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-template" */;
 			buildPhases = (
 				952A891899C9F532184BD4C8 /* [CP] Check Pods Manifest.lock */,
 				B3E21B3B1FAC956E00082CF7 /* Sources */,
@@ -479,14 +479,14 @@
 			);
 			dependencies = (
 			);
-			name = "secure-ios-app";
+			name = "ios-showcase-template";
 			productName = "secure-ios-app";
-			productReference = B3E21B3F1FAC956E00082CF7 /* secure-ios-app.app */;
+			productReference = B3E21B3F1FAC956E00082CF7 /* ios-showcase-template.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B3E21B551FAC956E00082CF7 /* secure-ios-appTests */ = {
+		B3E21B551FAC956E00082CF7 /* ios-showcase-templateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3E21B6D1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-appTests" */;
+			buildConfigurationList = B3E21B6D1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-templateTests" */;
 			buildPhases = (
 				A9EB5C9CF935FFE7394DBA60 /* [CP] Check Pods Manifest.lock */,
 				B3E21B521FAC956E00082CF7 /* Sources */,
@@ -500,14 +500,14 @@
 			dependencies = (
 				B3E21B581FAC956E00082CF7 /* PBXTargetDependency */,
 			);
-			name = "secure-ios-appTests";
+			name = "ios-showcase-templateTests";
 			productName = "secure-ios-appTests";
-			productReference = B3E21B561FAC956E00082CF7 /* secure-ios-appTests.xctest */;
+			productReference = B3E21B561FAC956E00082CF7 /* ios-showcase-templateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B3E21B601FAC956E00082CF7 /* secure-ios-appUITests */ = {
+		B3E21B601FAC956E00082CF7 /* ios-showcase-templateUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3E21B701FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-appUITests" */;
+			buildConfigurationList = B3E21B701FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-templateUITests" */;
 			buildPhases = (
 				9750510A98B5F4439898778B /* [CP] Check Pods Manifest.lock */,
 				B3E21B5D1FAC956E00082CF7 /* Sources */,
@@ -521,9 +521,9 @@
 			dependencies = (
 				B3E21B631FAC956E00082CF7 /* PBXTargetDependency */,
 			);
-			name = "secure-ios-appUITests";
+			name = "ios-showcase-templateUITests";
 			productName = "secure-ios-appUITests";
-			productReference = B3E21B611FAC956E00082CF7 /* secure-ios-appUITests.xctest */;
+			productReference = B3E21B611FAC956E00082CF7 /* ios-showcase-templateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -552,7 +552,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B3E21B3A1FAC956E00082CF7 /* Build configuration list for PBXProject "secure-ios-app" */;
+			buildConfigurationList = B3E21B3A1FAC956E00082CF7 /* Build configuration list for PBXProject "ios-showcase-template" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -565,9 +565,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B3E21B3E1FAC956E00082CF7 /* secure-ios-app */,
-				B3E21B551FAC956E00082CF7 /* secure-ios-appTests */,
-				B3E21B601FAC956E00082CF7 /* secure-ios-appUITests */,
+				B3E21B3E1FAC956E00082CF7 /* ios-showcase-template */,
+				B3E21B551FAC956E00082CF7 /* ios-showcase-templateTests */,
+				B3E21B601FAC956E00082CF7 /* ios-showcase-templateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -677,7 +677,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9750510A98B5F4439898778B /* [CP] Check Pods Manifest.lock */ = {
@@ -695,7 +695,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A9EB5C9CF935FFE7394DBA60 /* [CP] Check Pods Manifest.lock */ = {
@@ -713,7 +713,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BEDD5545E2EDC51564483ABE /* [CP] Embed Pods Frameworks */ = {
@@ -861,12 +861,12 @@
 /* Begin PBXTargetDependency section */
 		B3E21B581FAC956E00082CF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B3E21B3E1FAC956E00082CF7 /* secure-ios-app */;
+			target = B3E21B3E1FAC956E00082CF7 /* ios-showcase-template */;
 			targetProxy = B3E21B571FAC956E00082CF7 /* PBXContainerItemProxy */;
 		};
 		B3E21B631FAC956E00082CF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B3E21B3E1FAC956E00082CF7 /* secure-ios-app */;
+			target = B3E21B3E1FAC956E00082CF7 /* ios-showcase-template */;
 			targetProxy = B3E21B621FAC956E00082CF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1006,13 +1006,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = "secure-ios-app/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ios-showcase-template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-app.secureapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c708fd4a-a5c7-4353-b315-5d70039e67ce";
 				PROVISIONING_PROFILE_SPECIFIER = RHTINHOUSE;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/secure-ios-app/secure-ios-app-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ios-showcase-template/secure-ios-app-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1026,13 +1026,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = "secure-ios-app/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ios-showcase-template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-app.secureapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c708fd4a-a5c7-4353-b315-5d70039e67ce";
 				PROVISIONING_PROFILE_SPECIFIER = RHTINHOUSE;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/secure-ios-app/secure-ios-app-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ios-showcase-template/secure-ios-app-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1045,13 +1045,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "secure-ios-appTests/Info.plist";
+				INFOPLIST_FILE = "ios-showcase-templateTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secure-ios-app.app/secure-ios-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-showcase-template.app/ios-showcase-template";
 			};
 			name = Debug;
 		};
@@ -1062,13 +1062,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "secure-ios-appTests/Info.plist";
+				INFOPLIST_FILE = "ios-showcase-templateTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secure-ios-app.app/secure-ios-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-showcase-template.app/ios-showcase-template";
 			};
 			name = Release;
 		};
@@ -1078,7 +1078,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "secure-ios-appUITests/Info.plist";
+				INFOPLIST_FILE = "ios-showcase-templateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1094,7 +1094,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "secure-ios-appUITests/Info.plist";
+				INFOPLIST_FILE = "ios-showcase-templateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redhat.secure-ios-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1107,7 +1107,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B3E21B3A1FAC956E00082CF7 /* Build configuration list for PBXProject "secure-ios-app" */ = {
+		B3E21B3A1FAC956E00082CF7 /* Build configuration list for PBXProject "ios-showcase-template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3E21B681FAC956E00082CF7 /* Debug */,
@@ -1116,7 +1116,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3E21B6A1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-app" */ = {
+		B3E21B6A1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3E21B6B1FAC956E00082CF7 /* Debug */,
@@ -1125,7 +1125,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3E21B6D1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-appTests" */ = {
+		B3E21B6D1FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-templateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3E21B6E1FAC956E00082CF7 /* Debug */,
@@ -1134,7 +1134,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3E21B701FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "secure-ios-appUITests" */ = {
+		B3E21B701FAC956E00082CF7 /* Build configuration list for PBXNativeTarget "ios-showcase-templateUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3E21B711FAC956E00082CF7 /* Debug */,

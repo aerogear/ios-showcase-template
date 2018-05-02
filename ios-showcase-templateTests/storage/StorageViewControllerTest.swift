@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import secure_ios_app
+@testable import ios_showcase_template
 
 class FakeStorageListener: StorageListener {
     static var noteId: Int = 0

@@ -9,7 +9,7 @@
 import XCTest
 import SwiftKeychainWrapper
 import RealmSwift
-@testable import secure_ios_app
+@testable import ios_showcase_template
 
 class InMemoryRealmStorageService: RealmStorageService {
     override func getRealmInstance() throws -> Realm {

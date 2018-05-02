@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             return try authService!.resumeAuth(url: url as URL)
         } catch AgsAuth.Errors.serviceNotConfigured {
-            print("Aerogear auth servie is not configured")
+            print("Aerogear auth service is not configured")
         } catch {
             fatalError("Unexpected error: \(error)")
         }

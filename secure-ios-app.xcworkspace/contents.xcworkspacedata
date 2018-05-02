@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:secure-ios-app.xcodeproj">
+      location = "group:/Users/aidenkeating/work/mobile-security-ios-template/ios-showcase-template.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

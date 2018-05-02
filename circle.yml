@@ -2,17 +2,16 @@ machine:
   xcode:
     version: 9.1
   environment:
-    XCODE_WORKSPACE: "secure-ios-app.xcworkspace"
-    XCODE_SCHEME: "secure-ios-app"
+    XCODE_WORKSPACE: "ios-showcase-template.xcworkspace"
+    XCODE_SCHEME: "ios-showcase-template"
     SIMULATOR: "iPhone 8"
     OS: "11.1"
-    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Red Hat, Inc."
 
 dependencies:
   pre:
-    - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.$CIRCLE_BUILD_NUM" "secure-ios-app/Info.plist"
-    - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 1.$CIRCLE_BUILD_NUM" "secure-ios-app/Info.plist"
-    - echo "Set app version to $(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' 'secure-ios-app/Info.plist')"
+    - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.$CIRCLE_BUILD_NUM" "ios-showcase-template/Info.plist"
+    - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 1.$CIRCLE_BUILD_NUM" "ios-showcase-template/Info.plist"
+    - echo "Set app version to $(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' 'ios-showcase-template/Info.plist')"
 
 test:
   override:
@@ -33,5 +32,5 @@ deployment:
   master:
     branch: master
     commands:
-      -  fastlane gym --workspace "secure-ios-app.xcworkspace" --scheme "secure-ios-app" --export_method "enterprise"
+      -  fastlane gym --workspace "ios-showcase-template.xcworkspace" --scheme "ios-showcase-template" --export_method "enterprise"
       - ./pushToKryptowire.sh $KRYPTOWIRE_API_KEY
