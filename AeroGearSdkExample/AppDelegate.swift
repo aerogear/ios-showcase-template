@@ -21,11 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(_: UIApplication) {
     }
-
-    func applicationDidEnterBackground(_: UIApplication) {
+    
+    /**
+     - Function to show a blurred image instead for the app preview when the app is sent to the background. This will prevent the iOS snapshot caching vulnerability.
+     */
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        let imageView = UIImageView(frame: (self.window?.bounds)!)
+        imageView.tag = 99
+        imageView.image = UIImage(named: "snapshot_cache_protection")
+        UIApplication.shared.keyWindow?.subviews.last?.addSubview(imageView)
     }
-
-    func applicationWillEnterForeground(_: UIApplication) {
+    
+    /**
+     - Function to remove the blurred image on app resume.
+     */
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        let imageView = UIApplication.shared.keyWindow?.subviews.last?.viewWithTag(99) as!
+        UIImageView
+        imageView.removeFromSuperview()
     }
 
     func applicationDidBecomeActive(_: UIApplication) {
