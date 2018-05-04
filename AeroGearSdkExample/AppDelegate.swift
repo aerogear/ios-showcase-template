@@ -1,5 +1,4 @@
 import AGSAuth
-import AGSCore
 import AGSPush
 import UIKit
 import UserNotifications
@@ -38,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication,
                      didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         pushHelper.setupPush()
+        let authenticationConfig = AuthenticationConfig(redirectURL: "org.aerogear.mobile.example:/callback")
+        try! AgsAuth.instance.configure(authConfig: authenticationConfig)
         return true
     }
 

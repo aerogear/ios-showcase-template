@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		0156A54620584CEE0054F056 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0156A54520584CED0054F056 /* PushViewController.swift */; };
 		0156A54820584CF30054F056 /* push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0156A54720584CF30054F056 /* push.storyboard */; };
-		01681E0F20973652004A0C8E /* SdkStartupPerfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01681E0C20973652004A0C8E /* SdkStartupPerfTest.swift */; };
-		01681E1320973770004A0C8E /* PushRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01681E1220973770004A0C8E /* PushRegistrationTests.swift */; };
 		016D7D81205BEB75001DE653 /* PushHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016D7D80205BEB75001DE653 /* PushHelper.swift */; };
-		017F3708201F4014001A9009 /* ServiceConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017F3707201F4014001A9009 /* ServiceConfigTests.swift */; };
 		018FBE5620123AEE00E763A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018FBE5520123AEE00E763A5 /* AppDelegate.swift */; };
 		018FBE5820123AEE00E763A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018FBE5720123AEE00E763A5 /* HomeViewController.swift */; };
 		018FBE5B20123AEE00E763A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE5920123AEE00E763A5 /* Main.storyboard */; };
@@ -20,19 +17,23 @@
 		018FBE6020123AEE00E763A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE5E20123AEE00E763A5 /* LaunchScreen.storyboard */; };
 		018FBE76201257F300E763A5 /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
 		018FBE77201257F300E763A5 /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
-		01928B8A201F202D0053EEB0 /* ConfigParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372266C9F61265244A81632 /* ConfigParserTests.swift */; };
 		01AA3CB0207CD5760096D2EE /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
-		01AA3CBB207CDAE20096D2EE /* MetricsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD7E1E207BAFF8008DD3C1 /* MetricsIntegrationTests.swift */; };
-		500FDA5E2058324C001E66B0 /* JwkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FDA5D2058324C001E66B0 /* JwkManagerTests.swift */; };
-		500FDA6020583F48001E66B0 /* MockJwk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FDA5F20583F48001E66B0 /* MockJwk.swift */; };
 		50BC6DE0208654DA00B639A0 /* KTVJSONWebToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC6DE1208654DA00B639A0 /* KTVJSONWebToken.framework */; };
-		50F2A040204EC7380071778E /* KeycloakConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2A03F204EC7380071778E /* KeycloakConfigTests.swift */; };
 		603D6C7263A899DE1EDE8CD7 /* Pods_AeroGearSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C9244E7BA473314AA1B91E /* Pods_AeroGearSdkExample.framework */; };
+		8861B940209C78EE00A5876C /* AccessControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861B93D209C78EE00A5876C /* AccessControlViewController.swift */; };
+		8861B942209C790100A5876C /* accesscontrol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8861B941209C790100A5876C /* accesscontrol.storyboard */; };
+		887F2341209C49800046C966 /* DeviceTrustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F233D209C49800046C966 /* DeviceTrustViewController.swift */; };
+		887F2343209C49AC0046C966 /* deviceTrust.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F2342209C49AC0046C966 /* deviceTrust.storyboard */; };
+		887F234B209C4D3A0046C966 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2348209C4D390046C966 /* Note.swift */; };
+		887F234C209C4D3A0046C966 /* RealmRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2349209C4D3A0046C966 /* RealmRole.swift */; };
+		887F234D209C4D3A0046C966 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F234A209C4D3A0046C966 /* Detector.swift */; };
+		887F2350209C4D870046C966 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F234F209C4D870046C966 /* AppComponents.swift */; };
+		887F2357209C4DF90046C966 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2352209C4DF90046C966 /* ViewHelper.swift */; };
+		887F2358209C4DF90046C966 /* DevicetrustService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2353209C4DF90046C966 /* DevicetrustService.swift */; };
+		887F2359209C4DF90046C966 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2354209C4DF90046C966 /* Logger.swift */; };
+		887F235B209C4DF90046C966 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2356209C4DF90046C966 /* StorageService.swift */; };
+		887F235E209C4E1C0046C966 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F235D209C4E1C0046C966 /* AppConfiguration.swift */; };
 		8FB6B476D2E14635C8EA2386 /* Pods_AeroGearSdkExampleIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */; };
-		B30606E720569357008FD9A0 /* MockOIDCAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30606E620569357008FD9A0 /* MockOIDCAuthenticator.swift */; };
-		B30606E9205696AC008FD9A0 /* MockOIDAuthorizationFlowSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30606E8205696AC008FD9A0 /* MockOIDAuthorizationFlowSession.swift */; };
-		B30606EB20569774008FD9A0 /* MockCredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30606EA20569774008FD9A0 /* MockCredentialManager.swift */; };
-		B34F3B83204F44DD005970E1 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F3B82204F44DD005970E1 /* Configurations.swift */; };
 		B352664D204437DE004BACC7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664B204437DE004BACC7 /* BaseViewController.swift */; };
 		B352664E204437DE004BACC7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664C204437DE004BACC7 /* MenuViewController.swift */; };
 		B3526650204438A2004BACC7 /* menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B352664F204438A2004BACC7 /* menu.storyboard */; };
@@ -41,15 +42,6 @@
 		B35266582044AF17004BACC7 /* auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35266572044AF17004BACC7 /* auth.storyboard */; };
 		B352665A2044B1C1004BACC7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35266592044B1C1004BACC7 /* AuthViewController.swift */; };
 		B352665C2044BBCD004BACC7 /* AuthDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352665B2044BBCD004BACC7 /* AuthDetailsViewController.swift */; };
-		B352665F20455FBC004BACC7 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352665E20455FBC004BACC7 /* ViewHelper.swift */; };
-		B3AC1A83204815E000BEB12B /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A82204815E000BEB12B /* AuthTests.swift */; };
-		B3AC1A862048184600BEB12B /* OIDCAuthenticatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A852048184600BEB12B /* OIDCAuthenticatorTest.swift */; };
-		B3AC1A89204825EC00BEB12B /* MockHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A88204825EC00BEB12B /* MockHttpRequest.swift */; };
-		B3AC1A8B2049951900BEB12B /* MobileServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A8A2049951900BEB12B /* MobileServiceTest.swift */; };
-		B3AC1A8D2049E11900BEB12B /* UsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A8C2049E11900BEB12B /* UsersTests.swift */; };
-		B3AC1A93204EA7E200BEB12B /* JwtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A92204EA7E200BEB12B /* JwtTests.swift */; };
-		B3AC1A97204ECE7900BEB12B /* CredentialsManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A95204ECE7900BEB12B /* CredentialsManagerTest.swift */; };
-		B3AC1A98204ECE7900BEB12B /* OIDCCredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC1A96204ECE7900BEB12B /* OIDCCredentialsTest.swift */; };
 		BF749467D04564133E1485E3 /* Pods_AeroGearSdkExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -74,10 +66,7 @@
 		0156A54320582FAD0054F056 /* AeroGearSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AeroGearSdkExample.entitlements; sourceTree = "<group>"; };
 		0156A54520584CED0054F056 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		0156A54720584CF30054F056 /* push.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = push.storyboard; sourceTree = "<group>"; };
-		01681E0C20973652004A0C8E /* SdkStartupPerfTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SdkStartupPerfTest.swift; sourceTree = "<group>"; };
-		01681E1220973770004A0C8E /* PushRegistrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushRegistrationTests.swift; sourceTree = "<group>"; };
 		016D7D80205BEB75001DE653 /* PushHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushHelper.swift; sourceTree = "<group>"; };
-		017F3707201F4014001A9009 /* ServiceConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfigTests.swift; sourceTree = "<group>"; };
 		018FBE5220123AEE00E763A5 /* AeroGearSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroGearSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018FBE5520123AEE00E763A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018FBE5720123AEE00E763A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -86,28 +75,31 @@
 		018FBE5F20123AEE00E763A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018FBE6120123AEE00E763A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018FBE6620123AEE00E763A5 /* AeroGearSdkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroGearSdkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		018FBE6C20123AEE00E763A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018FBE75201257F300E763A5 /* mobile-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mobile-services.json"; sourceTree = "<group>"; };
 		01AA3CB6207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroGearSdkExampleIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA1F76211A32BAA063C27D /* Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleIntegrationTests/Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B06B76FCDEA870626FD7E44 /* Pods-AeroGearSdkExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleTests/Pods-AeroGearSdkExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		135360C38D2B44669D831A4A /* Pods-AeroGearSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample.release.xcconfig"; sourceTree = "<group>"; };
-		1E0BBDD320809F940053703B /* MetricsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsServiceTests.swift; sourceTree = "<group>"; };
-		1ECD7E1E207BAFF8008DD3C1 /* MetricsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsIntegrationTests.swift; sourceTree = "<group>"; };
-		500FDA5D2058324C001E66B0 /* JwkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwkManagerTests.swift; sourceTree = "<group>"; };
-		500FDA5F20583F48001E66B0 /* MockJwk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJwk.swift; sourceTree = "<group>"; };
 		50BC6DE1208654DA00B639A0 /* KTVJSONWebToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KTVJSONWebToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50F2A03F204EC7380071778E /* KeycloakConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeycloakConfigTests.swift; sourceTree = "<group>"; };
 		61E92E9FB306839140DB9991 /* Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleIntegrationTests/Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		62B3CBB630EF770D9F5BB994 /* Pods-AeroGearSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
-		6372266C9F61265244A81632 /* ConfigParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigParserTests.swift; sourceTree = "<group>"; };
 		6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExampleIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8861B93D209C78EE00A5876C /* AccessControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessControlViewController.swift; sourceTree = "<group>"; };
+		8861B941209C790100A5876C /* accesscontrol.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accesscontrol.storyboard; sourceTree = "<group>"; };
+		887F233D209C49800046C966 /* DeviceTrustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTrustViewController.swift; sourceTree = "<group>"; };
+		887F2342209C49AC0046C966 /* deviceTrust.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = deviceTrust.storyboard; sourceTree = "<group>"; };
+		887F2344209C4C930046C966 /* AeroGearSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AeroGearSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		887F2348209C4D390046C966 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		887F2349209C4D3A0046C966 /* RealmRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRole.swift; sourceTree = "<group>"; };
+		887F234A209C4D3A0046C966 /* Detector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		887F234F209C4D870046C966 /* AppComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppComponents.swift; sourceTree = "<group>"; };
+		887F2352209C4DF90046C966 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		887F2353209C4DF90046C966 /* DevicetrustService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicetrustService.swift; sourceTree = "<group>"; };
+		887F2354209C4DF90046C966 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		887F2356209C4DF90046C966 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		887F235D209C4E1C0046C966 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		A50F76BA81DB65C2CA9C424B /* Pods-AeroGearSdkExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleTests/Pods-AeroGearSdkExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B30606E620569357008FD9A0 /* MockOIDCAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOIDCAuthenticator.swift; sourceTree = "<group>"; };
-		B30606E8205696AC008FD9A0 /* MockOIDAuthorizationFlowSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOIDAuthorizationFlowSession.swift; sourceTree = "<group>"; };
-		B30606EA20569774008FD9A0 /* MockCredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCredentialManager.swift; sourceTree = "<group>"; };
-		B34F3B82204F44DD005970E1 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		B352664B204437DE004BACC7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B352664C204437DE004BACC7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B352664F204438A2004BACC7 /* menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = menu.storyboard; sourceTree = "<group>"; };
@@ -116,15 +108,6 @@
 		B35266572044AF17004BACC7 /* auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = auth.storyboard; sourceTree = "<group>"; };
 		B35266592044B1C1004BACC7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B352665B2044BBCD004BACC7 /* AuthDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDetailsViewController.swift; sourceTree = "<group>"; };
-		B352665E20455FBC004BACC7 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
-		B3AC1A82204815E000BEB12B /* AuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
-		B3AC1A852048184600BEB12B /* OIDCAuthenticatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OIDCAuthenticatorTest.swift; sourceTree = "<group>"; };
-		B3AC1A88204825EC00BEB12B /* MockHttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpRequest.swift; sourceTree = "<group>"; };
-		B3AC1A8A2049951900BEB12B /* MobileServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileServiceTest.swift; sourceTree = "<group>"; };
-		B3AC1A8C2049E11900BEB12B /* UsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTests.swift; sourceTree = "<group>"; };
-		B3AC1A92204EA7E200BEB12B /* JwtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtTests.swift; sourceTree = "<group>"; };
-		B3AC1A95204ECE7900BEB12B /* CredentialsManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTest.swift; sourceTree = "<group>"; };
-		B3AC1A96204ECE7900BEB12B /* OIDCCredentialsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OIDCCredentialsTest.swift; sourceTree = "<group>"; };
 		F6C9244E7BA473314AA1B91E /* Pods_AeroGearSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,28 +150,10 @@
 			path = push;
 			sourceTree = "<group>";
 		};
-		01681E0B20973652004A0C8E /* performance */ = {
-			isa = PBXGroup;
-			children = (
-				01681E0C20973652004A0C8E /* SdkStartupPerfTest.swift */,
-			);
-			path = performance;
-			sourceTree = "<group>";
-		};
-		01681E1120973770004A0C8E /* push */ = {
-			isa = PBXGroup;
-			children = (
-				01681E1220973770004A0C8E /* PushRegistrationTests.swift */,
-			);
-			path = push;
-			sourceTree = "<group>";
-		};
 		018FBE4920123AEE00E763A5 = {
 			isa = PBXGroup;
 			children = (
 				018FBE5420123AEE00E763A5 /* AeroGearSdkExample */,
-				018FBE6920123AEE00E763A5 /* AeroGearSdkExampleTests */,
-				01AA3CBA207CD8910096D2EE /* AeroGearSdkExampleIntegrationTests */,
 				018FBE5320123AEE00E763A5 /* Products */,
 				6E3C137A1C3B9286096644DE /* Pods */,
 				7E9E84570B91F4A3B0CA2A4C /* Frameworks */,
@@ -208,12 +173,17 @@
 		018FBE5420123AEE00E763A5 /* AeroGearSdkExample */ = {
 			isa = PBXGroup;
 			children = (
+				8861B93A209C789500A5876C /* accesscontrol */,
+				887F235C209C4DFD0046C966 /* configurations */,
+				887F2351209C4DD80046C966 /* services */,
+				887F234E209C4D710046C966 /* di */,
+				887F2347209C4D0B0046C966 /* model */,
+				887F2339209C49400046C966 /* deviceTrust */,
 				0156A54320582FAD0054F056 /* AeroGearSdkExample.entitlements */,
 				0156A5442058301F0054F056 /* push */,
 				B35266562044AF07004BACC7 /* auth */,
 				B35266532044AD85004BACC7 /* home */,
 				B352664A204437DE004BACC7 /* menu */,
-				B352665D20455FAE004BACC7 /* helpers */,
 				018FBE75201257F300E763A5 /* mobile-services.json */,
 				B352665120443D52004BACC7 /* RootViewController.swift */,
 				018FBE5520123AEE00E763A5 /* AppDelegate.swift */,
@@ -221,64 +191,9 @@
 				018FBE5C20123AEE00E763A5 /* Assets.xcassets */,
 				018FBE5E20123AEE00E763A5 /* LaunchScreen.storyboard */,
 				018FBE6120123AEE00E763A5 /* Info.plist */,
+				887F2344209C4C930046C966 /* AeroGearSdkExample-Bridging-Header.h */,
 			);
 			path = AeroGearSdkExample;
-			sourceTree = "<group>";
-		};
-		018FBE6920123AEE00E763A5 /* AeroGearSdkExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				01681E1120973770004A0C8E /* push */,
-				01681E0B20973652004A0C8E /* performance */,
-				B3AC1A81204815E000BEB12B /* auth */,
-				63722015BF5E5190986AE905 /* core */,
-				B3AC1A87204825DE00BEB12B /* mocks */,
-				018FBE6C20123AEE00E763A5 /* Info.plist */,
-			);
-			path = AeroGearSdkExampleTests;
-			sourceTree = "<group>";
-		};
-		01AA3CBA207CD8910096D2EE /* AeroGearSdkExampleIntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				1ECD7E1D207BAFE6008DD3C1 /* metrics */,
-			);
-			path = AeroGearSdkExampleIntegrationTests;
-			sourceTree = "<group>";
-		};
-		1ECD7E1D207BAFE6008DD3C1 /* metrics */ = {
-			isa = PBXGroup;
-			children = (
-				1ECD7E1E207BAFF8008DD3C1 /* MetricsIntegrationTests.swift */,
-			);
-			path = metrics;
-			sourceTree = "<group>";
-		};
-		500FDA5C20583221001E66B0 /* jwk */ = {
-			isa = PBXGroup;
-			children = (
-				500FDA5D2058324C001E66B0 /* JwkManagerTests.swift */,
-			);
-			path = jwk;
-			sourceTree = "<group>";
-		};
-		50F2A03E204EC7140071778E /* config */ = {
-			isa = PBXGroup;
-			children = (
-				50F2A03F204EC7380071778E /* KeycloakConfigTests.swift */,
-			);
-			path = config;
-			sourceTree = "<group>";
-		};
-		63722015BF5E5190986AE905 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				017F3707201F4014001A9009 /* ServiceConfigTests.swift */,
-				6372266C9F61265244A81632 /* ConfigParserTests.swift */,
-				B3AC1A8A2049951900BEB12B /* MobileServiceTest.swift */,
-				1E0BBDD320809F940053703B /* MetricsServiceTests.swift */,
-			);
-			path = core;
 			sourceTree = "<group>";
 		};
 		6E3C137A1C3B9286096644DE /* Pods */ = {
@@ -303,6 +218,61 @@
 				AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8861B93A209C789500A5876C /* accesscontrol */ = {
+			isa = PBXGroup;
+			children = (
+				8861B93D209C78EE00A5876C /* AccessControlViewController.swift */,
+				8861B941209C790100A5876C /* accesscontrol.storyboard */,
+			);
+			path = accesscontrol;
+			sourceTree = "<group>";
+		};
+		887F2339209C49400046C966 /* deviceTrust */ = {
+			isa = PBXGroup;
+			children = (
+				887F233D209C49800046C966 /* DeviceTrustViewController.swift */,
+				887F2342209C49AC0046C966 /* deviceTrust.storyboard */,
+			);
+			path = deviceTrust;
+			sourceTree = "<group>";
+		};
+		887F2347209C4D0B0046C966 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				887F234A209C4D3A0046C966 /* Detector.swift */,
+				887F2348209C4D390046C966 /* Note.swift */,
+				887F2349209C4D3A0046C966 /* RealmRole.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		887F234E209C4D710046C966 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				887F234F209C4D870046C966 /* AppComponents.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		887F2351209C4DD80046C966 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				887F2353209C4DF90046C966 /* DevicetrustService.swift */,
+				887F2354209C4DF90046C966 /* Logger.swift */,
+				887F2356209C4DF90046C966 /* StorageService.swift */,
+				887F2352209C4DF90046C966 /* ViewHelper.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		887F235C209C4DFD0046C966 /* configurations */ = {
+			isa = PBXGroup;
+			children = (
+				887F235D209C4E1C0046C966 /* AppConfiguration.swift */,
+			);
+			path = configurations;
 			sourceTree = "<group>";
 		};
 		B352664A204437DE004BACC7 /* menu */ = {
@@ -332,66 +302,6 @@
 				B352665B2044BBCD004BACC7 /* AuthDetailsViewController.swift */,
 			);
 			path = auth;
-			sourceTree = "<group>";
-		};
-		B352665D20455FAE004BACC7 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				B352665E20455FBC004BACC7 /* ViewHelper.swift */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
-		B3AC1A81204815E000BEB12B /* auth */ = {
-			isa = PBXGroup;
-			children = (
-				500FDA5C20583221001E66B0 /* jwk */,
-				50F2A03E204EC7140071778E /* config */,
-				B3AC1A94204ECE7900BEB12B /* credentials */,
-				B3AC1A91204EA7D000BEB12B /* jwt */,
-				B3AC1A84204815E700BEB12B /* authenticator */,
-				B3AC1A82204815E000BEB12B /* AuthTests.swift */,
-				B3AC1A8C2049E11900BEB12B /* UsersTests.swift */,
-			);
-			path = auth;
-			sourceTree = "<group>";
-		};
-		B3AC1A84204815E700BEB12B /* authenticator */ = {
-			isa = PBXGroup;
-			children = (
-				B3AC1A852048184600BEB12B /* OIDCAuthenticatorTest.swift */,
-			);
-			path = authenticator;
-			sourceTree = "<group>";
-		};
-		B3AC1A87204825DE00BEB12B /* mocks */ = {
-			isa = PBXGroup;
-			children = (
-				B3AC1A88204825EC00BEB12B /* MockHttpRequest.swift */,
-				B34F3B82204F44DD005970E1 /* Configurations.swift */,
-				B30606E620569357008FD9A0 /* MockOIDCAuthenticator.swift */,
-				B30606E8205696AC008FD9A0 /* MockOIDAuthorizationFlowSession.swift */,
-				B30606EA20569774008FD9A0 /* MockCredentialManager.swift */,
-				500FDA5F20583F48001E66B0 /* MockJwk.swift */,
-			);
-			path = mocks;
-			sourceTree = "<group>";
-		};
-		B3AC1A91204EA7D000BEB12B /* jwt */ = {
-			isa = PBXGroup;
-			children = (
-				B3AC1A92204EA7E200BEB12B /* JwtTests.swift */,
-			);
-			path = jwt;
-			sourceTree = "<group>";
-		};
-		B3AC1A94204ECE7900BEB12B /* credentials */ = {
-			isa = PBXGroup;
-			children = (
-				B3AC1A95204ECE7900BEB12B /* CredentialsManagerTest.swift */,
-				B3AC1A96204ECE7900BEB12B /* OIDCCredentialsTest.swift */,
-			);
-			path = credentials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +376,7 @@
 				TargetAttributes = {
 					018FBE5120123AEE00E763A5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -514,7 +425,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8861B942209C790100A5876C /* accesscontrol.storyboard in Resources */,
 				B35266582044AF17004BACC7 /* auth.storyboard in Resources */,
+				887F2343209C49AC0046C966 /* deviceTrust.storyboard in Resources */,
 				018FBE6020123AEE00E763A5 /* LaunchScreen.storyboard in Resources */,
 				B35266552044AD9C004BACC7 /* home.storyboard in Resources */,
 				018FBE76201257F300E763A5 /* mobile-services.json in Resources */,
@@ -574,9 +487,18 @@
 				"${BUILT_PRODUCTS_DIR}/AGSPush/AGSPush.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/KTVJSONWebToken/KTVJSONWebToken.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TrustKit/TrustKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -586,9 +508,18 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AGSPush.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTVJSONWebToken.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrustKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,14 +571,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				B352665220443D52004BACC7 /* RootViewController.swift in Sources */,
+				887F235B209C4DF90046C966 /* StorageService.swift in Sources */,
+				887F2341209C49800046C966 /* DeviceTrustViewController.swift in Sources */,
+				8861B940209C78EE00A5876C /* AccessControlViewController.swift in Sources */,
+				887F2358209C4DF90046C966 /* DevicetrustService.swift in Sources */,
 				018FBE5820123AEE00E763A5 /* HomeViewController.swift in Sources */,
+				887F2359209C4DF90046C966 /* Logger.swift in Sources */,
+				887F234D209C4D3A0046C966 /* Detector.swift in Sources */,
+				887F2350209C4D870046C966 /* AppComponents.swift in Sources */,
 				018FBE5620123AEE00E763A5 /* AppDelegate.swift in Sources */,
+				887F234B209C4D3A0046C966 /* Note.swift in Sources */,
 				B352664D204437DE004BACC7 /* BaseViewController.swift in Sources */,
+				887F2357209C4DF90046C966 /* ViewHelper.swift in Sources */,
 				B352665A2044B1C1004BACC7 /* AuthViewController.swift in Sources */,
 				0156A54620584CEE0054F056 /* PushViewController.swift in Sources */,
 				B352664E204437DE004BACC7 /* MenuViewController.swift in Sources */,
+				887F235E209C4E1C0046C966 /* AppConfiguration.swift in Sources */,
 				016D7D81205BEB75001DE653 /* PushHelper.swift in Sources */,
-				B352665F20455FBC004BACC7 /* ViewHelper.swift in Sources */,
+				887F234C209C4D3A0046C966 /* RealmRole.swift in Sources */,
 				B352665C2044BBCD004BACC7 /* AuthDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,25 +597,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3AC1A862048184600BEB12B /* OIDCAuthenticatorTest.swift in Sources */,
-				B3AC1A93204EA7E200BEB12B /* JwtTests.swift in Sources */,
-				B30606E9205696AC008FD9A0 /* MockOIDAuthorizationFlowSession.swift in Sources */,
-				B3AC1A97204ECE7900BEB12B /* CredentialsManagerTest.swift in Sources */,
-				500FDA6020583F48001E66B0 /* MockJwk.swift in Sources */,
-				B3AC1A89204825EC00BEB12B /* MockHttpRequest.swift in Sources */,
-				01681E0F20973652004A0C8E /* SdkStartupPerfTest.swift in Sources */,
-				B30606E720569357008FD9A0 /* MockOIDCAuthenticator.swift in Sources */,
-				B30606EB20569774008FD9A0 /* MockCredentialManager.swift in Sources */,
-				01928B8A201F202D0053EEB0 /* ConfigParserTests.swift in Sources */,
-				B3AC1A8B2049951900BEB12B /* MobileServiceTest.swift in Sources */,
-				B3AC1A98204ECE7900BEB12B /* OIDCCredentialsTest.swift in Sources */,
-				500FDA5E2058324C001E66B0 /* JwkManagerTests.swift in Sources */,
-				017F3708201F4014001A9009 /* ServiceConfigTests.swift in Sources */,
-				01681E1320973770004A0C8E /* PushRegistrationTests.swift in Sources */,
-				B34F3B83204F44DD005970E1 /* Configurations.swift in Sources */,
-				B3AC1A8D2049E11900BEB12B /* UsersTests.swift in Sources */,
-				B3AC1A83204815E000BEB12B /* AuthTests.swift in Sources */,
-				50F2A040204EC7380071778E /* KeycloakConfigTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +604,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01AA3CBB207CDAE20096D2EE /* MetricsIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +756,7 @@
 			baseConfigurationReference = 62B3CBB630EF770D9F5BB994 /* Pods-AeroGearSdkExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AeroGearSdkExample/AeroGearSdkExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
@@ -843,6 +765,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AeroGearSdkExample/AeroGearSdkExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -853,6 +777,7 @@
 			baseConfigurationReference = 135360C38D2B44669D831A4A /* Pods-AeroGearSdkExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AeroGearSdkExample/AeroGearSdkExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
@@ -861,6 +786,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AeroGearSdkExample/AeroGearSdkExample-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,8 +12,6 @@ class AuthViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
 
     override func viewDidLoad() {
-        let authenticationConfig = AuthenticationConfig(redirectURL: "org.aerogear.mobile.example:/callback")
-        try! AgsAuth.instance.configure(authConfig: authenticationConfig)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

@@ -1,4 +1,3 @@
-import AGSCore
 import AGSPush
 import Foundation
 import UIKit
@@ -13,7 +12,6 @@ public class PushHelper {
       Presents dialog with message
     */
     public func onPushMessageReceived(_ userInfo: [AnyHashable: Any], _ fetchCompletionHandler: (UIBackgroundFetchResult) -> Void) {
-        AgsCore.logger.info("Push message received: \(userInfo)")
 
         // When a message is received, send Notification, would be handled by registered ViewController
         let notification: Notification = Notification(name: Notification.Name(rawValue: "message_received"), object: nil, userInfo: userInfo)
@@ -27,7 +25,6 @@ public class PushHelper {
       Example for AgsPush SDK registration
     */
     public func registerUPS(_ deviceToken: Data) {
-        AgsCore.logger.info("Registered for notifications with token")
 
         var config = UnifiedPushConfig()
         config.alias = "Example App"
@@ -36,12 +33,8 @@ public class PushHelper {
         AgsPush.instance.register(
             deviceToken,
             config,
-            success: {
-                AgsCore.logger.info("Successfully registered to Unified Push Server")
-            },
-            failure: { (error: Error!) in
-                AgsCore.logger.error("Failure to register for on Unified Push Server: \(error)")
-            }
+            success: {},
+            failure: { (error: Error!) in }
         )
     }
 
@@ -72,6 +65,6 @@ public class PushHelper {
         Called when Apple registration failed
     */
     public func onRegistrationFailed(_ error: Error) {
-        AgsCore.logger.error("Failure to register for notifications: \(error)")
+        
     }
 }
