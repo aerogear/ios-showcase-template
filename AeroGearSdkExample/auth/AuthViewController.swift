@@ -14,6 +14,12 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        do {
+            guard let currentUser = try AgsAuth.instance.currentUser() else { return }
+            onLoginComplete(user: currentUser, err: nil)
+        } catch {
+            fatalError("Unexpected error: \(error).")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +61,6 @@ class AuthViewController: UIViewController {
     }
 
     static func loadViewController() -> UIViewController {
-        // TODO: return the right UIViewController based on the current login status
         return authStoryBoard.instantiateViewController(withIdentifier: "AuthenticationViewController")
     }
 }
