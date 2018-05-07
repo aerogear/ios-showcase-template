@@ -16,10 +16,6 @@
 		018FBE5D20123AEE00E763A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE5C20123AEE00E763A5 /* Assets.xcassets */; };
 		018FBE6020123AEE00E763A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE5E20123AEE00E763A5 /* LaunchScreen.storyboard */; };
 		018FBE76201257F300E763A5 /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
-		018FBE77201257F300E763A5 /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
-		01AA3CB0207CD5760096D2EE /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 018FBE75201257F300E763A5 /* mobile-services.json */; };
-		50BC6DE0208654DA00B639A0 /* KTVJSONWebToken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC6DE1208654DA00B639A0 /* KTVJSONWebToken.framework */; };
-		603D6C7263A899DE1EDE8CD7 /* Pods_AeroGearSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C9244E7BA473314AA1B91E /* Pods_AeroGearSdkExample.framework */; };
 		8861B940209C78EE00A5876C /* AccessControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861B93D209C78EE00A5876C /* AccessControlViewController.swift */; };
 		8861B942209C790100A5876C /* accesscontrol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8861B941209C790100A5876C /* accesscontrol.storyboard */; };
 		887F2341209C49800046C966 /* DeviceTrustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F233D209C49800046C966 /* DeviceTrustViewController.swift */; };
@@ -34,7 +30,6 @@
 		887F235E209C4E1C0046C966 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F235D209C4E1C0046C966 /* AppConfiguration.swift */; };
 		887F5F7B20A029EB007857E2 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F5F7720A029EB007857E2 /* StorageViewController.swift */; };
 		887F5F7D20A02A03007857E2 /* storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F5F7C20A02A03007857E2 /* storage.storyboard */; };
-		8FB6B476D2E14635C8EA2386 /* Pods_AeroGearSdkExampleIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */; };
 		B352664D204437DE004BACC7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664B204437DE004BACC7 /* BaseViewController.swift */; };
 		B352664E204437DE004BACC7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664C204437DE004BACC7 /* MenuViewController.swift */; };
 		B3526650204438A2004BACC7 /* menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B352664F204438A2004BACC7 /* menu.storyboard */; };
@@ -43,53 +38,36 @@
 		B35266582044AF17004BACC7 /* auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35266572044AF17004BACC7 /* auth.storyboard */; };
 		B352665A2044B1C1004BACC7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35266592044B1C1004BACC7 /* AuthViewController.swift */; };
 		B352665C2044BBCD004BACC7 /* AuthDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352665B2044BBCD004BACC7 /* AuthDetailsViewController.swift */; };
-		BF749467D04564133E1485E3 /* Pods_AeroGearSdkExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BFE0334FA785C6F07DFAE6A5 /* Pods_ShowcaseTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED3552C4D20220726561437 /* Pods_ShowcaseTemplate.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		018FBE6720123AEE00E763A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 018FBE4A20123AEE00E763A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 018FBE5120123AEE00E763A5;
-			remoteInfo = AeroGearSdkExample;
-		};
-		01AA3C97207CD5760096D2EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 018FBE4A20123AEE00E763A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 018FBE5120123AEE00E763A5;
-			remoteInfo = AeroGearSdkExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0156A54320582FAD0054F056 /* AeroGearSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AeroGearSdkExample.entitlements; sourceTree = "<group>"; };
+		0156A54320582FAD0054F056 /* ShowcaseTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShowcaseTemplate.entitlements; sourceTree = "<group>"; };
 		0156A54520584CED0054F056 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		0156A54720584CF30054F056 /* push.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = push.storyboard; sourceTree = "<group>"; };
 		016D7D80205BEB75001DE653 /* PushHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushHelper.swift; sourceTree = "<group>"; };
-		018FBE5220123AEE00E763A5 /* AeroGearSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroGearSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		018FBE5220123AEE00E763A5 /* ShowcaseTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowcaseTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018FBE5520123AEE00E763A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018FBE5720123AEE00E763A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		018FBE5A20123AEE00E763A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018FBE5C20123AEE00E763A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018FBE5F20123AEE00E763A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018FBE6120123AEE00E763A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		018FBE6620123AEE00E763A5 /* AeroGearSdkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroGearSdkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		018FBE75201257F300E763A5 /* mobile-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mobile-services.json"; sourceTree = "<group>"; };
-		01AA3CB6207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroGearSdkExampleIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA1F76211A32BAA063C27D /* Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleIntegrationTests/Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B06B76FCDEA870626FD7E44 /* Pods-AeroGearSdkExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleTests/Pods-AeroGearSdkExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		135360C38D2B44669D831A4A /* Pods-AeroGearSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample.release.xcconfig"; sourceTree = "<group>"; };
+		50B2CC5C449E8702E952BAAE /* Pods-ShowcaseTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowcaseTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowcaseTemplate/Pods-ShowcaseTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		50BC6DE1208654DA00B639A0 /* KTVJSONWebToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KTVJSONWebToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E92E9FB306839140DB9991 /* Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleIntegrationTests/Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		62B3CBB630EF770D9F5BB994 /* Pods-AeroGearSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
 		6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExampleIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5400FB5DFA9D793F2B254D /* Pods-ShowcaseTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowcaseTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowcaseTemplate/Pods-ShowcaseTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		8861B93D209C78EE00A5876C /* AccessControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessControlViewController.swift; sourceTree = "<group>"; };
 		8861B941209C790100A5876C /* accesscontrol.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accesscontrol.storyboard; sourceTree = "<group>"; };
 		887F233D209C49800046C966 /* DeviceTrustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTrustViewController.swift; sourceTree = "<group>"; };
 		887F2342209C49AC0046C966 /* deviceTrust.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = deviceTrust.storyboard; sourceTree = "<group>"; };
-		887F2344209C4C930046C966 /* AeroGearSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AeroGearSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		887F2344209C4C930046C966 /* ShowcaseTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowcaseTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		887F2348209C4D390046C966 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		887F2349209C4D3A0046C966 /* RealmRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRole.swift; sourceTree = "<group>"; };
 		887F234A209C4D3A0046C966 /* Detector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
@@ -110,6 +88,7 @@
 		B35266572044AF17004BACC7 /* auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = auth.storyboard; sourceTree = "<group>"; };
 		B35266592044B1C1004BACC7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B352665B2044BBCD004BACC7 /* AuthDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDetailsViewController.swift; sourceTree = "<group>"; };
+		BED3552C4D20220726561437 /* Pods_ShowcaseTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowcaseTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C9244E7BA473314AA1B91E /* Pods_AeroGearSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,24 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603D6C7263A899DE1EDE8CD7 /* Pods_AeroGearSdkExample.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		018FBE6320123AEE00E763A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50BC6DE0208654DA00B639A0 /* KTVJSONWebToken.framework in Frameworks */,
-				BF749467D04564133E1485E3 /* Pods_AeroGearSdkExampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01AA3CAD207CD5760096D2EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FB6B476D2E14635C8EA2386 /* Pods_AeroGearSdkExampleIntegrationTests.framework in Frameworks */,
+				BFE0334FA785C6F07DFAE6A5 /* Pods_ShowcaseTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +117,7 @@
 		018FBE4920123AEE00E763A5 = {
 			isa = PBXGroup;
 			children = (
-				018FBE5420123AEE00E763A5 /* AeroGearSdkExample */,
+				018FBE5420123AEE00E763A5 /* ShowcaseTemplate */,
 				018FBE5320123AEE00E763A5 /* Products */,
 				6E3C137A1C3B9286096644DE /* Pods */,
 				7E9E84570B91F4A3B0CA2A4C /* Frameworks */,
@@ -165,14 +127,12 @@
 		018FBE5320123AEE00E763A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				018FBE5220123AEE00E763A5 /* AeroGearSdkExample.app */,
-				018FBE6620123AEE00E763A5 /* AeroGearSdkExampleTests.xctest */,
-				01AA3CB6207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests.xctest */,
+				018FBE5220123AEE00E763A5 /* ShowcaseTemplate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		018FBE5420123AEE00E763A5 /* AeroGearSdkExample */ = {
+		018FBE5420123AEE00E763A5 /* ShowcaseTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				887F5F7320A029C7007857E2 /* storage */,
@@ -181,7 +141,7 @@
 				887F2351209C4DD80046C966 /* services */,
 				887F2347209C4D0B0046C966 /* model */,
 				887F2339209C49400046C966 /* deviceTrust */,
-				0156A54320582FAD0054F056 /* AeroGearSdkExample.entitlements */,
+				0156A54320582FAD0054F056 /* ShowcaseTemplate.entitlements */,
 				0156A5442058301F0054F056 /* push */,
 				B35266562044AF07004BACC7 /* auth */,
 				B35266532044AD85004BACC7 /* home */,
@@ -193,9 +153,9 @@
 				018FBE5C20123AEE00E763A5 /* Assets.xcassets */,
 				018FBE5E20123AEE00E763A5 /* LaunchScreen.storyboard */,
 				018FBE6120123AEE00E763A5 /* Info.plist */,
-				887F2344209C4C930046C966 /* AeroGearSdkExample-Bridging-Header.h */,
+				887F2344209C4C930046C966 /* ShowcaseTemplate-Bridging-Header.h */,
 			);
-			path = AeroGearSdkExample;
+			path = ShowcaseTemplate;
 			sourceTree = "<group>";
 		};
 		6E3C137A1C3B9286096644DE /* Pods */ = {
@@ -207,6 +167,8 @@
 				61E92E9FB306839140DB9991 /* Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig */,
 				0B06B76FCDEA870626FD7E44 /* Pods-AeroGearSdkExampleTests.debug.xcconfig */,
 				A50F76BA81DB65C2CA9C424B /* Pods-AeroGearSdkExampleTests.release.xcconfig */,
+				50B2CC5C449E8702E952BAAE /* Pods-ShowcaseTemplate.debug.xcconfig */,
+				6E5400FB5DFA9D793F2B254D /* Pods-ShowcaseTemplate.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -218,6 +180,7 @@
 				F6C9244E7BA473314AA1B91E /* Pods_AeroGearSdkExample.framework */,
 				6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */,
 				AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */,
+				BED3552C4D20220726561437 /* Pods_ShowcaseTemplate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,9 +273,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		018FBE5120123AEE00E763A5 /* AeroGearSdkExample */ = {
+		018FBE5120123AEE00E763A5 /* ShowcaseTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 018FBE6F20123AEE00E763A5 /* Build configuration list for PBXNativeTarget "AeroGearSdkExample" */;
+			buildConfigurationList = 018FBE6F20123AEE00E763A5 /* Build configuration list for PBXNativeTarget "ShowcaseTemplate" */;
 			buildPhases = (
 				446FF7F6E3AD6BA248AF55E9 /* [CP] Check Pods Manifest.lock */,
 				018FBE4E20123AEE00E763A5 /* Sources */,
@@ -324,48 +287,10 @@
 			);
 			dependencies = (
 			);
-			name = AeroGearSdkExample;
+			name = ShowcaseTemplate;
 			productName = AeroGearSdkExample;
-			productReference = 018FBE5220123AEE00E763A5 /* AeroGearSdkExample.app */;
+			productReference = 018FBE5220123AEE00E763A5 /* ShowcaseTemplate.app */;
 			productType = "com.apple.product-type.application";
-		};
-		018FBE6520123AEE00E763A5 /* AeroGearSdkExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 018FBE7220123AEE00E763A5 /* Build configuration list for PBXNativeTarget "AeroGearSdkExampleTests" */;
-			buildPhases = (
-				0D7F731205626D198279B5BC /* [CP] Check Pods Manifest.lock */,
-				018FBE6220123AEE00E763A5 /* Sources */,
-				018FBE6320123AEE00E763A5 /* Frameworks */,
-				018FBE6420123AEE00E763A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				018FBE6820123AEE00E763A5 /* PBXTargetDependency */,
-			);
-			name = AeroGearSdkExampleTests;
-			productName = AeroGearSdkExampleTests;
-			productReference = 018FBE6620123AEE00E763A5 /* AeroGearSdkExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		01AA3C95207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01AA3CB3207CD5760096D2EE /* Build configuration list for PBXNativeTarget "AeroGearSdkExampleIntegrationTests" */;
-			buildPhases = (
-				470982BDC85E8E3143621ED8 /* [CP] Check Pods Manifest.lock */,
-				01AA3C99207CD5760096D2EE /* Sources */,
-				01AA3CAD207CD5760096D2EE /* Frameworks */,
-				01AA3CAF207CD5760096D2EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				01AA3C96207CD5760096D2EE /* PBXTargetDependency */,
-			);
-			name = AeroGearSdkExampleIntegrationTests;
-			productName = AeroGearSdkExampleTests;
-			productReference = 01AA3CB6207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -393,17 +318,9 @@
 							};
 						};
 					};
-					018FBE6520123AEE00E763A5 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 018FBE5120123AEE00E763A5;
-					};
-					01AA3C95207CD5760096D2EE = {
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
-			buildConfigurationList = 018FBE4D20123AEE00E763A5 /* Build configuration list for PBXProject "AeroGearSdkExample" */;
+			buildConfigurationList = 018FBE4D20123AEE00E763A5 /* Build configuration list for PBXProject "ShowcaseTemplate" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -416,9 +333,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				018FBE5120123AEE00E763A5 /* AeroGearSdkExample */,
-				018FBE6520123AEE00E763A5 /* AeroGearSdkExampleTests */,
-				01AA3C95207CD5760096D2EE /* AeroGearSdkExampleIntegrationTests */,
+				018FBE5120123AEE00E763A5 /* ShowcaseTemplate */,
 			);
 		};
 /* End PBXProject section */
@@ -442,50 +357,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		018FBE6420123AEE00E763A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018FBE77201257F300E763A5 /* mobile-services.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01AA3CAF207CD5760096D2EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01AA3CB0207CD5760096D2EE /* mobile-services.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D7F731205626D198279B5BC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeroGearSdkExampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1B2E2D2A6248F032BF93FB57 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShowcaseTemplate/Pods-ShowcaseTemplate-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AGSAuth/AGSAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/AGSCore/AGSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AGSPush/AGSPush.framework",
@@ -528,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AeroGearSdkExample/Pods-AeroGearSdkExample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowcaseTemplate/Pods-ShowcaseTemplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		446FF7F6E3AD6BA248AF55E9 /* [CP] Check Pods Manifest.lock */ = {
@@ -542,25 +423,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeroGearSdkExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		470982BDC85E8E3143621ED8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeroGearSdkExampleIntegrationTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ShowcaseTemplate-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -597,34 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		018FBE6220123AEE00E763A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01AA3C99207CD5760096D2EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		018FBE6820123AEE00E763A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 018FBE5120123AEE00E763A5 /* AeroGearSdkExample */;
-			targetProxy = 018FBE6720123AEE00E763A5 /* PBXContainerItemProxy */;
-		};
-		01AA3C96207CD5760096D2EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 018FBE5120123AEE00E763A5 /* AeroGearSdkExample */;
-			targetProxy = 01AA3C97207CD5760096D2EE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		018FBE5920123AEE00E763A5 /* Main.storyboard */ = {
@@ -757,19 +593,19 @@
 		};
 		018FBE7020123AEE00E763A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62B3CBB630EF770D9F5BB994 /* Pods-AeroGearSdkExample.debug.xcconfig */;
+			baseConfigurationReference = 50B2CC5C449E8702E952BAAE /* Pods-ShowcaseTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = AeroGearSdkExample/AeroGearSdkExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShowcaseTemplate/ShowcaseTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExample/Info.plist;
+				INFOPLIST_FILE = ShowcaseTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.ShowcaseTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AeroGearSdkExample/AeroGearSdkExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShowcaseTemplate/ShowcaseTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,100 +614,28 @@
 		};
 		018FBE7120123AEE00E763A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 135360C38D2B44669D831A4A /* Pods-AeroGearSdkExample.release.xcconfig */;
+			baseConfigurationReference = 6E5400FB5DFA9D793F2B254D /* Pods-ShowcaseTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = AeroGearSdkExample/AeroGearSdkExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShowcaseTemplate/ShowcaseTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExample/Info.plist;
+				INFOPLIST_FILE = ShowcaseTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.ShowcaseTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AeroGearSdkExample/AeroGearSdkExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShowcaseTemplate/ShowcaseTemplate-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		018FBE7320123AEE00E763A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B06B76FCDEA870626FD7E44 /* Pods-AeroGearSdkExampleTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroGearSdkExample.app/AeroGearSdkExample";
-			};
-			name = Debug;
-		};
-		018FBE7420123AEE00E763A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A50F76BA81DB65C2CA9C424B /* Pods-AeroGearSdkExampleTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroGearSdkExample.app/AeroGearSdkExample";
-			};
-			name = Release;
-		};
-		01AA3CB4207CD5760096D2EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04CA1F76211A32BAA063C27D /* Pods-AeroGearSdkExampleIntegrationTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExampleIntegrationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroGearSdkExample.app/AeroGearSdkExample";
-			};
-			name = Debug;
-		};
-		01AA3CB5207CD5760096D2EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E92E9FB306839140DB9991 /* Pods-AeroGearSdkExampleIntegrationTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GHPBX39444;
-				INFOPLIST_FILE = AeroGearSdkExampleIntegrationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroGearSdkExample.app/AeroGearSdkExample";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		018FBE4D20123AEE00E763A5 /* Build configuration list for PBXProject "AeroGearSdkExample" */ = {
+		018FBE4D20123AEE00E763A5 /* Build configuration list for PBXProject "ShowcaseTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				018FBE6D20123AEE00E763A5 /* Debug */,
@@ -880,29 +644,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		018FBE6F20123AEE00E763A5 /* Build configuration list for PBXNativeTarget "AeroGearSdkExample" */ = {
+		018FBE6F20123AEE00E763A5 /* Build configuration list for PBXNativeTarget "ShowcaseTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				018FBE7020123AEE00E763A5 /* Debug */,
 				018FBE7120123AEE00E763A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		018FBE7220123AEE00E763A5 /* Build configuration list for PBXNativeTarget "AeroGearSdkExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				018FBE7320123AEE00E763A5 /* Debug */,
-				018FBE7420123AEE00E763A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		01AA3CB3207CD5760096D2EE /* Build configuration list for PBXNativeTarget "AeroGearSdkExampleIntegrationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01AA3CB4207CD5760096D2EE /* Debug */,
-				01AA3CB5207CD5760096D2EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

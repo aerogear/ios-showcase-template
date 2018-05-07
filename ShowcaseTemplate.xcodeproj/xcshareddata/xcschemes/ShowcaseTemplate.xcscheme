@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "018FBE5120123AEE00E763A5"
-               BuildableName = "AeroGearSdkExample.app"
-               BlueprintName = "AeroGearSdkExample"
-               ReferencedContainer = "container:AeroGearSdkExample.xcodeproj">
+               BuildableName = "ShowcaseTemplate.app"
+               BlueprintName = "ShowcaseTemplate"
+               ReferencedContainer = "container:ShowcaseTemplate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "018FBE6520123AEE00E763A5"
                BuildableName = "AeroGearSdkExampleTests.xctest"
                BlueprintName = "AeroGearSdkExampleTests"
-               ReferencedContainer = "container:AeroGearSdkExample.xcodeproj">
+               ReferencedContainer = "container:ShowcaseTemplate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "018FBE5120123AEE00E763A5"
-            BuildableName = "AeroGearSdkExample.app"
-            BlueprintName = "AeroGearSdkExample"
-            ReferencedContainer = "container:AeroGearSdkExample.xcodeproj">
+            BuildableName = "ShowcaseTemplate.app"
+            BlueprintName = "ShowcaseTemplate"
+            ReferencedContainer = "container:ShowcaseTemplate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "018FBE5120123AEE00E763A5"
-            BuildableName = "AeroGearSdkExample.app"
-            BlueprintName = "AeroGearSdkExample"
-            ReferencedContainer = "container:AeroGearSdkExample.xcodeproj">
+            BuildableName = "ShowcaseTemplate.app"
+            BlueprintName = "ShowcaseTemplate"
+            ReferencedContainer = "container:ShowcaseTemplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "018FBE5120123AEE00E763A5"
-            BuildableName = "AeroGearSdkExample.app"
-            BlueprintName = "AeroGearSdkExample"
-            ReferencedContainer = "container:AeroGearSdkExample.xcodeproj">
+            BuildableName = "ShowcaseTemplate.app"
+            BlueprintName = "ShowcaseTemplate"
+            ReferencedContainer = "container:ShowcaseTemplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
