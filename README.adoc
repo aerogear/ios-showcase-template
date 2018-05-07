@@ -1,11 +1,8 @@
-= Example project
+= iOS Showcase Template
 
-**This project is used only for internal testing purposes**
-See official documentation to see how to integrate SDK into your app.
+A Native iOS Application that demonstrates features of the Aerogear iOS SDK.
 
 == Prerequisites
-
-An example project that makes use of the SDK has been provided in the `example` folder. This project is good for understanding how the SDK works.
 
 You will need the following installed on your development machine:
 
@@ -24,33 +21,15 @@ gem install cocoapods
 pod setup
 ----
 
-2) In the `example` directory run the following command:
+2) Run the following command:
 
 [source,bash]
 ----
 pod install
 ----
 
-=== Run the Example App
+=== Run the App
 
-3) Open the `AeroGearSdkExample.xcworkspace` file with Xcode and click the 'Build & Run' button in Xcode. This should start the example application in an emulator.
+3) Open the `ShowcaseTemplate.xcworkspace` file with Xcode and click the 'Build & Run' button in Xcode. This should start the example application in an emulator.
 
 > Do not use `.xcodeproj`. If you open up a project file instead of a workspace, dependencies will not be correctly configured.
-
-=== Notes About the Example Project
-
-It is important to note that the example SDK is using relative import statements to import the SDK code. You can see this in `example/Podfile`:
-
-[source,ruby]
-----
-pod 'AGSCore', :path => '../modules/core'
-----
-
-In the Xcode workspace, you will see a file explorer similar to that below:
-
-image:./images/example-app-workspace.png[]
-
-Under `Pods` > `Development Pods` you will find the Core and the Metrics SDKs.
-
-
-
