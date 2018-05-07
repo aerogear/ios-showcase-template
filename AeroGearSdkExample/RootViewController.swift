@@ -11,6 +11,8 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
     static let MENU_PUSH_TITLE = "Push"
     // swiftlint:disable identifier_name
     static let MENU_DEVICE_TRUST_TITLE = "Device Trust"
+    // swiftlint:disable identifier_name
+    static let MENU_STORAGE_TITLE = "Storage"
 
     let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -23,6 +25,7 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
         addMenuItem(titleOfChildView: RootViewController.MENU_ACCESS_CONTROL_TITLE, iconName: "ic_verified_user")
         addMenuItem(titleOfChildView: RootViewController.MENU_PUSH_TITLE, iconName: "ic_notification")
         addMenuItem(titleOfChildView: RootViewController.MENU_DEVICE_TRUST_TITLE, iconName: "ic_device_trust")
+        addMenuItem(titleOfChildView: RootViewController.MENU_STORAGE_TITLE, iconName: "ic_storage")
         showFirstChild()
     }
 
@@ -44,6 +47,8 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
                 launchPushView()
             case RootViewController.MENU_DEVICE_TRUST_TITLE:
                 launchDeviceTrustView()
+            case RootViewController.MENU_STORAGE_TITLE:
+                launchStorageView()
             default:
                 print("no view to show")
             }
@@ -73,5 +78,10 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
     func launchDeviceTrustView() {
         let deviceTrustViewController = DeviceTrustViewController.loadViewController()
         presentViewController(deviceTrustViewController)
+    }
+    
+    func launchStorageView() {
+        let storageViewController = StorageViewController.loadViewController()
+        presentViewController(storageViewController)
     }
 }

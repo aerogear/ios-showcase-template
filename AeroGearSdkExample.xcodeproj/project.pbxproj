@@ -27,12 +27,13 @@
 		887F234B209C4D3A0046C966 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2348209C4D390046C966 /* Note.swift */; };
 		887F234C209C4D3A0046C966 /* RealmRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2349209C4D3A0046C966 /* RealmRole.swift */; };
 		887F234D209C4D3A0046C966 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F234A209C4D3A0046C966 /* Detector.swift */; };
-		887F2350209C4D870046C966 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F234F209C4D870046C966 /* AppComponents.swift */; };
 		887F2357209C4DF90046C966 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2352209C4DF90046C966 /* ViewHelper.swift */; };
 		887F2358209C4DF90046C966 /* DevicetrustService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2353209C4DF90046C966 /* DevicetrustService.swift */; };
 		887F2359209C4DF90046C966 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2354209C4DF90046C966 /* Logger.swift */; };
 		887F235B209C4DF90046C966 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2356209C4DF90046C966 /* StorageService.swift */; };
 		887F235E209C4E1C0046C966 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F235D209C4E1C0046C966 /* AppConfiguration.swift */; };
+		887F5F7B20A029EB007857E2 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F5F7720A029EB007857E2 /* StorageViewController.swift */; };
+		887F5F7D20A02A03007857E2 /* storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F5F7C20A02A03007857E2 /* storage.storyboard */; };
 		8FB6B476D2E14635C8EA2386 /* Pods_AeroGearSdkExampleIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8F799AC8AC0F2AD0F6489B /* Pods_AeroGearSdkExampleIntegrationTests.framework */; };
 		B352664D204437DE004BACC7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664B204437DE004BACC7 /* BaseViewController.swift */; };
 		B352664E204437DE004BACC7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352664C204437DE004BACC7 /* MenuViewController.swift */; };
@@ -92,12 +93,13 @@
 		887F2348209C4D390046C966 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		887F2349209C4D3A0046C966 /* RealmRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRole.swift; sourceTree = "<group>"; };
 		887F234A209C4D3A0046C966 /* Detector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
-		887F234F209C4D870046C966 /* AppComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppComponents.swift; sourceTree = "<group>"; };
 		887F2352209C4DF90046C966 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		887F2353209C4DF90046C966 /* DevicetrustService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicetrustService.swift; sourceTree = "<group>"; };
 		887F2354209C4DF90046C966 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		887F2356209C4DF90046C966 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		887F235D209C4E1C0046C966 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		887F5F7720A029EB007857E2 /* StorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
+		887F5F7C20A02A03007857E2 /* storage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storage.storyboard; sourceTree = "<group>"; };
 		A50F76BA81DB65C2CA9C424B /* Pods-AeroGearSdkExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroGearSdkExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroGearSdkExampleTests/Pods-AeroGearSdkExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC4C49488ECD6A7C4BE459CF /* Pods_AeroGearSdkExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroGearSdkExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B352664B204437DE004BACC7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -173,10 +175,10 @@
 		018FBE5420123AEE00E763A5 /* AeroGearSdkExample */ = {
 			isa = PBXGroup;
 			children = (
+				887F5F7320A029C7007857E2 /* storage */,
 				8861B93A209C789500A5876C /* accesscontrol */,
 				887F235C209C4DFD0046C966 /* configurations */,
 				887F2351209C4DD80046C966 /* services */,
-				887F234E209C4D710046C966 /* di */,
 				887F2347209C4D0B0046C966 /* model */,
 				887F2339209C49400046C966 /* deviceTrust */,
 				0156A54320582FAD0054F056 /* AeroGearSdkExample.entitlements */,
@@ -248,14 +250,6 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		887F234E209C4D710046C966 /* di */ = {
-			isa = PBXGroup;
-			children = (
-				887F234F209C4D870046C966 /* AppComponents.swift */,
-			);
-			path = di;
-			sourceTree = "<group>";
-		};
 		887F2351209C4DD80046C966 /* services */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +267,15 @@
 				887F235D209C4E1C0046C966 /* AppConfiguration.swift */,
 			);
 			path = configurations;
+			sourceTree = "<group>";
+		};
+		887F5F7320A029C7007857E2 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				887F5F7720A029EB007857E2 /* StorageViewController.swift */,
+				887F5F7C20A02A03007857E2 /* storage.storyboard */,
+			);
+			path = storage;
 			sourceTree = "<group>";
 		};
 		B352664A204437DE004BACC7 /* menu */ = {
@@ -429,6 +432,7 @@
 				B35266582044AF17004BACC7 /* auth.storyboard in Resources */,
 				887F2343209C49AC0046C966 /* deviceTrust.storyboard in Resources */,
 				018FBE6020123AEE00E763A5 /* LaunchScreen.storyboard in Resources */,
+				887F5F7D20A02A03007857E2 /* storage.storyboard in Resources */,
 				B35266552044AD9C004BACC7 /* home.storyboard in Resources */,
 				018FBE76201257F300E763A5 /* mobile-services.json in Resources */,
 				018FBE5D20123AEE00E763A5 /* Assets.xcassets in Resources */,
@@ -572,13 +576,13 @@
 			files = (
 				B352665220443D52004BACC7 /* RootViewController.swift in Sources */,
 				887F235B209C4DF90046C966 /* StorageService.swift in Sources */,
+				887F5F7B20A029EB007857E2 /* StorageViewController.swift in Sources */,
 				887F2341209C49800046C966 /* DeviceTrustViewController.swift in Sources */,
 				8861B940209C78EE00A5876C /* AccessControlViewController.swift in Sources */,
 				887F2358209C4DF90046C966 /* DevicetrustService.swift in Sources */,
 				018FBE5820123AEE00E763A5 /* HomeViewController.swift in Sources */,
 				887F2359209C4DF90046C966 /* Logger.swift in Sources */,
 				887F234D209C4D3A0046C966 /* Detector.swift in Sources */,
-				887F2350209C4D870046C966 /* AppComponents.swift in Sources */,
 				018FBE5620123AEE00E763A5 /* AppDelegate.swift in Sources */,
 				887F234B209C4D3A0046C966 /* Note.swift in Sources */,
 				B352664D204437DE004BACC7 /* BaseViewController.swift in Sources */,
@@ -761,7 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = AeroGearSdkExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -782,7 +786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = AeroGearSdkExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.AeroGearSdkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
