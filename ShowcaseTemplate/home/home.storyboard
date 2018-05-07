@@ -13,20 +13,24 @@
         <!--Home View Controller-->
         <scene sceneID="rRA-PZ-nB4">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jcA-go-XNw" customClass="HomeViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jcA-go-XNw" customClass="HomeViewController" customModule="ShowcaseTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5nB-s8-6Eu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A Native iOS Application that demonstrates Secure Mobile Development Practises." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-RV-dos">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A Native iOS Application that demonstrates features of the Aerogear iOS SDK." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-RV-dos">
                                 <rect key="frame" x="10" y="418" width="356" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="227" verticalHuggingPriority="251" misplaced="YES" image="feedhenry" translatesAutoresizingMaskIntoConstraints="NO" id="l22-BC-Z8R">
-                                <rect key="frame" x="172" y="333" width="70" height="70"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="227" verticalHuggingPriority="251" image="aerogear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="l22-BC-Z8R">
+                                <rect key="frame" x="152.5" y="285.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1nd-f8-32x"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ehy-la-9p6"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="feedhenry" width="142" height="132"/>
+        <image name="aerogear_icon" width="256" height="256"/>
     </resources>
 </document>
