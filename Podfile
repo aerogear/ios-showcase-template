@@ -15,6 +15,15 @@ target 'AeroGearSdkExample' do
     pod 'AGSPush'
   end
 
+  pod 'SwiftKeychainWrapper'
+  pod 'Alamofire', '~> 4.5'
+  pod 'NotificationBannerSwift'
+  pod 'RealmSwift'
+  pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git', :branch => 'master'
+  pod 'Floaty', '~> 4.0.0'
+  pod 'DTTJailbreakDetection'
+  pod 'TrustKit'
+
   target 'AeroGearSdkExampleTests' do
     inherit! :search_paths
     # Pods for testing
