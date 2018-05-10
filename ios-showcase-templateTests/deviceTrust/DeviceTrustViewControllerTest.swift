@@ -3,7 +3,6 @@
 //  ios-showcase-templateTests
 //
 //  Created by Wei Li on 04/01/2018.
-//  Copyright © 2018 Wei Li. All rights reserved.
 //
 
 import XCTest

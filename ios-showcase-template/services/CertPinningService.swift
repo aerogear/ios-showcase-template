@@ -3,7 +3,6 @@
 //  ios-showcase-template
 //
 //  Created by Tom Jackman on 02/01/2018.
-//  Copyright © 2018 Wei Li. All rights reserved.
 //
 
 import AGSCore
