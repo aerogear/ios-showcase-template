@@ -9,12 +9,14 @@ import UIKit
 import CoreData
 import TrustKit
 import AGSAuth
+import AGSPush
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var authService: AgsAuth?
+    var pushHelper = PushHelper()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -48,6 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootBuilder = RootBuilder(components: appComponents)
         let rootRouter = rootBuilder.build()
         rootRouter.launchFromWindow(window: window!)
+        
+        pushHelper.setupPush()
+        
         return true
     }
     
@@ -94,6 +99,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        pushHelper.registerUPS(deviceToken)
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        pushHelper.onRegistrationFailed(error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        pushHelper.onPushMessageReceived(userInfo, fetchCompletionHandler)
     }
 
     // MARK: - Core Data stack

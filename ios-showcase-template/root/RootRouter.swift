@@ -23,6 +23,7 @@ protocol RootRouter {
     func launchStorageView()
     func launchDeviceTrustView()
     func launchAccessControlView()
+    func launchPushView()
 }
 
 class RootRouterImpl: RootRouter {
@@ -36,6 +37,7 @@ class RootRouterImpl: RootRouter {
     var storageRouter: StorageRouter?
     var deviceTrustRouter: DeviceTrustRouter?
     var accessControlRouter: AccessControlRouter?
+    var pushRouter: PushRouter?
     
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -90,6 +92,13 @@ class RootRouterImpl: RootRouter {
         } else {
             launchAuthenticationView()
         }
+    }
+    
+    func launchPushView() {
+        if self.pushRouter == nil {
+            self.pushRouter = PushBuilder().build()
+        }
+        self.rootViewController.presentViewController(self.pushRouter!.viewController, true)
     }
     
     func resolveCurrentUser() -> User? {

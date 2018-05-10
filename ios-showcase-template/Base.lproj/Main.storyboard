@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Menu View Controller-->
         <scene sceneID="YG3-8k-igK">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="ETT-fu-fvI" customClass="MenuViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="ETT-fu-fvI" customClass="MenuViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7l-mX-CCX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
         <!--Root View Controller-->
         <scene sceneID="v8p-WY-l5v">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WdN-He-yVl" customClass="RootViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WdN-He-yVl" customClass="RootViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xtL-cM-66o" customClass="Mainly">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
         <!--Authentication View Controller-->
         <scene sceneID="IQC-hG-Dfp">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0gj-pQ-B8K" customClass="AuthenticationViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0gj-pQ-B8K" customClass="AuthenticationViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTi-M1-TCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +232,7 @@
         <!--Access Control View Controller-->
         <scene sceneID="fSX-a7-eCG">
             <objects>
-                <viewController storyboardIdentifier="AccessControlViewController" id="MCI-YB-EjZ" customClass="AccessControlViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccessControlViewController" id="MCI-YB-EjZ" customClass="AccessControlViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sfw-7V-9pm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +249,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjH-SM-7Do">
-                                                    <rect key="frame" x="15" y="11" width="384" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Nu5-aW-whB"/>
                                                     </constraints>
@@ -289,7 +289,7 @@
         <!--Authentication Details View Controller-->
         <scene sceneID="UMd-LZ-fWp">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationDetailsViewController" id="OWc-q8-PoD" customClass="AuthenticationDetailsViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationDetailsViewController" id="OWc-q8-PoD" customClass="AuthenticationDetailsViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L9P-Sh-4fE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +306,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNy-4f-6ky">
-                                                    <rect key="frame" x="23" y="1.6666666666666679" width="80" height="40"/>
+                                                    <rect key="frame" x="28" y="1.6666666666666679" width="80" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Vqh-iM-jMV"/>
                                                         <constraint firstAttribute="width" constant="80" id="s9I-Qg-9ht"/>
@@ -316,7 +316,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-G2-sjo">
-                                                    <rect key="frame" x="111" y="1.6666666666666679" width="280" height="40"/>
+                                                    <rect key="frame" x="116" y="1.6666666666666679" width="270" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="YEz-QY-zBv"/>
                                                     </constraints>
@@ -342,7 +342,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-hj-a84">
-                                                    <rect key="frame" x="23" y="2" width="368" height="40"/>
+                                                    <rect key="frame" x="28" y="2" width="358" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="uJS-qp-NpI"/>
                                                     </constraints>
@@ -381,7 +381,7 @@
         <!--Home View Controller-->
         <scene sceneID="ku8-pY-PYa">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iyq-ty-2AW" customClass="HomeViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iyq-ty-2AW" customClass="HomeViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P62-fo-WLf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,13 +412,13 @@
         <!--Storage View Controller-->
         <scene sceneID="B89-iV-Ryj">
             <objects>
-                <tableViewController storyboardIdentifier="StorageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LdS-5d-4WE" customClass="StorageViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StorageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LdS-5d-4WE" customClass="StorageViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ngh-uV-mH8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" textLabel="vXo-OD-OsF" style="IBUITableViewCellStyleDefault" id="ugE-6C-WSb" customClass="NoteTableViewCell" customModule="secure_ios_app" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" textLabel="vXo-OD-OsF" style="IBUITableViewCellStyleDefault" id="ugE-6C-WSb" customClass="NoteTableViewCell" customModule="ios_showcase_template" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ugE-6C-WSb" id="Ai2-Xa-foL">
@@ -452,12 +452,12 @@
         <!--Device Trust View Controller-->
         <scene sceneID="Gwg-dH-ECy">
             <objects>
-                <tableViewController storyboardIdentifier="DeviceTrustViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eh1-tM-NyE" customClass="DeviceTrustViewController" customModule="secure_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DeviceTrustViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eh1-tM-NyE" customClass="DeviceTrustViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q2o-Dz-q1g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="deviceTrustScore" text="Device Trust Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9CZ-UK-qRa" customClass="deviceTrustScore" customModule="secure_ios_app" customModuleProvider="target">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="deviceTrustScore" text="Device Trust Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9CZ-UK-qRa" customClass="deviceTrustScore" customModule="ios_showcase_template" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.39211086108594168" green="0.68322943652849744" blue="0.63080617328095323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -466,7 +466,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceTrustTableViewCell" textLabel="XC2-Qy-Oft" style="IBUITableViewCellStyleDefault" id="VSf-7i-aos" customClass="DeviceTrustTableViewCell" customModule="secure_ios_app" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceTrustTableViewCell" textLabel="XC2-Qy-Oft" style="IBUITableViewCellStyleDefault" id="VSf-7i-aos" customClass="DeviceTrustTableViewCell" customModule="ios_showcase_template" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="93" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VSf-7i-aos" id="6ln-pE-vtx">
@@ -499,9 +499,79 @@
             </objects>
             <point key="canvasLocation" x="519" y="64"/>
         </scene>
+        <!--Push View Controller-->
+        <scene sceneID="JQA-15-d8k">
+            <objects>
+                <viewController storyboardIdentifier="PushViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ohQ-57-Jyd" customClass="PushViewController" customModule="ios_showcase_template" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3kK-Ul-dYD" userLabel="TopLevelView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z8-XQ-v0u" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="170"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="background-push" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lh5-ws-VFr">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="107"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="107" id="DG2-P0-2TX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send push notifications from UPS server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-ZJ-BVD">
+                                        <rect key="frame" x="52.666666666666657" y="125" width="309" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92129844429999996" green="0.95613366369999997" blue="0.97606211899999995" alpha="0.18097174660000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lh5-ws-VFr" secondAttribute="trailing" id="9rJ-ED-zp4"/>
+                                    <constraint firstItem="lh5-ws-VFr" firstAttribute="top" secondItem="1Z8-XQ-v0u" secondAttribute="topMargin" id="Dat-Da-Twi"/>
+                                    <constraint firstItem="d2C-ZJ-BVD" firstAttribute="centerX" secondItem="1Z8-XQ-v0u" secondAttribute="centerX" id="IM1-2O-pGT"/>
+                                    <constraint firstItem="d2C-ZJ-BVD" firstAttribute="top" secondItem="lh5-ws-VFr" secondAttribute="bottom" constant="10" id="Kfe-Yz-YhB"/>
+                                    <constraint firstAttribute="height" constant="170" id="L0Z-OY-CRn"/>
+                                    <constraint firstAttribute="bottom" secondItem="d2C-ZJ-BVD" secondAttribute="bottom" constant="10" id="iTq-lN-tKe"/>
+                                    <constraint firstItem="lh5-ws-VFr" firstAttribute="leading" secondItem="1Z8-XQ-v0u" secondAttribute="leading" id="nUa-PI-QL1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-qz-EHw">
+                                <rect key="frame" x="10" y="200" width="394" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PushNotificationCell" id="rjQ-F3-OKj" userLabel="PushNotificationCell">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rjQ-F3-OKj" id="gCb-8d-3xF">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1Z8-XQ-v0u" firstAttribute="leading" secondItem="nmF-0p-g25" secondAttribute="leading" id="GUZ-US-tOE"/>
+                            <constraint firstItem="Fds-qz-EHw" firstAttribute="top" secondItem="nmF-0p-g25" secondAttribute="top" constant="180" id="PCs-Zm-Mtl"/>
+                            <constraint firstItem="Fds-qz-EHw" firstAttribute="leading" secondItem="nmF-0p-g25" secondAttribute="leading" constant="10" id="TXC-Yz-AX4"/>
+                            <constraint firstItem="nmF-0p-g25" firstAttribute="trailing" secondItem="1Z8-XQ-v0u" secondAttribute="trailing" id="XgC-hy-NrO"/>
+                            <constraint firstItem="nmF-0p-g25" firstAttribute="bottom" secondItem="Fds-qz-EHw" secondAttribute="bottom" constant="10" id="bsM-Oi-25a"/>
+                            <constraint firstItem="1Z8-XQ-v0u" firstAttribute="top" secondItem="nmF-0p-g25" secondAttribute="top" id="ehG-gP-VbC"/>
+                            <constraint firstItem="nmF-0p-g25" firstAttribute="trailing" secondItem="Fds-qz-EHw" secondAttribute="trailing" constant="10" id="yMY-DN-q3f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nmF-0p-g25"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Fds-qz-EHw" id="0dX-F2-iBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ued-um-Har" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="843.75000000000011"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background-pattern" width="452" height="732"/>
+        <image name="background-push" width="16" height="16"/>
         <image name="feedhenry" width="142" height="132"/>
         <image name="ic_cracked_lock" width="100" height="100"/>
         <image name="ic_openid_connect" width="192" height="192"/>

@@ -17,6 +17,7 @@ class RootViewController: BaseViewController,  DrawerMenuDelegate {
     static let MENU_ACCESS_CONTROL_TITLE = "Access Control"
     static let MENU_STORAGE_TITLE = "Secure Storage"
     static let MENU_DEVICETRUST_TITLE = "Device Trust"
+    static let MENU_PUSH_TITLE = "Push"
     
     var listener: MenuListener?
 
@@ -29,6 +30,7 @@ class RootViewController: BaseViewController,  DrawerMenuDelegate {
         addMenuItem(titleOfChildView: RootViewController.MENU_ACCESS_CONTROL_TITLE, iconName: "ic_verified_user")
         addMenuItem(titleOfChildView: RootViewController.MENU_STORAGE_TITLE, iconName: "ic_storage")
         addMenuItem(titleOfChildView: RootViewController.MENU_DEVICETRUST_TITLE, iconName: "ic_device_trust")
+        addMenuItem(titleOfChildView: RootViewController.MENU_PUSH_TITLE, iconName: "ic_notification")
         
         showFirstChild()
         // Do any additional setup after loading the view.
