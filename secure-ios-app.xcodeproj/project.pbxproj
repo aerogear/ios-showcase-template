@@ -473,7 +473,6 @@
 				B3E21B3C1FAC956E00082CF7 /* Frameworks */,
 				B3E21B3D1FAC956E00082CF7 /* Resources */,
 				C47B6E348402FCFFC8F86BA3 /* [CP] Embed Pods Frameworks */,
-				48BF2D289A56DE369BE478D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -493,7 +492,6 @@
 				B3E21B531FAC956E00082CF7 /* Frameworks */,
 				B3E21B541FAC956E00082CF7 /* Resources */,
 				BEDD5545E2EDC51564483ABE /* [CP] Embed Pods Frameworks */,
-				7164C9811D630BBBEB52B3A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -513,8 +511,6 @@
 				B3E21B5D1FAC956E00082CF7 /* Sources */,
 				B3E21B5E1FAC956E00082CF7 /* Frameworks */,
 				B3E21B5F1FAC956E00082CF7 /* Resources */,
-				82B5A85AB9B116D8B2002D56 /* [CP] Embed Pods Frameworks */,
-				16031AB3C7C27E0232C7C0D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -602,66 +598,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16031AB3C7C27E0232C7C0D8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-secure-ios-appUITests/Pods-secure-ios-appUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		48BF2D289A56DE369BE478D7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-secure-ios-app/Pods-secure-ios-app-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7164C9811D630BBBEB52B3A8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-secure-ios-appTests/Pods-secure-ios-appTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82B5A85AB9B116D8B2002D56 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-secure-ios-appUITests/Pods-secure-ios-appUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		952A891899C9F532184BD4C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
