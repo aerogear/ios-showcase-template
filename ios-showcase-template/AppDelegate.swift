@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Wei Li on 03/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import UIKit
@@ -106,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "secure_ios_app")
+        let container = NSPersistentContainer(name: "ios_showcase_template")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

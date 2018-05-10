@@ -1,9 +1,8 @@
 //
 //  AuthenticationViewController.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Wei Li on 06/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import UIKit

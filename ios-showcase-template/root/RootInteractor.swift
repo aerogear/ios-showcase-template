@@ -1,9 +1,8 @@
 //
 //  RootInteractor.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Wei Li on 08/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import Foundation

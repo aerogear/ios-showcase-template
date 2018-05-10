@@ -1,15 +1,14 @@
 //
-//  secure_ios_appTests.swift
-//  secure-ios-appTests
+//  ios_showcase_templateTests.swift
+//  ios-showcase-templateTests
 //
 //  Created by Wei Li on 03/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import XCTest
-@testable import secure_ios_app
+@testable import ios_showcase_template
 
-class secure_ios_appTests: XCTestCase {
+class ios_showcase_templateTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

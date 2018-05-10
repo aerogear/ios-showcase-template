@@ -1,6 +1,6 @@
 //
 //  RealmRole.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Thomas Nolan on 29/03/2018.
 //  Copyright © 2018 Wei Li. All rights reserved.

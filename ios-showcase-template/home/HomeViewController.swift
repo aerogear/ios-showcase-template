@@ -1,9 +1,8 @@
 //
 //  HomeViewController.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Wei Li on 03/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import UIKit

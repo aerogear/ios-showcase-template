@@ -1,9 +1,8 @@
 //
 //  Note.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Tom Jackman on 20/11/2017.
-//  Copyright © 2017 Wei Li. All rights reserved.
 //
 
 import Foundation

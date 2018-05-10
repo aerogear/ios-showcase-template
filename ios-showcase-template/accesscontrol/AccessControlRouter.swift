@@ -1,6 +1,6 @@
 //
 //  AccessControlRouter.swift
-//  secure-ios-app
+//  ios-showcase-template
 //
 //  Created by Wei Li on 02/01/2018.
 //  Copyright © 2018 Wei Li. All rights reserved.

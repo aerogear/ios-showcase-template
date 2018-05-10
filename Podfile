@@ -22,11 +22,6 @@ target 'ios-showcase-template' do
     pod 'RealmSwift'
   end
 
-  target 'ios-showcase-templateUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
 
 post_install do |installer|

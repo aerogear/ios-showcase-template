@@ -1,6 +1,6 @@
 //
 //  StorageServiceTest.swift
-//  secure-ios-appTests
+//  ios-showcase-templateTests
 //
 //  Created by Wei Li on 03/01/2018.
 //  Copyright © 2018 Wei Li. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftKeychainWrapper
 import RealmSwift
-@testable import secure_ios_app
+@testable import ios_showcase_template
 
 class InMemoryRealmStorageService: RealmStorageService {
     override func getRealmInstance() throws -> Realm {
