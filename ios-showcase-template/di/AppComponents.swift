@@ -33,7 +33,7 @@ class AppComponents {
         if self.authService == nil {
             self.authService = AgsAuth.instance
             do {
-                let authConfig = AuthenticationConfig(redirectURL: "com.redhat.secure-ios-app.secureapp:/callback")
+                let authConfig = AuthenticationConfig(redirectURL: "org.aerogear.ios-showcase-template:/callback")
                 try authService!.configure(authConfig: authConfig)
             } catch AgsAuth.Errors.noServiceConfigurationFound {
                 print("No Service Configuration Found")
