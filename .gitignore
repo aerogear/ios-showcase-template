@@ -1,7 +1,10 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
 ## Build generated
 build/
 DerivedData/
-aerogear-ios-sdk/
 
 ## Various settings
 *.pbxuser
@@ -13,13 +16,11 @@ aerogear-ios-sdk/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-*.xcuserdatad
 
 ## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
@@ -36,5 +37,75 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
-# Package.resolved
 .build/
+
+Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+AeroGearSDK.framework.zip
+
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+
+# IntelliJ
+.idea
+
+# Vim
+*.swo
+*.swp
+
+# Bundler
+.bundle
+
+# OS X
+.DS_Store
+
+Pods/
+Podfile.lock
+*.xcworkspace
+
+# CMake
+.downloads
+Debug
+Release
+
+
+AGExampleService
+
+docs/api
+*.bak
+
+Gemfile.lock
