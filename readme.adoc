@@ -1,11 +1,9 @@
-image:https://circleci.com/gh/feedhenry/mobile-security-ios-template.svg?style=svg["CircleCI", link="https://circleci.com/gh/feedhenry/mobile-security-ios-template"]
+image:https://circleci.com/gh/aerogear/ios-showcase-template.svg?style=svg["CircleCI", link="https://circleci.com/gh/aerogear/ios-showcase-template"]
 image:https://img.shields.io/badge/Swift%20Version-4.0-green.svg[]
 
-= Secure iOS Swift Template
+= Aerogear Services iOS Showcase Application Template
 
-A Native iOS Application that demonstrates Secure Mobile Development Practises.
-
-For more information, please check the https://github.com/feedhenry/mobile-security[Mobile Security Project].
+A Native iOS Application that demonstrates features of the Aerogear iOS SDK.
 
 == Features
 - OpenID Connect Authentication
@@ -23,23 +21,7 @@ For more information, please check the https://github.com/feedhenry/mobile-secur
 - Account Lockout Policies (via Keycloak)
 - Authentication/Access Control Auditing & Logging (via Keycloak)
 - Authenticated Calls to Protected Endpoints (via Keycloak)
-
-== Work with Different Backend Services
-
-By default the app will use the backend services that are running on https://security.skunkhenry.com:8443[a dedicated OpenShift cluster] for demonstration purpose. 
-
-You can also configure the app to run against different backend services:
-
-1. Update the URLs in link:secure-ios-app/AppConfig.plist[AppConfig.plist] file.
-2. If you are using HTTPS, update the certificate pinning configuration in link:secure-ios-app/AppDelegate.swift[AppDelegate.swift] file
-
-To generate the hash value of the certificate, you can use this command:
-[source, bash]
-----
-openssl s_client -servername <hostname> -connect <hostname:port> | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-----
-
-If you are using self-signed certificate, follow the instructions in the next section.
+- Push notifications with UPS server
 
 == Work with Self-signed Certificate
 
