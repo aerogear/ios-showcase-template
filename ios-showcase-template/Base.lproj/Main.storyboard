@@ -79,21 +79,21 @@
                                     <outlet property="delegate" destination="ETT-fu-fvI" id="Liy-fI-Fvq"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FeedHenry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRP-rF-teP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AeroGear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRP-rF-teP">
                                 <rect key="frame" x="20" y="152" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.feedhenry.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-p4-6nQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.aerogear.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-p4-6nQ">
                                 <rect key="frame" x="20" y="171" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedhenry" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-25-Scf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aerogear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-25-Scf">
                                 <rect key="frame" x="20" y="96" width="56" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -130,7 +130,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FxX-1z-5b2">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.89054404145077726" green="0.22852610118157468" blue="0.22818006970377214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1803921568627451" green="0.41176470588235292" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="llH-61-lXP">
                         <autoresizingMask key="autoresizingMask"/>
@@ -386,21 +387,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A Native iOS Application that demonstrates Secure Mobile Development Practises." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-XE-a61">
-                                <rect key="frame" x="10" y="418" width="394" height="136"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Native iOS Application that demonstrates features of the Aerogear iOS SDK." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-XE-a61">
+                                <rect key="frame" x="28" y="418" width="358" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="IZ1-gz-9qe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="227" verticalHuggingPriority="251" misplaced="YES" image="feedhenry" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-dD-iOB">
-                                <rect key="frame" x="172" y="333" width="70" height="70"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="227" verticalHuggingPriority="251" image="aerogear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-dD-iOB" userLabel="aerogear">
+                                <rect key="frame" x="172" y="320" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NlC-mS-aOq"/>
+                                    <constraint firstAttribute="width" constant="70" id="zLT-i2-2UV"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qf1-dD-iOB" firstAttribute="centerX" secondItem="aXt-ZI-Fg8" secondAttribute="centerX" id="7fq-3Z-JpR"/>
+                            <constraint firstItem="ReF-XE-a61" firstAttribute="top" secondItem="Qf1-dD-iOB" secondAttribute="bottom" constant="28" id="Qpb-Mg-mIj"/>
                             <constraint firstItem="Qf1-dD-iOB" firstAttribute="centerY" secondItem="aXt-ZI-Fg8" secondAttribute="centerY" constant="-23" id="Th3-eb-2v4"/>
+                            <constraint firstItem="aXt-ZI-Fg8" firstAttribute="trailing" secondItem="ReF-XE-a61" secondAttribute="trailing" constant="28" id="icX-iv-E0W"/>
+                            <constraint firstItem="ReF-XE-a61" firstAttribute="leading" secondItem="P62-fo-WLf" secondAttribute="leading" constant="28" id="uPC-OO-ULS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXt-ZI-Fg8"/>
                     </view>
@@ -570,9 +580,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aerogear_icon" width="256" height="256"/>
         <image name="background-pattern" width="452" height="732"/>
-        <image name="background-push" width="16" height="16"/>
-        <image name="feedhenry" width="142" height="132"/>
+        <image name="background-push" width="213" height="320"/>
         <image name="ic_cracked_lock" width="100" height="100"/>
         <image name="ic_openid_connect" width="192" height="192"/>
     </resources>

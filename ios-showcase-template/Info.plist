@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.feedhenry.securenativeandroidtemplate:/callback</string>
+				<string>org.aerogear.ios-showcase-template:/callback</string>
 			</array>
 		</dict>
 	</array>
