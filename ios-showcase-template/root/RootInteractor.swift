@@ -35,6 +35,8 @@ class RootInteractorImpl: RootInteractor {
             router?.launchDeviceTrustView()
         case RootViewController.MENU_ACCESS_CONTROL_TITLE:
             router?.launchAccessControlView()
+        case RootViewController.MENU_PUSH_TITLE:
+            router?.launchPushView()
         default:
             print("no view to show")
         }

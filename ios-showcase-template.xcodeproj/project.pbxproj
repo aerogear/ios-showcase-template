@@ -11,6 +11,10 @@
 		117FC22A206CEB69002FDC0E /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 117FC229206CEB68002FDC0E /* mobile-services.json */; };
 		4D0F173022C5831068DE8F00 /* Pods_ios_showcase_templateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98424858080741EB3E5AECC5 /* Pods_ios_showcase_templateTests.framework */; };
 		534C7C9176EE7AF144393CB0 /* Pods_ios_showcase_template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE619E485F0C1EE98228BEE1 /* Pods_ios_showcase_template.framework */; };
+		88821BCA20A451B400AC4B6E /* PushHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88821BC820A451B400AC4B6E /* PushHelper.swift */; };
+		88821BCB20A451B400AC4B6E /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88821BC920A451B400AC4B6E /* PushViewController.swift */; };
+		88821BCD20A451DF00AC4B6E /* PushBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88821BCC20A451DF00AC4B6E /* PushBuilder.swift */; };
+		88821BCF20A451F300AC4B6E /* PushRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88821BCE20A451F300AC4B6E /* PushRouter.swift */; };
 		AB3E11F91FC2F42900B7302C /* AppAuth in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3E11F81FC2F42900B7302C /* AppAuth */; };
 		AB3E11FB1FC3214300B7302C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E11FA1FC3214300B7302C /* Note.swift */; };
 		AB3E11FE1FC3238D00B7302C /* StorageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E11FD1FC3238D00B7302C /* StorageRouter.swift */; };
@@ -88,6 +92,11 @@
 		77633C3DADA4C980EA77A760 /* Pods-ios-showcase-templateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-showcase-templateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-showcase-templateUITests/Pods-ios-showcase-templateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7A09B7B01DD60272209BE2E8 /* Pods-ios-showcase-templateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-showcase-templateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-showcase-templateTests/Pods-ios-showcase-templateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD5F435EC6A784532CCCEF8 /* Pods-secure-ios-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-appTests/Pods-secure-ios-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		8838658520A47043002E7B72 /* ios-showcase-template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-showcase-template.entitlements"; sourceTree = "<group>"; };
+		88821BC820A451B400AC4B6E /* PushHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushHelper.swift; sourceTree = "<group>"; };
+		88821BC920A451B400AC4B6E /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
+		88821BCC20A451DF00AC4B6E /* PushBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushBuilder.swift; sourceTree = "<group>"; };
+		88821BCE20A451F300AC4B6E /* PushRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRouter.swift; sourceTree = "<group>"; };
 		98424858080741EB3E5AECC5 /* Pods_ios_showcase_templateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_showcase_templateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A564516AC590A89FD5711D21 /* Pods_secure_ios_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3E11F81FC2F42900B7302C /* AppAuth */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppAuth; path = Pods/AppAuth; sourceTree = "<group>"; };
@@ -186,6 +195,17 @@
 				595695FB7AA8A3085AB6141B /* Pods_ios_showcase_templateUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88821BC720A4518500AC4B6E /* push */ = {
+			isa = PBXGroup;
+			children = (
+				88821BC820A451B400AC4B6E /* PushHelper.swift */,
+				88821BC920A451B400AC4B6E /* PushViewController.swift */,
+				88821BCC20A451DF00AC4B6E /* PushBuilder.swift */,
+				88821BCE20A451F300AC4B6E /* PushRouter.swift */,
+			);
+			path = push;
 			sourceTree = "<group>";
 		};
 		AB3E11FC1FC3236100B7302C /* storage */ = {
@@ -388,6 +408,8 @@
 		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
+				8838658520A47043002E7B72 /* ios-showcase-template.entitlements */,
+				88821BC720A4518500AC4B6E /* push */,
 				117FC229206CEB68002FDC0E /* mobile-services.json */,
 				B30747961FE2808400A7E159 /* accesscontrol */,
 				B30BEBEC1FB5B7290008A171 /* model */,
@@ -503,6 +525,11 @@
 					B3E21B3E1FAC956E00082CF7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					B3E21B551FAC956E00082CF7 = {
 						CreatedOnToolsVersion = 9.1;
@@ -618,6 +645,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios-showcase-template/Pods-ios-showcase-template-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AGSAuth/AGSAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/AGSCore/AGSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AGSPush/AGSPush.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/DTTJailbreakDetection/DTTJailbreakDetection.framework",
@@ -637,6 +665,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AGSAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AGSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AGSPush.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTJailbreakDetection.framework",
@@ -675,16 +704,20 @@
 				ABEDBC911FD04AF90027066A /* DeviceTrustViewController.swift in Sources */,
 				B3E21B4B1FAC956E00082CF7 /* ios_showcase_template.xcdatamodeld in Sources */,
 				B36F5F471FFB9A3200CAB771 /* AccessControlRouter.swift in Sources */,
+				88821BCD20A451DF00AC4B6E /* PushBuilder.swift in Sources */,
 				AB73E11B1FFBCF30007BBDF5 /* CertPinningService.swift in Sources */,
 				B32CBD2E1FD0B61F008CFEF1 /* ViewHelper.swift in Sources */,
 				ABEDBC8F1FD04A7C0027066A /* Detector.swift in Sources */,
+				88821BCB20A451B400AC4B6E /* PushViewController.swift in Sources */,
 				B30BEBC01FB368D50008A171 /* AuthenticationInteractor.swift in Sources */,
 				B30BEBBE1FB368690008A171 /* AuthenticationBuilder.swift in Sources */,
 				117FC228206CE562002FDC0E /* RealmRole.swift in Sources */,
+				88821BCA20A451B400AC4B6E /* PushHelper.swift in Sources */,
 				B30BEBB61FB3556B0008A171 /* RootInteractor.swift in Sources */,
 				AB3E12021FC324D000B7302C /* StorageViewController.swift in Sources */,
 				AB3E12061FC331CB00B7302C /* StorageService.swift in Sources */,
 				AB3E12041FC3307400B7302C /* StorageInteractor.swift in Sources */,
+				88821BCF20A451F300AC4B6E /* PushRouter.swift in Sources */,
 				B30BEBA11FB20F3F0008A171 /* AppConfiguration.swift in Sources */,
 				B342DF381FB0CA9900BBA05B /* AuthenticationViewController.swift in Sources */,
 				B39FDB0B1FB2012F00C1EC0F /* MenuViewController.swift in Sources */,
@@ -863,6 +896,7 @@
 			baseConfigurationReference = 3A853A7E834818777C14016E /* Pods-ios-showcase-template.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-showcase-template/ios-showcase-template.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;
@@ -883,6 +917,7 @@
 			baseConfigurationReference = 5185CA4E465C33A6AFF38538 /* Pods-ios-showcase-template.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-showcase-template/ios-showcase-template.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;

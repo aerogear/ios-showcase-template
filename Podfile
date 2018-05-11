@@ -7,8 +7,10 @@ target 'ios-showcase-template' do
 
   if ENV['LOCAL']
     pod 'AGSAuth', :path => '../'
+    pod 'AGSPush', :path => '../'
   else
     pod 'AGSAuth'
+    pod 'AGSPush'
   end
 
   pod 'SwiftKeychainWrapper'
