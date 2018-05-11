@@ -6,6 +6,7 @@ target 'ios-showcase-template' do
   use_frameworks!
 
   if ENV['LOCAL']
+    pod 'AGSCore', :path => '../'
     pod 'AGSAuth', :path => '../'
     pod 'AGSPush', :path => '../'
   else
