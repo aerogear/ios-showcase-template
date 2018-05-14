@@ -9,9 +9,11 @@ target 'ios-showcase-template' do
     pod 'AGSCore', :path => '../'
     pod 'AGSAuth', :path => '../'
     pod 'AGSPush', :path => '../'
+    pod 'AGSSec', :path => '../'
   else
     pod 'AGSAuth'
     pod 'AGSPush'
+    pod 'AGSSec'
   end
 
   pod 'SwiftKeychainWrapper'
