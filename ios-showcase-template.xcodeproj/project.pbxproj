@@ -316,13 +316,6 @@
 			path = configurations;
 			sourceTree = "<group>";
 		};
-		B36F5F4A1FFCFDE500CAB771 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		B36F5F4D1FFD027F00CAB771 /* services */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,7 +437,6 @@
 				B3A410A81FFE5ABF00A32FF0 /* accesscontrol */,
 				B322807B1FFE331E00A0B201 /* configurations */,
 				B36F5F4D1FFD027F00CAB771 /* services */,
-				B36F5F4A1FFCFDE500CAB771 /* model */,
 				B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */,
 				B3E21B5C1FAC956E00082CF7 /* Info.plist */,
 			);
