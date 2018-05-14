@@ -5,8 +5,7 @@ target 'ios-showcase-template' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   platform :ios, '10.0'
-  s.swift_version = '4.0'
-  
+
   if ENV['LOCAL']
     pod 'AGSCore', :path => '../'
     pod 'AGSAuth', :path => '../'
