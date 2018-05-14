@@ -14,7 +14,7 @@ class Note: Object {
     @objc dynamic var content: String = ""
     @objc dynamic var createdAt: Date = Date()
     @objc dynamic var storageProvider: String = ""
-    
+
     func clone() -> Note {
         let another = Note()
         another.id = self.id

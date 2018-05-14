@@ -5,16 +5,16 @@
 //  Created by Tom Jackman on 30/11/2017.
 //
 
+import DTTJailbreakDetection
 import Foundation
 import LocalAuthentication
-import DTTJailbreakDetection
 
 protocol DeviceTrustService {
     func performTrustChecks() -> [Detector]
 }
 
 class iosDeviceTrustService: DeviceTrustService {
-    
+
     var detections: [Detector]
     // Detections
     // Positive: Detection occured that is deemed a security issue
@@ -29,7 +29,7 @@ class iosDeviceTrustService: DeviceTrustService {
     let EMULATOR_DETECTED_NEGATIVE = "Physical Device Access Detected"
     let LATEST_OS_DETECTED_POSITIVE = "Latest OS Version Not Installed"
     let LATEST_OS_DETECTED_NEGATIVE = "Latest OS Version Installed"
-    
+
     // detection descriptions
     let DETECTION_DEVICE_LOCK_DESC = "This check will detect if a lock screen has been set on the device. Not setting a lock screen on the device can make it vulnerable to unauthorised access."
     let JAILBREAK_DETECTED_DESC = "This check will detect if the underlying device is Jailbroken. A Jailbroken device permits root access and can be used to used to carry out malicious actions, such as recovering application data."
@@ -37,35 +37,34 @@ class iosDeviceTrustService: DeviceTrustService {
     let EMULATOR_DETECTED_DESC = "This check will detect if the app is running on an emulator. Emulators can be created that are already jailbroken and come packaged with other tooling that can be used to attack or reverse engineer an application more easily than on a physical device."
     let LATEST_OS_DETECTED_DESC = "This check will detect if the application is running on the latest major iOS version (iOS 11.0). If the device is running on an older version, it may be vulnerable to unpatched vulnerabilities."
 
-    
     /**
      - Initilise the iOS Device Trust Service
     */
     init() {
         self.detections = []
     }
-    
+
     /**
      - Perform the Device Trust Checks
-     
+
      - Returns: A list of Detector objects
      */
     func performTrustChecks() -> [Detector] {
         if #available(iOS 9.0, *) {
             self.detections.append(detectDeviceLock())
         }
-        self.detections.append( detectJailbreak())
+        self.detections.append(detectJailbreak())
         self.detections.append(detectEmulator())
         self.detections.append(detectDebugabble())
         self.detections.append(detectLatestOS())
-        
+
         return self.detections
     }
-    
+
     // tag::detectDeviceLock[]
     /**
      - Check if a lock screen is set on the device. (iOS 9 or higher).
-     
+
      - Returns: A detector object.
      */
     fileprivate func detectDeviceLock() -> Detector {
@@ -76,27 +75,29 @@ class iosDeviceTrustService: DeviceTrustService {
             return Detector(label: DETECTION_DEVICE_LOCK_NEGATIVE, detected: false, description: DETECTION_DEVICE_LOCK_DESC)
         }
     }
+
     // end::detectDeviceLock[]
-    
+
     // tag::detectJailbreak[]
     /**
      - Check if the device running the application is jailbroken.
-     
+
      - Returns: A detector object.
      */
     fileprivate func detectJailbreak() -> Detector {
-        if (DTTJailbreakDetection.isJailbroken()) {
+        if DTTJailbreakDetection.isJailbroken() {
             return Detector(label: JAILBREAK_DETECTED_POSITIVE, detected: true, description: JAILBREAK_DETECTED_DESC)
         } else {
             return Detector(label: JAILBREAK_DETECTED_NEGATIVE, detected: false, description: JAILBREAK_DETECTED_DESC)
         }
     }
+
     // end::detectJailbreak[]
-    
+
     // tag::detectDebugabble[]
     /**
      - Check if the device running the application is jailbroken.
-     
+
      - Returns: A detector object.
      */
     fileprivate func detectDebugabble() -> Detector {
@@ -106,12 +107,13 @@ class iosDeviceTrustService: DeviceTrustService {
             return Detector(label: DEBUG_MODE_DETECTED_NEGATIVE, detected: false, description: DEBUG_MODE_DETECTED_DESC)
         #endif
     }
+
     // end::detectDebugabble[]
-    
+
     // tag::detectEmulator[]
     /**
      - Check if the application is running in an emulator.
-     
+
      - Returns: A detector object.
      */
     fileprivate func detectEmulator() -> Detector {
@@ -121,12 +123,13 @@ class iosDeviceTrustService: DeviceTrustService {
             return Detector(label: EMULATOR_DETECTED_NEGATIVE, detected: false, description: EMULATOR_DETECTED_DESC)
         #endif
     }
+
     // end::detectEmulator[]
-    
+
     // tag::detectLatestOS[]
     /**
      - Check if the device is running the on the latest version of iOS.
-     
+
      - Returns: A detector object.
      */
     fileprivate func detectLatestOS() -> Detector {
@@ -136,7 +139,6 @@ class iosDeviceTrustService: DeviceTrustService {
             return Detector(label: LATEST_OS_DETECTED_POSITIVE, detected: true, description: LATEST_OS_DETECTED_DESC)
         }
     }
+
     // end::detectLatestOS[]
-
 }
-

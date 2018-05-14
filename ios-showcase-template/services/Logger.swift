@@ -25,43 +25,43 @@ class Logger {
         formatter.timeZone = TimeZone.current
         return formatter
     }
-    
+
     class func verbose(_ message: String) {
         Logger.log(message: message, level: .v)
     }
-    
+
     class func debug(_ message: String) {
         Logger.log(message: message, level: .d)
     }
-    
+
     class func info(_ message: String) {
         Logger.log(message: message, level: .i)
     }
-    
+
     class func warn(_ message: String) {
         Logger.log(message: message, level: .w)
     }
-    
+
     class func error(_ message: String) {
         Logger.log(message: message, level: .e)
     }
-    
+
     class func severe(_ message: String) {
         Logger.log(message: message, level: .s)
     }
-    
+
     class func log(message: String,
                    level: LogLevel,
                    fileName: String = #file,
                    line: Int = #line,
                    column: Int = #column,
                    funcName: String = #function) {
-        
+
         #if DEBUG
             print("\(Date().toString()) \(level.rawValue)[\(sourceFileName(filePath: fileName))]:\(line) \(column) \(funcName) -> \(message)")
         #endif
     }
-    
+
     private class func sourceFileName(filePath: String) -> String {
         let components = filePath.components(separatedBy: "/")
         return components.isEmpty ? "" : components.last!

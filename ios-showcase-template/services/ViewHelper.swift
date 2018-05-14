@@ -15,22 +15,20 @@ class ViewHelper {
         parent.view.addSubview(child.view)
         child.didMove(toParentViewController: child)
     }
-    
+
     class func removeViewController(viewController: UIViewController) {
         viewController.willMove(toParentViewController: nil)
         viewController.view.removeFromSuperview()
         viewController.removeFromParentViewController()
     }
-    
+
     class func showErrorBannerMessage(from: UIViewController, title: String, message: String) {
         let banner = NotificationBanner(title: title, subtitle: message, style: .danger)
         banner.show(bannerPosition: .bottom, on: from)
     }
-    
+
     class func showSuccessBannerMessage(from: UIViewController, title: String, message: String) {
         let banner = NotificationBanner(title: title, subtitle: message, style: .success)
         banner.show(bannerPosition: .bottom, on: from)
     }
 }
-
-

@@ -5,8 +5,8 @@
 //  Created by Wei Li on 14/12/2017.
 //
 
-import UIKit
 import AGSAuth
+import UIKit
 
 protocol AccessControlListener {
     func showAccess()
@@ -14,10 +14,10 @@ protocol AccessControlListener {
 
 class AccessControlViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var rolesTable: UITableView!
-    
+    @IBOutlet var rolesTable: UITableView!
+
     let allRealmRoles = [RealmRoles.apiAccess, RealmRoles.mobileUser, RealmRoles.superUser]
-    
+
     var userIdentity: User? {
         didSet {
             if rolesTable == nil {
@@ -28,17 +28,17 @@ class AccessControlViewController: UIViewController, UITableViewDataSource, UITa
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         rolesTable.separatorStyle = UITableViewCellSeparatorStyle.none
         rolesTable.dataSource = self
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+
         if let user = self.userIdentity {
             highlightUserRealmRoles(user: user)
         }
@@ -48,7 +48,7 @@ class AccessControlViewController: UIViewController, UITableViewDataSource, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // tag::highlightUserRealmRoles[]
     func highlightUserRealmRoles(user: User) {
         for realmRole in self.allRealmRoles {
@@ -59,8 +59,9 @@ class AccessControlViewController: UIViewController, UITableViewDataSource, UITa
             }
         }
     }
+
     // end::highlightUserRealmRoles[]
-    
+
     func setRoleAccessoryType(role: RealmRole, type: UITableViewCellAccessoryType) {
         let rowIndex = self.allRealmRoles.index(of: role)!
         let indexPath = IndexPath(row: rowIndex, section: 0)
@@ -79,11 +80,11 @@ class AccessControlViewController: UIViewController, UITableViewDataSource, UITa
         // Pass the selected object to the new view controller.
     }
     */
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allRealmRoles.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let lableText = self.allRealmRoles[indexPath.row].roleText
         let roleNameCell = tableView.dequeueReusableCell(withIdentifier: "realmRoleNameCell")!
@@ -91,11 +92,11 @@ class AccessControlViewController: UIViewController, UITableViewDataSource, UITa
         roleNameLabel.text = lableText
         return roleNameCell
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }

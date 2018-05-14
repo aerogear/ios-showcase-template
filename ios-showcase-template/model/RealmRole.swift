@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct RealmRole : Equatable{
-    
+struct RealmRole: Equatable {
+
     var roleName: String
     var roleText: String
-    
-    static func ==(lhs: RealmRole, rhs: RealmRole) -> Bool {
+
+    static func == (lhs: RealmRole, rhs: RealmRole) -> Bool {
         return lhs.roleName == rhs.roleName
     }
 }

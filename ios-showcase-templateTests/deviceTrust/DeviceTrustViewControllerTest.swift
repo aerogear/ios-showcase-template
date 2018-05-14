@@ -5,8 +5,8 @@
 //  Created by Wei Li on 04/01/2018.
 //
 
-import XCTest
 @testable import ios_showcase_template
+import XCTest
 
 class FakeDeviceTrustListener: DeviceTrustListener {
     func performTrustChecks() -> [Detector] {
@@ -16,9 +16,9 @@ class FakeDeviceTrustListener: DeviceTrustListener {
 }
 
 class DeviceTrustViewControllerTest: XCTestCase {
-    
+
     var deviceTrustVCToTest: DeviceTrustViewController!
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,13 +28,13 @@ class DeviceTrustViewControllerTest: XCTestCase {
         UIApplication.shared.keyWindow!.rootViewController = deviceTrustVCToTest
         _ = deviceTrustVCToTest.view
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         deviceTrustVCToTest = nil
         super.tearDown()
     }
-    
+
     func testRender() {
         XCTAssertEqual(deviceTrustVCToTest.deviceTrustScore.text, "Device Trust Score: 0.0%")
         let indexPath = IndexPath(row: 0, section: 0)
