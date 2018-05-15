@@ -2,7 +2,7 @@ disabled_rules: # rule identifiers to exclude from running
 included: # paths to include during linting. `--path` is ignored if present.
   - ios-showcase-template
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - /example/Pods
+  - /Pods
 
 ## TODO remove this and resolve issues
 disabled_rules:
