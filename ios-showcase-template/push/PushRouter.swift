@@ -8,12 +8,12 @@
 import Foundation
 
 protocol PushRouter {
-    var viewController: PushViewController {get}
+    var viewController: PushViewController { get }
 }
 
 class PushRouterImpl: PushRouter {
     let viewController: PushViewController
-    
+
     init(viewController: PushViewController) {
         self.viewController = viewController
     }

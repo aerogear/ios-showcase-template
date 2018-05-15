@@ -5,11 +5,11 @@
 //  Created by Wei Li on 03/11/2017.
 //
 
-import UIKit
-import CoreData
-import TrustKit
 import AGSAuth
 import AGSPush
+import CoreData
+import TrustKit
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,42 +21,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+
         // tag::trustkitConfig[]
         // Define TrustKit configuration
         let trustKitConfig = [
             kTSKSwizzleNetworkDelegates: true,
             kTSKPinnedDomains: [
                 "security.feedhenry.org": [
-                    kTSKIncludeSubdomains : true,
-                    kTSKEnforcePinning : true,
+                    kTSKIncludeSubdomains: true,
+                    kTSKEnforcePinning: true,
                     kTSKPublicKeyAlgorithms: [kTSKAlgorithmRsa2048],
                     kTSKPublicKeyHashes: [
                         "trENjoQnbWupnAtu1/WagBE0RgJ+p7ke2ppWML8vAl0=",
                         "arENjoQnbWupnAtu1/WagBE0RgJ+p7ke2ppWML8vAl0="
-                    ],]]] as [String : Any]
-        
+                    ]
+                ]
+            ]
+        ] as [String: Any]
+
         // Init TrustKit with the above config
         TrustKit.initSharedInstance(withConfiguration: trustKitConfig)
         // end::trustkitConfig[]
-        
+
         //Load the configuration file
         let configFilePath = Bundle.main.path(forResource: "AppConfig", ofType: "plist")!
         let configDict = NSDictionary(contentsOfFile: configFilePath)!
         let appConfiguration = AppConfiguration(configDict)
-        
+
         let appComponents = AppComponents(appConfiguration: appConfiguration)
-        
+
         let rootBuilder = RootBuilder(components: appComponents)
         let rootRouter = rootBuilder.build()
         rootRouter.launchFromWindow(window: window!)
-        
+
         pushHelper.setupPush()
-        
+
         return true
     }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         do {
             return try authService!.resumeAuth(url: url as URL)
         } catch AgsAuth.Errors.serviceNotConfigured {
@@ -66,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return false
     }
-    
+
     /**
      - Function to show a blurred image instead for the app preview when the app is sent to the background. This will prevent the iOS snapshot caching vulnerability.
      */
@@ -76,13 +79,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         imageView.image = UIImage(named: "snapshot_cache_protection")
         UIApplication.shared.keyWindow?.subviews.last?.addSubview(imageView)
     }
-    
+
     /**
      - Function to remove the blurred image on app resume.
      */
     func applicationWillEnterForeground(_ application: UIApplication) {
         let imageView = UIApplication.shared.keyWindow?.subviews.last?.viewWithTag(99) as!
-        UIImageView
+            UIImageView
         imageView.removeFromSuperview()
     }
 
@@ -100,17 +103,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-    
+
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         pushHelper.registerUPS(deviceToken)
     }
-    
+
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
         pushHelper.onRegistrationFailed(error)
     }
-    
+
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         pushHelper.onPushMessageReceived(userInfo, fetchCompletionHandler)
     }
@@ -125,11 +128,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "ios_showcase_template")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { storeDescription, error in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -146,7 +149,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -159,6 +162,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

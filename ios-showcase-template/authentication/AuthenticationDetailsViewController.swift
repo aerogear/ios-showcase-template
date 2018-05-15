@@ -5,14 +5,13 @@
 //  Created by Wei Li on 20/11/2017.
 //
 
-import UIKit
 import AGSAuth
-
+import UIKit
 
 class AuthenticationDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    @IBOutlet weak var userInfoView: UITableView!
-    
+
+    @IBOutlet var userInfoView: UITableView!
+
     var currentUser: User? {
         didSet {
             if let tableView = self.userInfoView {
@@ -20,10 +19,10 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             }
         }
     }
-    
+
     var navbarItem: UINavigationItem?
     var authListener: AuthListener?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,33 +34,33 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.showLogoutBtn()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.removeLogoutBtn()
     }
-    
+
     func displayUserDetails(from: UIViewController, user: User) {
         self.currentUser = user
         ViewHelper.showChildViewController(parentViewController: from, childViewController: self)
         ViewHelper.showSuccessBannerMessage(from: self, title: "Login Completed", message: "")
     }
-    
+
     func showError(title: String, error: Error) {
         ViewHelper.showErrorBannerMessage(from: self, title: title, message: error.localizedDescription)
     }
-    
+
     func removeView() {
         ViewHelper.removeViewController(viewController: self)
     }
-    
+
     func showLogoutBtn() {
-        guard  let rootViewController = self.parent?.parent else {
+        guard let rootViewController = self.parent?.parent else {
             return
         }
         if rootViewController.isKind(of: RootViewController.self) {
@@ -69,13 +68,13 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             self.navbarItem!.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
         }
     }
-    
+
     func removeLogoutBtn() {
         if self.navbarItem != nil {
-            self.navbarItem!.rightBarButtonItem = nil;
+            self.navbarItem!.rightBarButtonItem = nil
         }
     }
-    
+
     @IBAction func logoutTapped(_ sender: UIBarButtonItem) {
         let alertView = UIAlertController(title: "Logout", message: "Are you sure to logout?", preferredStyle: UIAlertControllerStyle.alert)
         alertView.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
@@ -88,7 +87,6 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
         }))
         self.present(alertView, animated: true, completion: nil)
     }
-    
 
     /*
     // MARK: - Navigation
@@ -99,7 +97,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
         // Pass the selected object to the new view controller.
     }
     */
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -110,14 +108,14 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             return 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionNum = indexPath.section
-        if (sectionNum == 0) {
+        if sectionNum == 0 {
             let userInfoCell = tableView.dequeueReusableCell(withIdentifier: "userInfoCell")!
             let fieldNameLabel = userInfoCell.contentView.viewWithTag(1) as! UILabel
             let fieldValueLabel = userInfoCell.contentView.viewWithTag(2) as! UILabel
-            if (indexPath.row == 0) {
+            if indexPath.row == 0 {
                 fieldNameLabel.text = "Name"
                 fieldValueLabel.text = self.currentUser!.fullName
             } else {
@@ -132,7 +130,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             return roleNameCell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -143,8 +141,8 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             return ""
         }
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2;
+        return 2
     }
 }

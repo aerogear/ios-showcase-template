@@ -15,12 +15,12 @@ protocol AuthListener {
 
 /* The view controller for the authentication view. It should pass the user events to the listener (interactor) */
 class AuthenticationViewController: UIViewController {
-    
-    @IBOutlet weak var authenticationButton: UIButton!
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var certPinningError: UILabel!
-    @IBOutlet weak var dangerLogo: UIImageView!
+
+    @IBOutlet var authenticationButton: UIButton!
+    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var certPinningError: UILabel!
+    @IBOutlet var dangerLogo: UIImageView!
 
     var authListener: AuthListener?
 
@@ -33,14 +33,14 @@ class AuthenticationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // tag::onAuthButtonTapped[]
     @IBAction func onAuthButtonTapped(_ sender: UIButton) {
         // perform cert pinning on the auth server when the auth button is pressed
         if let listener = self.authListener {
-            listener.performPreCertCheck() {
+            listener.performPreCertCheck {
                 validCert in
-                if(validCert) {
+                if validCert {
                     // cert is valid, continue with login
                     listener.startAuth(presentingViewController: self)
                 } else {
@@ -54,12 +54,13 @@ class AuthenticationViewController: UIViewController {
             }
         }
     }
+
     // end::onAuthButtonTapped[]
-    
+
     func showError(title: String, error: Error) {
         ViewHelper.showErrorBannerMessage(from: self, title: title, message: error.localizedDescription)
     }
-    
+
     /*
     // MARK: - Navigation
 
@@ -69,5 +70,4 @@ class AuthenticationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -5,10 +5,10 @@
 //  Created by Wei Li on 03/01/2018.
 //
 
-import XCTest
-import SwiftKeychainWrapper
-import RealmSwift
 @testable import ios_showcase_template
+import RealmSwift
+import SwiftKeychainWrapper
+import XCTest
 
 class InMemoryRealmStorageService: RealmStorageService {
     override func getRealmInstance() throws -> Realm {
@@ -20,13 +20,13 @@ class InMemoryRealmStorageService: RealmStorageService {
 }
 
 class StorageServiceTest: XCTestCase {
-    
+
     let TEST_KEY_CHAIN_NAME = "StorageServiceTest-keychain"
-    
+
     var storageServiceToTest: StorageService!
     var kcwrapper: KeychainWrapper!
     var encryptionKey: Data!
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -36,7 +36,7 @@ class StorageServiceTest: XCTestCase {
         Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
         doDeleteAll()
     }
-    
+
     override func tearDown() {
         doDeleteAll()
         kcwrapper = nil
@@ -44,17 +44,17 @@ class StorageServiceTest: XCTestCase {
         storageServiceToTest = nil
         super.tearDown()
     }
-    
+
     func notesArrayToList(notes: [Note]) -> List<Note> {
         let notesList = List<Note>()
         notesList.append(objectsIn: notes)
         return notesList
     }
-    
+
     func doList() -> [Note] {
         var notes: [Note] = [Note()]
         let listPromise = expectation(description: "list notes")
-        storageServiceToTest.list() { error, localNotes in
+        storageServiceToTest.list { error, localNotes in
             if let err = error {
                 XCTFail("unexpcted error when list notes: \(err.localizedDescription)")
                 return
@@ -66,7 +66,7 @@ class StorageServiceTest: XCTestCase {
         wait(for: [listPromise], timeout: 1)
         return notes
     }
-    
+
     func doCreate(title: String, content: String) -> Note {
         var note: Note = Note()
         let createPromise = expectation(description: "create notes")
@@ -82,7 +82,7 @@ class StorageServiceTest: XCTestCase {
         wait(for: [createPromise], timeout: 1)
         return note
     }
-    
+
     func doRead(id: Int) -> Note? {
         var note: Note? = Note()
         let readPromise = expectation(description: "read note")
@@ -98,7 +98,7 @@ class StorageServiceTest: XCTestCase {
         wait(for: [readPromise], timeout: 1)
         return note
     }
-    
+
     func doEdit(id: Int, title: String, content: String) -> Note {
         var note: Note = Note()
         let editPromise = expectation(description: "edit note")
@@ -114,11 +114,11 @@ class StorageServiceTest: XCTestCase {
         wait(for: [editPromise], timeout: 1)
         return note
     }
-    
+
     func doDelete(id: Int) -> Note {
         var note: Note = Note()
         let deletePromise = expectation(description: "delete note")
-        storageServiceToTest.delete(identifier: id){ error, noteDeleted in
+        storageServiceToTest.delete(identifier: id) { error, noteDeleted in
             if let err = error {
                 XCTFail("unexpected error when delete node: \(err.localizedDescription)")
                 return
@@ -130,10 +130,10 @@ class StorageServiceTest: XCTestCase {
         wait(for: [deletePromise], timeout: 1)
         return note
     }
-    
+
     func doDeleteAll() {
         let deleteAllPromise = expectation(description: "delete all notes")
-        storageServiceToTest.deleteAll() { error, sucess in
+        storageServiceToTest.deleteAll { error, sucess in
             if let err = error {
                 XCTFail("unexpcted error when delete all notes: \(err.localizedDescription)")
                 return
@@ -143,11 +143,11 @@ class StorageServiceTest: XCTestCase {
         }
         wait(for: [deleteAllPromise], timeout: 1)
     }
-    
+
     func testAll() {
         var currentNotes = doList()
         XCTAssertEqual(currentNotes.count, 0)
-        
+
         let testNoteTitle = "testNote"
         let testNoteContent = "testNoteContent"
         let createdNote = doCreate(title: testNoteTitle, content: testNoteContent)
@@ -155,24 +155,23 @@ class StorageServiceTest: XCTestCase {
         XCTAssertNotNil(createdNote.createdAt)
         XCTAssertEqual(createdNote.title, testNoteTitle)
         XCTAssertEqual(createdNote.content, testNoteContent)
-        
+
         currentNotes = doList()
         XCTAssertEqual(currentNotes.count, 1)
-        
+
         var noteRead = doRead(id: createdNote.id)!
         XCTAssertEqual(noteRead.id, createdNote.id)
-        
+
         let updateNoteTitle = "testNoteUpdated"
         let updateNoteContent = "testNoteContentUpdated"
         doEdit(id: noteRead.id, title: updateNoteTitle, content: updateNoteContent)
         noteRead = doRead(id: createdNote.id)!
         XCTAssertEqual(noteRead.title, updateNoteTitle)
         XCTAssertEqual(noteRead.content, updateNoteContent)
-        
+
         let removedId = noteRead.id
         doDelete(id: removedId)
         let removedNote = doRead(id: removedId)
         XCTAssertNil(removedNote)
     }
-    
 }

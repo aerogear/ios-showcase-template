@@ -5,8 +5,8 @@
 //  Created by Wei Li on 09/11/2017.
 //
 
-import AGSCore
 import AGSAuth
+import AGSCore
 import Foundation
 import SwiftKeychainWrapper
 
@@ -21,7 +21,7 @@ class AppComponents {
     let REALM_STORAGE_KEYCHAIN_ALIAS = "realm-db-keychain"
     var deviceTrustService: DeviceTrustService?
     var certPinningService: CertPinningService?
-    
+
     init(appConfiguration: AppConfiguration) {
         self.appConfiguration = appConfiguration
         self.kcWrapper = KeychainWrapper.standard
@@ -42,6 +42,7 @@ class AppComponents {
         }
         return self.authService!
     }
+
     // end::initAuthService[]
 
     // Setup the Storage Service
@@ -54,7 +55,7 @@ class AppComponents {
         }
         return self.storageService!
     }
-    
+
     // Setup the Cert Pinning Service
     func resolveCertPinningService() -> CertPinningService {
         if self.certPinningService == nil {

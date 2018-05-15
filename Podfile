@@ -4,6 +4,7 @@
 target 'ios-showcase-template' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  platform :ios, '10.0'
 
   if ENV['LOCAL']
     pod 'AGSCore', :path => '../'
@@ -17,7 +18,6 @@ target 'ios-showcase-template' do
   end
 
   pod 'SwiftKeychainWrapper'
-  pod 'Alamofire', '~> 4.5'
   pod 'NotificationBannerSwift'
   pod 'RealmSwift'
   pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git', :branch => 'master'

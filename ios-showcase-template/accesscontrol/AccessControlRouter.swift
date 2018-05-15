@@ -8,12 +8,12 @@
 import Foundation
 
 protocol AccessControlRouter {
-    var viewController: AccessControlViewController {get}
+    var viewController: AccessControlViewController { get }
 }
 
 class AccessControlRouterImpl: AccessControlRouter {
     let viewController: AccessControlViewController
-    
+
     init(viewController: AccessControlViewController) {
         self.viewController = viewController
     }

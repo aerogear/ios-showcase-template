@@ -5,20 +5,19 @@
 //  Created by Wei Li on 04/01/2018.
 //
 
-import XCTest
-@testable import ios_showcase_template
 @testable import AGSAuth
-
+@testable import ios_showcase_template
+import XCTest
 
 class AuthenticationDetailsViewControllerTest: XCTestCase {
     var authDetailsViewController: AuthenticationDetailsViewController!
     var authListener = TestAuthListener()
-    
+
     var realmRole: UserRole!
     var clientRole: UserRole!
     var roles: Set<UserRole>!
     var testUser: User!
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,7 +25,7 @@ class AuthenticationDetailsViewControllerTest: XCTestCase {
         clientRole = UserRole(nameSpace: "client", roleName: "clientRole")
         roles = [realmRole, clientRole]
         testUser = User(userName: "testUser", email: "testUser@example.com", firstName: "test", lastName: "user", accessToken: "", identityToken: "", roles: roles)
-        
+
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         authDetailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticationDetailsViewController") as! AuthenticationDetailsViewController
         authDetailsViewController.authListener = authListener
@@ -34,7 +33,7 @@ class AuthenticationDetailsViewControllerTest: XCTestCase {
         UIApplication.shared.keyWindow!.rootViewController = authDetailsViewController
         _ = authDetailsViewController.view
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         authDetailsViewController = nil
@@ -48,7 +47,7 @@ class AuthenticationDetailsViewControllerTest: XCTestCase {
         XCTAssertNotNil(fieldValueLabel)
         XCTAssertEqual(fieldValueLabel.text, name)
     }
-    
+
     func checkFirstRole(role: String) {
         let indexPath = IndexPath(row: 0, section: 1)
         let userRoleCell = authDetailsViewController.userInfoView.cellForRow(at: indexPath)!
@@ -56,7 +55,7 @@ class AuthenticationDetailsViewControllerTest: XCTestCase {
         XCTAssertNotNil(userRoleCell)
         XCTAssertEqual(roleValueLabel.text, role)
     }
-    
+
     func testRender() {
         checkUserName(name: "\(testUser.firstName!) \(testUser.lastName!)")
         checkFirstRole(role: testUser.roles.first!.roleName)
@@ -65,5 +64,4 @@ class AuthenticationDetailsViewControllerTest: XCTestCase {
         checkUserName(name: "\(anotherUser.firstName!) \(anotherUser.lastName!)")
         checkFirstRole(role: anotherUser.roles.first!.roleName)
     }
-    
 }

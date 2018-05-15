@@ -5,13 +5,13 @@
 //  Created by Wei Li on 08/11/2017.
 //
 
-import Foundation
 import AGSAuth
+import Foundation
 
 /* Manage the routing insdie the authentication view */
 protocol AuthenticationRouter {
-    var viewController: AuthenticationViewController {get}
-    var detailsViewController: AuthenticationDetailsViewController {get}
+    var viewController: AuthenticationViewController { get }
+    var detailsViewController: AuthenticationDetailsViewController { get }
     func navigateToUserDetailsView(withIdentify identify: User?, andError error: Error?)
     func leaveUserDetailsView(withError error: Error?)
     func initialViewController(user: User?) -> UIViewController
@@ -20,12 +20,12 @@ protocol AuthenticationRouter {
 class AuthenticationRouterImpl: AuthenticationRouter {
     let viewController: AuthenticationViewController
     let detailsViewController: AuthenticationDetailsViewController
-    
+
     init(viewController: AuthenticationViewController, detailsViewController: AuthenticationDetailsViewController) {
         self.viewController = viewController
         self.detailsViewController = detailsViewController
     }
-    
+
     func navigateToUserDetailsView(withIdentify user: User?, andError error: Error?) {
         if let identityInfo = user {
             Logger.info("got user identity: \(identityInfo)")
@@ -35,7 +35,7 @@ class AuthenticationRouterImpl: AuthenticationRouter {
             self.viewController.showError(title: "Login Failed", error: err)
         }
     }
-    
+
     func leaveUserDetailsView(withError error: Error?) {
         if let err = error {
             Logger.error("logout failed due to error : \(err.localizedDescription)")
@@ -45,7 +45,7 @@ class AuthenticationRouterImpl: AuthenticationRouter {
             self.detailsViewController.removeView()
         }
     }
-    
+
     func initialViewController(user: User?) -> UIViewController {
         if let userIdentity = user {
             // if the user is already logged in, add the details atop of the authentication view
