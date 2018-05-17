@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import SCLAlertView
+import AGSSec
 
 protocol DeviceTrustListener {
-    func performTrustChecks() -> [Detector]
+    func performTrustChecks() -> [SecurityCheckResult]
 }
 
 /* The class for the table view cells. */
@@ -21,7 +21,7 @@ class DeviceTrustTableViewCell: UITableViewCell {
 class DeviceTrustViewController: UITableViewController {
 
     var deviceTrustListener: DeviceTrustListener?
-    var deviceChecks = [Detector]()
+    var deviceChecks = [SecurityCheckResult]()
     @IBOutlet var deviceTrustScore: UILabel!
     let RED_COLOR = UIColor(red: CGFloat(150.0 / 255.0), green: CGFloat(44.0 / 255.0), blue: CGFloat(44.0 / 255.0), alpha: CGFloat(1.0))
     let GREEN_COLOR = UIColor(red: CGFloat(57.0 / 255.0), green: CGFloat(180.0 / 255.0), blue: CGFloat(171.0 / 255.0), alpha: CGFloat(1.0))
@@ -54,7 +54,7 @@ class DeviceTrustViewController: UITableViewController {
      - Set the trust score header value in the UI.
      */
     func setTrustScore() {
-        let totalTestFailures = self.deviceChecks.filter { $0.detected }.count
+        let totalTestFailures = self.deviceChecks.filter{ !$0.passed }.count
         let deviceTrustScore = 100 - ((Double(totalTestFailures) / Double(self.deviceChecks.count)) * 100)
         self.deviceTrustScore?.text = "Device Trust Score: \(deviceTrustScore)%"
 
@@ -84,19 +84,6 @@ class DeviceTrustViewController: UITableViewController {
     }
 
     /**
-     - Handler for selections on the table cells
-     */
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detection = self.deviceChecks[indexPath.row]
-
-        if detection.detected {
-            SCLAlertView().showError(detection.label, subTitle: detection.description)
-        } else {
-            SCLAlertView().showSuccess(detection.label, subTitle: detection.description)
-        }
-    }
-
-    /**
      - Setup of the table view to reference the table in the storyboard
 
      - Returns: An individual cell in the table list
@@ -108,18 +95,16 @@ class DeviceTrustViewController: UITableViewController {
         // Fetches the appropriate note for the data source layout.
         let detection = self.deviceChecks[indexPath.row]
 
-        // set the properties for the cell
-        cell.textLabel?.text = detection.label
-
         // set the text colouring
-        if detection.detected {
+        if(detection.passed) {
+            cell.textLabel?.text = detection.name + " not detected"
+            cell.textLabel?.textColor = GREEN_COLOR
+            cell.imageView?.image = UIImage(named: "ic_detected_false")
 
+        } else {
+            cell.textLabel?.text = detection.name + " detected"
             cell.textLabel?.textColor = RED_COLOR
             cell.imageView?.image = UIImage(named: "ic_detected_true")
-        } else {
-            let greenColorShade = GREEN_COLOR
-            cell.textLabel?.textColor = greenColorShade
-            cell.imageView?.image = UIImage(named: "ic_detected_false")
         }
 
         return cell
