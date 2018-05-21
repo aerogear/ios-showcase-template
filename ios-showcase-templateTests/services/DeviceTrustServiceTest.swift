@@ -9,7 +9,6 @@
 import XCTest
 
 class DeviceTrustServiceTest: XCTestCase {
-
     var trustServiceToTest: DeviceTrustService!
 
     override func setUp() {

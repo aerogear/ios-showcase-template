@@ -8,7 +8,6 @@
 import Foundation
 
 struct RealmRole: Equatable {
-
     var roleName: String
     var roleText: String
 

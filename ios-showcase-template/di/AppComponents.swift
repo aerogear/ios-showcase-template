@@ -11,7 +11,6 @@ import Foundation
 import SwiftKeychainWrapper
 
 class AppComponents {
-
     let appConfiguration: AppConfiguration
     let kcWrapper: KeychainWrapper
 

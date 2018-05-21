@@ -13,7 +13,6 @@ import UIKit
  This class should be used to build the authentication module, and the caller should be able to pass the required dependencies to it.
  */
 class AuthenticationBuilder {
-
     let appComponents: AppComponents
 
     init(appComponents: AppComponents) {

@@ -12,7 +12,6 @@ import UIKit
  Builder class for the storage module.
  */
 class StorageBuilder {
-
     let appComponents: AppComponents
 
     init(appComponents: AppComponents) {

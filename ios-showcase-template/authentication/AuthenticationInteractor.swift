@@ -16,7 +16,6 @@ protocol AuthenticationInteractor: AuthListener {
 }
 
 class AuthenticationInteractorImpl: AuthenticationInteractor {
-
     let authService: AgsAuth
     let certPinningService: CertPinningService
     var router: AuthenticationRouter?

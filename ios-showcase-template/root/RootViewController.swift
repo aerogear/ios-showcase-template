@@ -11,7 +11,6 @@ import UIKit
  The main root view controller. It is responsible for listening to the user interaction events, and passing the events on to the listener (interactor).
  */
 class RootViewController: BaseViewController, DrawerMenuDelegate {
-
     static let MENU_HOME_TITLE = "Home"
     static let MENU_AUTHENTICATION_TITLE = "Authentication"
     static let MENU_ACCESS_CONTROL_TITLE = "Access Control"

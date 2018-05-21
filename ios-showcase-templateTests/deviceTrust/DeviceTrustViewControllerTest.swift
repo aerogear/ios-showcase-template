@@ -16,7 +16,6 @@ class FakeDeviceTrustListener: DeviceTrustListener {
 }
 
 class DeviceTrustViewControllerTest: XCTestCase {
-
     var deviceTrustVCToTest: DeviceTrustViewController!
 
     override func setUp() {

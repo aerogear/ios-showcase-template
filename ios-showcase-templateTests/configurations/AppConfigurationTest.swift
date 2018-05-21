@@ -9,7 +9,6 @@
 import XCTest
 
 class AppConfigurationTest: XCTestCase {
-
     var appConfigurationToTest: AppConfiguration!
     let configDict: NSDictionary = ["api-server": ["server-url": "http://server.example.com"]]
 

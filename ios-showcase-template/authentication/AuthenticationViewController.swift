@@ -15,7 +15,6 @@ protocol AuthListener {
 
 /* The view controller for the authentication view. It should pass the user events to the listener (interactor) */
 class AuthenticationViewController: UIViewController {
-
     @IBOutlet var authenticationButton: UIButton!
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var backgroundImage: UIImageView!

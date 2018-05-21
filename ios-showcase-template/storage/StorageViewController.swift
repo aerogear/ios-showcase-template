@@ -27,7 +27,6 @@ class NoteTableViewCell: UITableViewCell {
 
 /* The view controller for the storage view. */
 class StorageViewController: UITableViewController {
-
     @IBOutlet var addButton: UIBarButtonItem!
     var storageListener: StorageListener?
     var notes = [Note]()
@@ -77,7 +76,6 @@ class StorageViewController: UITableViewController {
      - Display a modal to create a note
      */
     func showCreateModal() {
-
         // create the view
         let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: false
@@ -115,7 +113,6 @@ class StorageViewController: UITableViewController {
         self.readNote(identifier: identifier) {
             error, note in
             if note != nil {
-
                 // create the view
                 let appearance = SCLAlertView.SCLAppearance(
                     showCloseButton: false
@@ -158,7 +155,6 @@ class StorageViewController: UITableViewController {
         self.readNote(identifier: identifier) {
             error, note in
             if note != nil {
-
                 // create the view
                 let appearance = SCLAlertView.SCLAppearance(
                     showCloseButton: false
@@ -183,7 +179,6 @@ class StorageViewController: UITableViewController {
      - Display a modal to delete all notes
     */
     func showDeleteAllModal() {
-
         // create the view
         let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: false
@@ -281,7 +276,6 @@ class StorageViewController: UITableViewController {
      - Parameter identifier: the identifier of the note to delete
      */
     func deleteNote(title: String, identifier: Int) {
-
         self.storageListener?.delete(identifier: identifier) {
             error, note in
             DispatchQueue.main.async() {

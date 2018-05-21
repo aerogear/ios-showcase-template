@@ -27,7 +27,6 @@ protocol RootRouter {
 }
 
 class RootRouterImpl: RootRouter {
-
     let navViewController: UINavigationController
     let rootViewController: RootViewController
     let appComponents: AppComponents

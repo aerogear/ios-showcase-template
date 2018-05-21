@@ -9,7 +9,6 @@
 import XCTest
 
 class TestAuthListener: AuthListener {
-
     var startAuthCalled: Bool = false
     var logoutCalled: Bool = false
     var pinningFailure: Bool = false
@@ -28,7 +27,6 @@ class TestAuthListener: AuthListener {
 }
 
 class AuthenticationViewControllerTest: XCTestCase {
-
     var authViewController: AuthenticationViewController!
     var authListener: TestAuthListener = TestAuthListener()
 

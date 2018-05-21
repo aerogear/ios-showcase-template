@@ -5,8 +5,8 @@
 //  Created by Tom Jackman on 30/11/2017.
 //
 
-import Foundation
 import AGSSec
+import Foundation
 
 protocol DeviceTrustListener {
     func performTrustChecks() -> [SecurityCheckResult]
@@ -19,7 +19,6 @@ class DeviceTrustTableViewCell: UITableViewCell {
 
 /* The view controller for the device trust view. */
 class DeviceTrustViewController: UITableViewController {
-
     var deviceTrustListener: DeviceTrustListener?
     var deviceChecks = [SecurityCheckResult]()
     @IBOutlet var deviceTrustScore: UILabel!
@@ -54,7 +53,7 @@ class DeviceTrustViewController: UITableViewController {
      - Set the trust score header value in the UI.
      */
     func setTrustScore() {
-        let totalTestFailures = self.deviceChecks.filter{ !$0.passed }.count
+        let totalTestFailures = self.deviceChecks.filter { !$0.passed }.count
         let deviceTrustScore = 100 - ((Double(totalTestFailures) / Double(self.deviceChecks.count)) * 100)
         self.deviceTrustScore?.text = "Device Trust Score: \(deviceTrustScore)%"
 
@@ -96,13 +95,12 @@ class DeviceTrustViewController: UITableViewController {
         let detection = self.deviceChecks[indexPath.row]
 
         // set the text colouring
-        if(detection.passed) {
-            cell.textLabel?.text = detection.name + " not detected"
+        if detection.passed {
+            cell.textLabel?.text = detection.result
             cell.textLabel?.textColor = GREEN_COLOR
             cell.imageView?.image = UIImage(named: "ic_detected_false")
-
         } else {
-            cell.textLabel?.text = detection.name + " detected"
+            cell.textLabel?.text = detection.result
             cell.textLabel?.textColor = RED_COLOR
             cell.imageView?.image = UIImage(named: "ic_detected_true")
         }

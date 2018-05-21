@@ -1,22 +1,22 @@
+import AGSSec
 import DTTJailbreakDetection
 import Foundation
 import LocalAuthentication
-import AGSSec
 
 protocol DeviceTrustService {
     func performTrustChecks() -> [SecurityCheckResult]
 }
 
 class iosDeviceTrustService: DeviceTrustService {
-    var security: AgsSec;
+    var security: AgsSecurity
     var detections: [SecurityCheckResult]
-    
+
     /**
      - Initilise the iOS Device Trust Service
     */
     init() {
         self.detections = []
-        self.security = AgsSec();
+        self.security = AgsSecurity()
     }
 
     /**
@@ -42,7 +42,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A detector object.
      */
     fileprivate func detectDeviceLock() -> SecurityCheckResult {
-        return self.security.check(IsDeviceLockCheck());
+        return self.security.check(IsDeviceLockCheck())
     }
 
     // end::detectDeviceLock[]
@@ -55,7 +55,7 @@ class iosDeviceTrustService: DeviceTrustService {
      */
 
     fileprivate func detectJailbreak() -> SecurityCheckResult {
-        return self.security.check(IsJailbrokenCheck());
+        return self.security.check(IsJailbrokenCheck())
     }
 
     // end::detectJailbreak[]
@@ -67,7 +67,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A detector object.
      */
     fileprivate func detectDebugabble() -> SecurityCheckResult {
-        return self.security.check(IsDebuggerCheck());
+        return self.security.check(IsDebuggerCheck())
     }
 
     // end::detectDebugabble[]
@@ -79,7 +79,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A detector object.
      */
     fileprivate func detectEmulator() -> SecurityCheckResult {
-        return self.security.check(IsEmulatorCheck());
+        return self.security.check(IsEmulatorCheck())
     }
 
     // end::detectEmulator[]

@@ -15,7 +15,6 @@ protocol StorageInteractor: StorageListener {
 }
 
 class StorageInteractorImpl: StorageInteractor {
-
     let storageService: StorageService
     var router: StorageRouter?
 

@@ -9,7 +9,6 @@ import AGSAuth
 import Foundation
 
 class AccessControlBuilder {
-
     let appComponents: AppComponents
 
     init(appComponents: AppComponents) {

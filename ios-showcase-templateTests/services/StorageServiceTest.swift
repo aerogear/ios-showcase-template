@@ -20,7 +20,6 @@ class InMemoryRealmStorageService: RealmStorageService {
 }
 
 class StorageServiceTest: XCTestCase {
-
     let TEST_KEY_CHAIN_NAME = "StorageServiceTest-keychain"
 
     var storageServiceToTest: StorageService!

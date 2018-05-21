@@ -13,7 +13,6 @@ struct MenuItem {
 }
 
 class BaseViewController: UIViewController {
-
     var menuDelegate: DrawerMenuDelegate?
 
     var arrayMenuOptions = [MenuItem]()

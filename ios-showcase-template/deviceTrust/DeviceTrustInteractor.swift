@@ -5,8 +5,8 @@
 //  Created by Tom Jackman on 30/11/2017.
 //
 
-import Foundation
 import AGSSec
+import Foundation
 
 /* Implement the business logic for the device trust view here. */
 protocol DeviceTrustInteractor: DeviceTrustListener {
@@ -15,7 +15,6 @@ protocol DeviceTrustInteractor: DeviceTrustListener {
 }
 
 class DeviceTrustInteractorImpl: DeviceTrustInteractor {
-  
     var deviceTrustService: DeviceTrustService
     var router: DeviceTrustRouter?
 

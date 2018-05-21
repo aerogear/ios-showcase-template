@@ -13,7 +13,6 @@ protocol AccessControlListener {
 }
 
 class AccessControlViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
     @IBOutlet var rolesTable: UITableView!
 
     let allRealmRoles = [RealmRoles.apiAccess, RealmRoles.mobileUser, RealmRoles.superUser]

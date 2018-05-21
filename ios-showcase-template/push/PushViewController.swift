@@ -3,7 +3,6 @@ import AGSPush
 import UIKit
 
 class PushViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     @IBOutlet var tableView: UITableView!
 
     let notificationCellIdentifier = "PushNotificationCell"
@@ -61,7 +60,6 @@ class PushViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let cell = tableView.dequeueReusableCell(withIdentifier: notificationCellIdentifier)!
         cell.textLabel?.text = messages[(indexPath as IndexPath).row]
 

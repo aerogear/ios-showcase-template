@@ -9,7 +9,6 @@ import UIKit
 
 /* The view controller for the home view */
 class HomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
