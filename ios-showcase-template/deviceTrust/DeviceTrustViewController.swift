@@ -5,7 +5,7 @@
 //  Created by Tom Jackman on 30/11/2017.
 //
 
-import AGSSec
+import AGSSecurity
 import Foundation
 
 protocol DeviceTrustListener {

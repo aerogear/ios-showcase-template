@@ -1,4 +1,4 @@
-import AGSSec
+import AGSSecurity
 import DTTJailbreakDetection
 import Foundation
 import LocalAuthentication
