@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/aerogear/showcase
     macos:
       xcode: "9.3.0"
     shell: /bin/bash --login -eo pipefail
@@ -9,21 +10,21 @@ jobs:
       - run:
           name: Install lint
           command: brew install swiftlint
-
       - run:
           name: Check style using swiftlint
           command: swiftlint
-
+      - run:
+          name: Fetch dev dependencies
+          command: git clone git@github.com:aerogear/aerogear-ios-sdk.git sdk
       - run:
           name: Set Ruby Version
           command:  echo "ruby-2.4" > ~/.ruby-version
-
       # Install CocoaPods
       - run:
           name: Install CocoaPods
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-            pod install
+            LOCAL_DIR=./sdk pod install
 
       # Build the app and run tests
       - run:

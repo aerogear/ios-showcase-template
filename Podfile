@@ -6,11 +6,11 @@ target 'ios-showcase-template' do
   use_frameworks!
   platform :ios, '10.0'
 
-  if ENV['LOCAL']
-    pod 'AGSCore', :path => '../'
-    pod 'AGSAuth', :path => '../'
-    pod 'AGSPush', :path => '../'
-    pod 'AGSSec', :path => '../'
+  if ENV['LOCAL_DIR']
+    pod 'AGSCore', :path => ENV['LOCAL_DIR']
+    pod 'AGSAuth', :path => ENV['LOCAL_DIR']
+    pod 'AGSPush', :path => ENV['LOCAL_DIR']
+    pod 'AGSSec', :path => ENV['LOCAL_DIR']
   else
     pod 'AGSAuth'
     pod 'AGSPush'
