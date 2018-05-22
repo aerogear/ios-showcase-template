@@ -25,7 +25,7 @@ class DeviceTrustInteractorImpl: DeviceTrustInteractor {
     /**
      - Perform the device trust checks in the device trust service.
 
-     - Returns Detector: A list of detection results
+     - Returns SecurityCheckResult: A list of security check results
      */
     func performTrustChecks() -> [SecurityCheckResult] {
         return self.deviceTrustService.performTrustChecks()
