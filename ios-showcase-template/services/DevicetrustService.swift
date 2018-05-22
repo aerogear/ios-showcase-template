@@ -42,7 +42,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDeviceLock() -> SecurityCheckResult {
-        return self.security.check(IsDeviceLockCheck())
+        return self.security.check(DeviceLockCheck())
     }
 
     // end::detectDeviceLock[]
@@ -55,7 +55,7 @@ class iosDeviceTrustService: DeviceTrustService {
      */
 
     fileprivate func detectJailbreak() -> SecurityCheckResult {
-        return self.security.check(IsJailbrokenCheck())
+        return self.security.check(NonJailbrokenCheck())
     }
 
     // end::detectJailbreak[]
@@ -67,7 +67,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDebugabble() -> SecurityCheckResult {
-        return self.security.check(IsDebuggerCheck())
+        return self.security.check(NonDebugCheck())
     }
 
     // end::detectDebugabble[]
@@ -79,7 +79,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectEmulator() -> SecurityCheckResult {
-        return self.security.check(IsEmulatorCheck())
+        return self.security.check(NonEmulatorCheck())
     }
 
     // end::detectEmulator[]
