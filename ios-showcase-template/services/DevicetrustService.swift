@@ -22,7 +22,7 @@ class iosDeviceTrustService: DeviceTrustService {
     /**
      - Perform the Device Trust Checks
 
-     - Returns: A list of Detector objects
+     - Returns: A list of SecurityCheckResult objects
      */
     func performTrustChecks() -> [SecurityCheckResult] {
         if #available(iOS 9.0, *) {
@@ -39,7 +39,7 @@ class iosDeviceTrustService: DeviceTrustService {
     /**
      - Check if a lock screen is set on the device. (iOS 9 or higher).
 
-     - Returns: A detector object.
+     - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDeviceLock() -> SecurityCheckResult {
         return self.security.check(IsDeviceLockCheck())
@@ -51,7 +51,7 @@ class iosDeviceTrustService: DeviceTrustService {
     /**
      - Check if the device running the application is jailbroken.
 
-     - Returns: A detector object.
+     - Returns: A SecurityCheckResult object.
      */
 
     fileprivate func detectJailbreak() -> SecurityCheckResult {
@@ -64,7 +64,7 @@ class iosDeviceTrustService: DeviceTrustService {
     /**
      - Check if the device running the application is jailbroken.
 
-     - Returns: A detector object.
+     - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDebugabble() -> SecurityCheckResult {
         return self.security.check(IsDebuggerCheck())
@@ -76,7 +76,7 @@ class iosDeviceTrustService: DeviceTrustService {
     /**
      - Check if the application is running in an emulator.
 
-     - Returns: A detector object.
+     - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectEmulator() -> SecurityCheckResult {
         return self.security.check(IsEmulatorCheck())

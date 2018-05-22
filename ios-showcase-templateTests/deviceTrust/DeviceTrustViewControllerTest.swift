@@ -7,11 +7,12 @@
 
 @testable import ios_showcase_template
 import XCTest
+import AGSSecurity
 
 class FakeDeviceTrustListener: DeviceTrustListener {
-    func performTrustChecks() -> [Detector] {
-        let detector = Detector(label: "test", detected: true, description: "test")
-        return [detector]
+    func performTrustChecks() -> [SecurityCheckResult] {
+        let result = SecurityCheckResult("test", true, "test")
+        return [result]
     }
 }
 
