@@ -10,11 +10,11 @@ target 'ios-showcase-template' do
     pod 'AGSCore', :path => ENV['LOCAL_DIR']
     pod 'AGSAuth', :path => ENV['LOCAL_DIR']
     pod 'AGSPush', :path => ENV['LOCAL_DIR']
-    pod 'AGSSec', :path => ENV['LOCAL_DIR']
+    pod 'AGSSecurity', :path => ENV['LOCAL_DIR']
   else
     pod 'AGSAuth'
     pod 'AGSPush'
-    pod 'AGSSec'
+    pod 'AGSSecurity'
   end
 
   pod 'SwiftKeychainWrapper'
