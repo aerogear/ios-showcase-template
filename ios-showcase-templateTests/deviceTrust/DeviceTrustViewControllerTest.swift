@@ -11,7 +11,7 @@ import AGSSecurity
 
 class FakeDeviceTrustListener: DeviceTrustListener {
     func performTrustChecks() -> [SecurityCheckResult] {
-        let result = SecurityCheckResult("test", true, "test")
+        let result = SecurityCheckResult("test", false, "test")
         return [result]
     }
 }

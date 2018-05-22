@@ -26,6 +26,6 @@ class DeviceTrustServiceTest: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let detectors = trustServiceToTest.performTrustChecks()
-        XCTAssertEqual(detectors.count, 5)
+        XCTAssertEqual(detectors.count, 4)
     }
 }
