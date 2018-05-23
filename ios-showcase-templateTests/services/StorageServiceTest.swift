@@ -62,7 +62,7 @@ class StorageServiceTest: XCTestCase {
                 listPromise.fulfill()
             }
         }
-        wait(for: [listPromise], timeout: 1)
+        wait(for: [listPromise], timeout: 5)
         return notes
     }
 
@@ -78,7 +78,7 @@ class StorageServiceTest: XCTestCase {
                 createPromise.fulfill()
             }
         }
-        wait(for: [createPromise], timeout: 1)
+        wait(for: [createPromise], timeout: 5)
         return note
     }
 
@@ -94,7 +94,7 @@ class StorageServiceTest: XCTestCase {
                 readPromise.fulfill()
             }
         }
-        wait(for: [readPromise], timeout: 1)
+        wait(for: [readPromise], timeout: 5)
         return note
     }
 
@@ -110,7 +110,7 @@ class StorageServiceTest: XCTestCase {
                 editPromise.fulfill()
             }
         }
-        wait(for: [editPromise], timeout: 1)
+        wait(for: [editPromise], timeout: 5)
         return note
     }
 
@@ -126,7 +126,7 @@ class StorageServiceTest: XCTestCase {
                 deletePromise.fulfill()
             }
         }
-        wait(for: [deletePromise], timeout: 1)
+        wait(for: [deletePromise], timeout: 5)
         return note
     }
 
@@ -140,7 +140,7 @@ class StorageServiceTest: XCTestCase {
                 deleteAllPromise.fulfill()
             }
         }
-        wait(for: [deleteAllPromise], timeout: 1)
+        wait(for: [deleteAllPromise], timeout: 5)
     }
 
     func testAll() {
