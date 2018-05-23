@@ -60,7 +60,6 @@ class FakeStorageListener: StorageListener {
 }
 
 class StorageViewControllerTest: XCTestCase {
-
     var storageVCToTest: StorageViewController!
 
     override func setUp() {

@@ -56,7 +56,6 @@ class Logger {
                    line: Int = #line,
                    column: Int = #column,
                    funcName: String = #function) {
-
         #if DEBUG
             print("\(Date().toString()) \(level.rawValue)[\(sourceFileName(filePath: fileName))]:\(line) \(column) \(funcName) -> \(message)")
         #endif

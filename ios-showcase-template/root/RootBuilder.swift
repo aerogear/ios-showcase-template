@@ -13,7 +13,6 @@ import UIKit
   This is where all the dependencies for the root module are specified, and all the required instances are created.
  */
 class RootBuilder {
-
     let appComponents: AppComponents
 
     init(components: AppComponents) {

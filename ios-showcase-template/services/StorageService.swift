@@ -19,7 +19,6 @@ protocol StorageService {
 }
 
 class RealmStorageService: StorageService {
-
     let encryptionKey: Data
     let keychainWrapper: KeychainWrapper
 
@@ -331,7 +330,6 @@ class RealmStorageService: StorageService {
 
 // extension to provide safe writes to the realm db
 extension Realm {
-
     /**
      - Provide a way to only write transaction when one is not already in progress
      */
@@ -346,7 +344,6 @@ extension Realm {
 
 // extension to convert realm db result format into notes array format
 extension Results {
-
     /**
     - Convert the realm result format to an array
 

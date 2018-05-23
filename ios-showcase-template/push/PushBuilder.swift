@@ -8,7 +8,6 @@
 import Foundation
 
 class PushBuilder {
-
     func build() -> PushRouter {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "PushViewController") as! PushViewController

@@ -20,7 +20,6 @@ protocol RootInteractor: MenuListener {
 }
 
 class RootInteractorImpl: RootInteractor {
-
     var router: RootRouter?
 
     func onMenuItemSelected(_ item: MenuItem) {

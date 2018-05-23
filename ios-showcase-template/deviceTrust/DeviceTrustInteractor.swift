@@ -5,6 +5,7 @@
 //  Created by Tom Jackman on 30/11/2017.
 //
 
+import AGSSecurity
 import Foundation
 
 /* Implement the business logic for the device trust view here. */
@@ -14,8 +15,7 @@ protocol DeviceTrustInteractor: DeviceTrustListener {
 }
 
 class DeviceTrustInteractorImpl: DeviceTrustInteractor {
-
-    let deviceTrustService: DeviceTrustService
+    var deviceTrustService: DeviceTrustService
     var router: DeviceTrustRouter?
 
     init(deviceTrustService: DeviceTrustService) {
@@ -25,9 +25,9 @@ class DeviceTrustInteractorImpl: DeviceTrustInteractor {
     /**
      - Perform the device trust checks in the device trust service.
 
-     - Returns Detector: A list of detection results
+     - Returns SecurityCheckResult: A list of security check results
      */
-    func performTrustChecks() -> [Detector] {
+    func performTrustChecks() -> [SecurityCheckResult] {
         return self.deviceTrustService.performTrustChecks()
     }
 }

@@ -9,7 +9,6 @@ import AGSAuth
 import UIKit
 
 class AuthenticationDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
     @IBOutlet var userInfoView: UITableView!
 
     var currentUser: User? {

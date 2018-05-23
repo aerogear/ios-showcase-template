@@ -9,7 +9,6 @@ import Foundation
 
 /* Builder class for the device trust module */
 class DeviceTrustBuilder {
-
     let appComponents: AppComponents
 
     init(appComponents: AppComponents) {
