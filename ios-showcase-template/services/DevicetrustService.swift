@@ -33,8 +33,20 @@ class iosDeviceTrustService: DeviceTrustService {
         self.detections.append(detectDebugabble())
 
         return self.detections
+        
     }
 
+    // tag::detectAll[]
+    /**
+     - Perform all security checks and publish the results
+     
+     - Returns: A SecurityCheckResult array
+     */
+    fileprivate func detectAll() -> [SecurityCheckResult] {
+        let checks : [SecurityCheck] = [DeviceLockCheck(), NonDebugCheck(), NonEmulatorCheck(), NonJailbrokenCheck()]
+        return self.security.checkManyAndPublishMetric(checks)
+    }
+    
     // tag::detectDeviceLock[]
     /**
      - Check if a lock screen is set on the device. (iOS 9 or higher).
@@ -42,9 +54,8 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDeviceLock() -> SecurityCheckResult {
-        return self.security.check(DeviceLockCheck())
+        return self.security.checkAndPublishMetric(DeviceLockCheck())
     }
-
     // end::detectDeviceLock[]
 
     // tag::detectJailbreak[]
@@ -55,7 +66,7 @@ class iosDeviceTrustService: DeviceTrustService {
      */
 
     fileprivate func detectJailbreak() -> SecurityCheckResult {
-        return self.security.check(NonJailbrokenCheck())
+        return self.security.checkAndPublishMetric(NonJailbrokenCheck())
     }
 
     // end::detectJailbreak[]
@@ -67,7 +78,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectDebugabble() -> SecurityCheckResult {
-        return self.security.check(NonDebugCheck())
+        return self.security.checkAndPublishMetric(NonDebugCheck())
     }
 
     // end::detectDebugabble[]
@@ -79,7 +90,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A SecurityCheckResult object.
      */
     fileprivate func detectEmulator() -> SecurityCheckResult {
-        return self.security.check(NonEmulatorCheck())
+        return self.security.checkAndPublishMetric(NonEmulatorCheck())
     }
 
     // end::detectEmulator[]
