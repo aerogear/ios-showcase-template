@@ -8,7 +8,7 @@
 import UIKit
 
 /* The view controller for the home view */
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     /*
     // MARK: - Navigation
 
