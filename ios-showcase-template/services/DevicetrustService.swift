@@ -25,6 +25,7 @@ class iosDeviceTrustService: DeviceTrustService {
      - Returns: A list of SecurityCheckResult objects
      */
     func performTrustChecks() -> [SecurityCheckResult] {
+        self.detections = []
         if #available(iOS 9.0, *) {
             self.detections.append(detectDeviceLock())
         }

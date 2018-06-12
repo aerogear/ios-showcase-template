@@ -471,6 +471,7 @@
 				B3E21B3C1FAC956E00082CF7 /* Frameworks */,
 				B3E21B3D1FAC956E00082CF7 /* Resources */,
 				C47B6E348402FCFFC8F86BA3 /* [CP] Embed Pods Frameworks */,
+				0ACF0B14997188B1626A3FF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,6 +491,7 @@
 				B3E21B531FAC956E00082CF7 /* Frameworks */,
 				B3E21B541FAC956E00082CF7 /* Resources */,
 				BEDD5545E2EDC51564483ABE /* [CP] Embed Pods Frameworks */,
+				D540B93C0E0230A39BD56DDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -569,6 +571,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0ACF0B14997188B1626A3FF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-showcase-template/Pods-ios-showcase-template-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		952A891899C9F532184BD4C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,6 +694,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-showcase-template/Pods-ios-showcase-template-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D540B93C0E0230A39BD56DDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-showcase-templateTests/Pods-ios-showcase-templateTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -894,7 +926,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = "ios-showcase-template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aerogear.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -917,7 +949,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = "ios-showcase-template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aerogear.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";

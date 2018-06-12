@@ -36,9 +36,9 @@ class DeviceTrustViewControllerTest: XCTestCase {
     }
 
     func testRender() {
-        XCTAssertEqual(deviceTrustVCToTest.deviceTrustScore.text, "Device Trust Score: 0.0%")
+        XCTAssertEqual(deviceTrustVCToTest.deviceTrustScoreLabel.text, "0%")
         let indexPath = IndexPath(row: 0, section: 0)
-        let cell = deviceTrustVCToTest.tableView.cellForRow(at: indexPath)
-        XCTAssertEqual(cell?.textLabel?.text, "test")
+        let cell = deviceTrustVCToTest.deviceTrustTableView.cellForRow(at: indexPath)
+        XCTAssertEqual(cell?.textLabel?.text?.lowercased(), "test")
     }
 }
