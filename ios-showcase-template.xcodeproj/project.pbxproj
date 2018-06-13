@@ -65,6 +65,9 @@
 		B3E21B4D1FAC956E00082CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21B4C1FAC956E00082CF7 /* Assets.xcassets */; };
 		B3E21B501FAC956E00082CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E21B4E1FAC956E00082CF7 /* LaunchScreen.storyboard */; };
 		B3E21B5B1FAC956E00082CF7 /* secure_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */; };
+		EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958520D112470083E2F2 /* MetricsViewController.swift */; };
+		EF37958820D112570083E2F2 /* MetricsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958720D112570083E2F2 /* MetricsRouter.swift */; };
+		EF37958A20D1126C0083E2F2 /* MetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +159,9 @@
 		B3E21B5C1FAC956E00082CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE92F9E3F9D3C5BEBF24DA86 /* Pods_secure_ios_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB29BB07BFAFFA62B9AE8B2 /* Pods-secure-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-app/Pods-secure-ios-app.release.xcconfig"; sourceTree = "<group>"; };
+		EF37958520D112470083E2F2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
+		EF37958720D112570083E2F2 /* MetricsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRouter.swift; sourceTree = "<group>"; };
+		EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsBuilder.swift; sourceTree = "<group>"; };
 		F6CB8BA2824140238CE2CF40 /* Pods_secure_ios_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE619E485F0C1EE98228BEE1 /* Pods_ios_showcase_template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_showcase_template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -398,6 +404,7 @@
 		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
+				EF37958420D111A10083E2F2 /* metrics */,
 				8838658520A47043002E7B72 /* ios-showcase-template.entitlements */,
 				88821BC720A4518500AC4B6E /* push */,
 				117FC229206CEB68002FDC0E /* mobile-services.json */,
@@ -457,6 +464,16 @@
 				77633C3DADA4C980EA77A760 /* Pods-ios-showcase-templateUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF37958420D111A10083E2F2 /* metrics */ = {
+			isa = PBXGroup;
+			children = (
+				EF37958520D112470083E2F2 /* MetricsViewController.swift */,
+				EF37958720D112570083E2F2 /* MetricsRouter.swift */,
+				EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */,
+			);
+			path = metrics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -730,6 +747,7 @@
 				B3E21B4B1FAC956E00082CF7 /* ios_showcase_template.xcdatamodeld in Sources */,
 				B36F5F471FFB9A3200CAB771 /* AccessControlRouter.swift in Sources */,
 				88821BCD20A451DF00AC4B6E /* PushBuilder.swift in Sources */,
+				EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */,
 				AB73E11B1FFBCF30007BBDF5 /* CertPinningService.swift in Sources */,
 				B32CBD2E1FD0B61F008CFEF1 /* ViewHelper.swift in Sources */,
 				88821BCB20A451B400AC4B6E /* PushViewController.swift in Sources */,
@@ -753,6 +771,8 @@
 				B302EA771FACD7EE00EAD340 /* HomeViewController.swift in Sources */,
 				B30BEBB21FB324800008A171 /* RootBuilder.swift in Sources */,
 				AB3E11FE1FC3238D00B7302C /* StorageRouter.swift in Sources */,
+				EF37958820D112570083E2F2 /* MetricsRouter.swift in Sources */,
+				EF37958A20D1126C0083E2F2 /* MetricsBuilder.swift in Sources */,
 				ABEDBC931FD04B820027066A /* DeviceTrustRouter.swift in Sources */,
 				B30BEBB41FB32AD40008A171 /* RootRouter.swift in Sources */,
 				AB3E11FB1FC3214300B7302C /* Note.swift in Sources */,

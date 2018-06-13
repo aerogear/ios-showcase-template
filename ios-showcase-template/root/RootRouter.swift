@@ -24,6 +24,8 @@ protocol RootRouter {
     func launchDeviceTrustView()
     func launchAccessControlView()
     func launchPushView()
+    func launchMetricsView()
+    func launchURL(_ urlString: String)
 }
 
 class RootRouterImpl: RootRouter {
@@ -37,6 +39,7 @@ class RootRouterImpl: RootRouter {
     var deviceTrustRouter: DeviceTrustRouter?
     var accessControlRouter: AccessControlRouter?
     var pushRouter: PushRouter?
+    var metricsRouter: MetricsRouter?
 
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -90,6 +93,20 @@ class RootRouterImpl: RootRouter {
             acVC.userIdentity = currentUser
         } else {
             launchAuthenticationView()
+        }
+    }
+    
+    func launchMetricsView() {
+        if self.metricsRouter == nil {
+            self.metricsRouter = MetricsBuilder().build()
+        }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_METRICS
+        self.rootViewController.presentViewController(self.metricsRouter!.viewController, true)
+    }
+    
+    func launchURL(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:])
         }
     }
 

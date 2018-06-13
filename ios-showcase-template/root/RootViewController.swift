@@ -7,16 +7,90 @@
 
 import UIKit
 
+struct MenuItem {
+    var type: MenuItemType
+    var title: String
+    var iconName: String?
+    
+    init(_ type: MenuItemType, _ title: String, _ iconName: String?) {
+        self.type = type
+        self.title = title
+        self.iconName = iconName
+    }
+}
+
+enum MenuItemType {
+    case home
+    case identityManagement
+    case identityManagementDocs
+    case identityManagementAuth
+    case identityManagementSSO
+    case deviceSec
+    case deviceSecDocs
+    case deviceSecTrust
+    case deviceSecStorage
+    case deviceSecPinning
+    case push
+    case pushDocs
+    case pushMessage
+    case metrics
+    case metricsDocs
+    case metricsProfile
+    case metricsTrust
+}
+
 /*
  The main root view controller. It is responsible for listening to the user interaction events, and passing the events on to the listener (interactor).
  */
 class RootViewController: BaseViewController, DrawerMenuDelegate {
-    static let MENU_HOME_TITLE = "Home"
-    static let MENU_AUTHENTICATION_TITLE = "Authentication"
-    static let MENU_ACCESS_CONTROL_TITLE = "Access Control"
-    static let MENU_STORAGE_TITLE = "Secure Storage"
-    static let MENU_DEVICETRUST_TITLE = "Device Trust"
-    static let MENU_PUSH_TITLE = "Push"
+    
+    static let MENU_ITEM_TITLE_HOME = "Home"
+    
+    static let MENU_ITEM_TITLE_IDM = "Identity Management"
+    static let MENU_ITEM_TITLE_IDM_DOCS = "Documentation"
+    static let MENU_ITEM_TITLE_IDM_AUTH = "Authentication"
+    static let MENU_ITEM_TITLE_IDM_SSO = "SSO"
+    
+    static let MENU_ITEM_TITLE_SEC = "Device Security"
+    static let MENU_ITEM_TITLE_SEC_DOCS = "Documentation"
+    static let MENU_ITEM_TITLE_SEC_TRUST = "Device Trust"
+    static let MENU_ITEM_TITLE_SEC_STORAGE = "Secure Storage"
+    static let MENU_ITEM_TITLE_SEC_PINNING = "Cert Pinning"
+    
+    static let MENU_ITEM_TITLE_PUSH = "Push Notifications"
+    static let MENU_ITEM_TITLE_PUSH_DOCS = "Documentation"
+    static let MENU_ITEM_TITLE_PUSH_MESSAGE = "Push Messages"
+    
+    static let MENU_ITEM_TITLE_METRICS = "Metrics"
+    static let MENU_ITEM_TITLE_METRICS_DOCS = "Documentation"
+    static let MENU_ITEM_TITLE_METRICS_PROFILE = "Device Profile Info"
+    static let MENU_ITEM_TITLE_METRICS_TRUST = "Trust Check Info"
+    
+    static let MENU_ITEMS = [
+        MenuItem(MenuItemType.home, MENU_ITEM_TITLE_HOME, "ic_home"),
+        
+        MenuItem(MenuItemType.identityManagement, MENU_ITEM_TITLE_IDM, "ic_account_circle"),
+        MenuItem(MenuItemType.identityManagementDocs, MENU_ITEM_TITLE_IDM_DOCS, nil),
+        MenuItem(MenuItemType.identityManagementAuth, MENU_ITEM_TITLE_IDM_AUTH, nil),
+        MenuItem(MenuItemType.identityManagementSSO, MENU_ITEM_TITLE_IDM_SSO, nil),
+        
+        MenuItem(MenuItemType.deviceSec, MENU_ITEM_TITLE_SEC, "ic_security"),
+        MenuItem(MenuItemType.deviceSecDocs, MENU_ITEM_TITLE_SEC_DOCS, nil),
+        MenuItem(MenuItemType.deviceSecTrust, MENU_ITEM_TITLE_SEC_TRUST, nil),
+        MenuItem(MenuItemType.deviceSecStorage, MENU_ITEM_TITLE_SEC_STORAGE, nil),
+        MenuItem(MenuItemType.deviceSecPinning, MENU_ITEM_TITLE_SEC_PINNING, nil),
+        
+        MenuItem(MenuItemType.push, MENU_ITEM_TITLE_PUSH, "ic_notification_active"),
+        MenuItem(MenuItemType.pushDocs, MENU_ITEM_TITLE_PUSH_DOCS, nil),
+        MenuItem(MenuItemType.pushMessage, MENU_ITEM_TITLE_PUSH_MESSAGE,nil),
+        
+        MenuItem(MenuItemType.metrics, MENU_ITEM_TITLE_METRICS, "ic_metrics"),
+        // NOTE: These should be added back in when the metrics pages are created
+        // MenuItem(MenuItemType.MetricsDocs, MENU_ITEM_TITLE_METRICS_DOCS, nil),
+        // MenuItem(MenuItemType.MetricsProfile, MENU_ITEM_TITLE_METRICS_PROFILE, nil),
+        // MenuItem(MenuItemType.MetricsTrust, MENU_ITEM_TITLE_METRICS_TRUST, nil)
+    ]
+
 
     var listener: MenuListener?
 
@@ -24,13 +98,10 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
         super.viewDidLoad()
         self.menuDelegate = self
 
-        addMenuItem(titleOfChildView: RootViewController.MENU_HOME_TITLE, iconName: "ic_home")
-        addMenuItem(titleOfChildView: RootViewController.MENU_AUTHENTICATION_TITLE, iconName: "ic_account_circle")
-        addMenuItem(titleOfChildView: RootViewController.MENU_ACCESS_CONTROL_TITLE, iconName: "ic_verified_user")
-        addMenuItem(titleOfChildView: RootViewController.MENU_STORAGE_TITLE, iconName: "ic_storage")
-        addMenuItem(titleOfChildView: RootViewController.MENU_DEVICETRUST_TITLE, iconName: "ic_device_trust")
-        addMenuItem(titleOfChildView: RootViewController.MENU_PUSH_TITLE, iconName: "ic_notification")
-
+        for menuItem in RootViewController.MENU_ITEMS {
+            addMenuItem(menuItem)
+        }
+        
         showFirstChild()
         // Do any additional setup after loading the view.
     }

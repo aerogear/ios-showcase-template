@@ -22,20 +22,41 @@ protocol RootInteractor: MenuListener {
 class RootInteractorImpl: RootInteractor {
     var router: RootRouter?
 
+
     func onMenuItemSelected(_ item: MenuItem) {
-        switch item.title {
-        case RootViewController.MENU_HOME_TITLE:
+        switch item.type {
+        case MenuItemType.home:
             router?.launchHomeView()
-        case RootViewController.MENU_AUTHENTICATION_TITLE:
+        case MenuItemType.identityManagement:
+            print("Open IDM description page")
+        case MenuItemType.identityManagementAuth:
             router?.launchAuthenticationView()
-        case RootViewController.MENU_STORAGE_TITLE:
+        case MenuItemType.identityManagementDocs:
+            print("Open auth documentation using router?.launchURL(String)")
+        case MenuItemType.identityManagementSSO:
+            print("Open documentation page about using SSO in an iOS app")
+        case MenuItemType.deviceSec:
+            print("Open device security page")
+        case MenuItemType.deviceSecDocs:
+            print("Open device security documentation using router?.launchURL(String)")
+        case MenuItemType.deviceSecStorage:
             router?.launchStorageView()
-        case RootViewController.MENU_DEVICETRUST_TITLE:
+        case MenuItemType.deviceSecTrust:
             router?.launchDeviceTrustView()
-        case RootViewController.MENU_ACCESS_CONTROL_TITLE:
-            router?.launchAccessControlView()
-        case RootViewController.MENU_PUSH_TITLE:
+        case MenuItemType.push:
+            print("Open Push description page")
+        case MenuItemType.pushDocs:
+            print("Open push documentation using router?.launchURL(String)")
+        case MenuItemType.pushMessage:
             router?.launchPushView()
+        case MenuItemType.metrics:
+            router?.launchMetricsView()
+        case MenuItemType.metricsDocs:
+            print("Open metrics documentation using router?.launchURL(String)")
+        case MenuItemType.metricsTrust:
+            print("Open metrics trust page")
+        case MenuItemType.metricsProfile:
+            print("Open metrics profile page")
         default:
             print("no view to show")
         }

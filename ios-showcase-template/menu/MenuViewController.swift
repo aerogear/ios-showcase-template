@@ -109,7 +109,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let lblTitle: UILabel = cell.contentView.viewWithTag(titleViewTag) as! UILabel
         let imgIcon: UIImageView = cell.contentView.viewWithTag(imageViewTag) as! UIImageView
 
-        imgIcon.image = UIImage(named: arrayMenuOptions[indexPath.row].icon)
+        imgIcon.image = nil
+        lblTitle.text = nil
+        if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
+            imgIcon.image = UIImage(named: menuItemIcon)
+        }
         lblTitle.text = arrayMenuOptions[indexPath.row].title
 
         return cell
