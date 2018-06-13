@@ -9,12 +9,18 @@ import AGSAuth
 import UIKit
 
 class AuthenticationDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
     @IBOutlet var userInfoView: UITableView!
-
+    @IBOutlet weak var userRolesView: UITableView!
+    @IBOutlet weak var logoutButton: UIButton!
+    
     var currentUser: User? {
         didSet {
-            if let tableView = self.userInfoView {
+            if let tableView = self.userInfoView, let rolesView = self.userRolesView {
                 tableView.reloadData()
+                rolesView.reloadData()
             }
         }
     }
@@ -27,6 +33,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
 
         // Do any additional setup after loading the view.
         userInfoView.dataSource = self
+        userRolesView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +54,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
     func displayUserDetails(from: UIViewController, user: User) {
         self.currentUser = user
         ViewHelper.showChildViewController(parentViewController: from, childViewController: self)
-        ViewHelper.showSuccessBannerMessage(from: self, title: "Login Completed", message: "")
+        //ViewHelper.showSuccessBannerMessage(from: self, title: "Login Completed", message: "")
     }
 
     func showError(title: String, error: Error) {
@@ -59,22 +66,14 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
     }
 
     func showLogoutBtn() {
-        guard let rootViewController = self.parent?.parent else {
-            return
-        }
-        if rootViewController.isKind(of: RootViewController.self) {
-            self.navbarItem = rootViewController.navigationItem
-            self.navbarItem!.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
-        }
+        self.logoutButton.isHidden = false
     }
 
     func removeLogoutBtn() {
-        if self.navbarItem != nil {
-            self.navbarItem!.rightBarButtonItem = nil
-        }
+        self.logoutButton.isHidden = true
     }
 
-    @IBAction func logoutTapped(_ sender: UIBarButtonItem) {
+    @IBAction func logoutTapped(_ sender: Any) {
         let alertView = UIAlertController(title: "Logout", message: "Are you sure to logout?", preferredStyle: UIAlertControllerStyle.alert)
         alertView.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
             if let listener = self.authListener {
@@ -86,7 +85,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
         }))
         self.present(alertView, animated: true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
@@ -97,51 +96,72 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
     }
     */
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 2
-        case 1:
-            return self.currentUser!.realmRoles.count
-        default:
-            return 0
-        }
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionNum = indexPath.section
-        if sectionNum == 0 {
-            let userInfoCell = tableView.dequeueReusableCell(withIdentifier: "userInfoCell")!
-            let fieldNameLabel = userInfoCell.contentView.viewWithTag(1) as! UILabel
-            let fieldValueLabel = userInfoCell.contentView.viewWithTag(2) as! UILabel
-            if indexPath.row == 0 {
-                fieldNameLabel.text = "Name"
-                fieldValueLabel.text = self.currentUser!.fullName
-            } else {
-                fieldNameLabel.text = "Email"
-                fieldValueLabel.text = self.currentUser!.email
+        if tableView == self.userInfoView {
+            var cell: UITableViewCell
+            //not great. There should be a better way to do this...
+            switch indexPath.row {
+            case 0:
+                cell = tableView.dequeueReusableCell(withIdentifier: "fullnameCell")!
+                let profileImage = UIImage(named: "ic_person")?.withRenderingMode(.alwaysTemplate)
+                let userProfileImageView = cell.contentView.viewWithTag(3) as! UIImageView
+                userProfileImageView.image = profileImage
+                userProfileImageView.tintColor = UIColor(named: "Primary")
+                let fullNameLabel = cell.contentView.viewWithTag(2) as! UILabel
+                fullNameLabel.text = self.currentUser!.fullName
+            case 1:
+                cell = tableView.dequeueReusableCell(withIdentifier: "emailCell")!
+                let emailLabel = cell.contentView.viewWithTag(2) as! UILabel
+                emailLabel.text = self.currentUser!.email
+            case 2:
+                cell = tableView.dequeueReusableCell(withIdentifier: "usernameCell")!
+                let usernameLabel = cell.contentView.viewWithTag(2) as! UILabel
+                usernameLabel.text = self.currentUser!.userName
+            case 3:
+                cell = tableView.dequeueReusableCell(withIdentifier: "otpEnabledCell")!
+                //hard coded for now, need to fix this in the future once the info is available from the auth sdk
+                let enabledLabel = cell.contentView.viewWithTag(1) as! UILabel
+                enabledLabel.isEnabled = true
+                enabledLabel.text = "X"
+                enabledLabel.textColor = UIColor(named: "Red")
+            case 4:
+                cell = tableView.dequeueReusableCell(withIdentifier: "emailVerifiedCell")!
+                //hard coded for now, need to fix this in the future once the info is available from the auth sdk
+                let enabledLabel = cell.contentView.viewWithTag(1) as! UILabel
+                enabledLabel.isEnabled = true
+                enabledLabel.text = "X"
+                enabledLabel.textColor = UIColor(named: "Red")
+            default:
+                cell = UITableViewCell(style: .default, reuseIdentifier: nil)
             }
-            return userInfoCell
-        } else {
-            let roleNameCell = tableView.dequeueReusableCell(withIdentifier: "roleNameCell")!
-            let roleValueLabel = roleNameCell.contentView.viewWithTag(1) as! UILabel
-            roleValueLabel.text = self.currentUser!.realmRoles[indexPath.row]
-            return roleNameCell
+            return cell
         }
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "User Details"
-        case 1:
-            return "Realm Roles"
-        default:
-            return ""
+        
+        if tableView == self.userRolesView {
+            var cell: UITableViewCell
+            switch indexPath.row {
+            case 0:
+                cell = tableView.dequeueReusableCell(withIdentifier: "headerCell")!
+            default:
+                cell = tableView.dequeueReusableCell(withIdentifier: "roleNameCell", for: indexPath)
+                let roleValueLabel = cell.contentView.viewWithTag(1) as! UILabel
+                roleValueLabel.text = self.currentUser!.realmRoles[indexPath.row - 1]
+            }
+            return cell
         }
+        
+        return UITableViewCell(style: .default, reuseIdentifier: nil)
     }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == self.userInfoView {
+            return 5
+        }
+        
+        if tableView == self.userRolesView {
+            return self.currentUser!.realmRoles.count + 1
+        }
+        
+        return 0
     }
 }
