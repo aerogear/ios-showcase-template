@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct MenuItem {
-    var title: String
-    var icon: String
-}
-
 class BaseViewController: UIViewController {
     var menuDelegate: DrawerMenuDelegate?
 
@@ -83,8 +78,7 @@ class BaseViewController: UIViewController {
         menuVC.appearWithAnimation()
     }
 
-    func addMenuItem(titleOfChildView: String, iconName: String) {
-        let menuItem: MenuItem = MenuItem(title: titleOfChildView, icon: iconName)
+    func addMenuItem(_ menuItem: MenuItem) {
         arrayMenuOptions.append(menuItem)
     }
 
