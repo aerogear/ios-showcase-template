@@ -56,6 +56,7 @@ class RootRouterImpl: RootRouter {
         if self.homeRouter == nil {
             self.homeRouter = HomeBuilder().build()
         }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_HOME
         self.rootViewController.presentViewController(self.homeRouter!.viewController, true)
     }
 
@@ -63,6 +64,7 @@ class RootRouterImpl: RootRouter {
         if self.authenticationRouter == nil {
             self.authenticationRouter = AuthenticationBuilder(appComponents: self.appComponents).build()
         }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_IDM_AUTH
         self.rootViewController.presentViewController(self.authenticationRouter!.initialViewController(user: self.resolveCurrentUser()), true)
     }
 
@@ -71,6 +73,7 @@ class RootRouterImpl: RootRouter {
         if self.storageRouter == nil {
             self.storageRouter = StorageBuilder(appComponents: self.appComponents).build()
         }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_SEC_STORAGE
         self.rootViewController.presentViewController(self.storageRouter!.viewController, true)
     }
 
@@ -79,6 +82,7 @@ class RootRouterImpl: RootRouter {
         if self.deviceTrustRouter == nil {
             self.deviceTrustRouter = DeviceTrustBuilder(appComponents: self.appComponents).build()
         }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_SEC_TRUST
         self.rootViewController.presentViewController(self.deviceTrustRouter!.viewController, true)
     }
 
@@ -89,11 +93,20 @@ class RootRouterImpl: RootRouter {
                 self.accessControlRouter = AccessControlBuilder(appComponents: self.appComponents).build()
             }
             let acVC = self.accessControlRouter!.viewController
+            self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_IDM_SSO
             self.rootViewController.presentViewController(acVC, true)
             acVC.userIdentity = currentUser
         } else {
             launchAuthenticationView()
         }
+    }
+
+    func launchPushView() {
+        if self.pushRouter == nil {
+            self.pushRouter = PushBuilder().build()
+        }
+        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_PUSH_MESSAGE
+        self.rootViewController.presentViewController(self.pushRouter!.viewController, true)
     }
     
     func launchMetricsView() {
@@ -108,13 +121,6 @@ class RootRouterImpl: RootRouter {
         if let url = URL(string: urlString) {
             UIApplication.shared.open(url, options: [:])
         }
-    }
-
-    func launchPushView() {
-        if self.pushRouter == nil {
-            self.pushRouter = PushBuilder().build()
-        }
-        self.rootViewController.presentViewController(self.pushRouter!.viewController, true)
     }
 
     func resolveCurrentUser() -> User? {
