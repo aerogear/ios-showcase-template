@@ -34,6 +34,10 @@ jobs:
             SCAN_DEVICE: iPhone 7
             SCAN_SCHEME: ios-showcase-template
 
+      - run:
+          name: Push to Kryptowire
+          command: ./scripts/pushToKryptowire.sh
+
       # Collect XML test results data to show in the UI,
       # and save the same XML files under test-results folder
       # in the Artifacts tab
