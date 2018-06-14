@@ -25,7 +25,7 @@ class AuthenticationBuilder {
         let detailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticationDetailsViewController") as! AuthenticationDetailsViewController
 
         let authenticationRouter = AuthenticationRouterImpl(viewController: viewController, detailsViewController: detailsViewController)
-        let authenticationInteractor = AuthenticationInteractorImpl(authService: self.appComponents.resolveAuthService(), certPinningService: self.appComponents.resolveCertPinningService())
+        let authenticationInteractor = AuthenticationInteractorImpl(authService: self.appComponents.resolveAuthService())
         authenticationInteractor.router = authenticationRouter
 
         viewController.authListener = authenticationInteractor

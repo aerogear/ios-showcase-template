@@ -10,7 +10,6 @@ import UIKit
 protocol AuthListener {
     func startAuth(presentingViewController: UIViewController)
     func logout()
-    func performPreCertCheck(onCompleted: @escaping (Bool) -> Void)
 }
 
 /* The view controller for the authentication view. It should pass the user events to the listener (interactor) */
@@ -18,8 +17,6 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet var authenticationButton: UIButton!
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var backgroundImage: UIImageView!
-    @IBOutlet var certPinningError: UILabel!
-    @IBOutlet var dangerLogo: UIImageView!
 
     var authListener: AuthListener?
 
@@ -35,22 +32,8 @@ class AuthenticationViewController: UIViewController {
 
     // tag::onAuthButtonTapped[]
     @IBAction func onAuthButtonTapped(_ sender: UIButton) {
-        // perform cert pinning on the auth server when the auth button is pressed
         if let listener = self.authListener {
-            listener.performPreCertCheck {
-                validCert in
-                if validCert {
-                    // cert is valid, continue with login
-                    listener.startAuth(presentingViewController: self)
-                } else {
-                    // pin validation issues, update the UI to notify the user and prevent authentication.
-                    self.authenticationButton.isHidden = true
-                    self.certPinningError.isHidden = false
-                    self.logoImage.isHidden = true
-                    self.dangerLogo.isHidden = false
-                    self.backgroundImage.image = UIImage(named: "ic_error_background")
-                }
-            }
+            listener.startAuth(presentingViewController: self)
         }
     }
 
