@@ -134,7 +134,7 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
     
     func showWarningMessage() {
         if self.currentScore < SECURE_SCORE_THREASHOLD {
-            let alert = UIAlertController(title: "Warning", message: "Your current trust score \(self.currentScore)% is below the specified target of \(SECURE_SCORE_THREASHOLD)%, do you want to continue or exit the app?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Warning", message: "Your current device trust score \(self.currentScore)% is below the specified target of \(SECURE_SCORE_THREASHOLD)%, do you want to continue or exit the app?", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Continue".uppercased(), style: .cancel)
             let exitAction = UIAlertAction(title: "Exit".uppercased(), style: .default) { action in
                 exit(0)
