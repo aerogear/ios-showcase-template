@@ -51,15 +51,4 @@ class AuthenticationViewControllerTest: XCTestCase {
         authViewController.onAuthButtonTapped(UIButton())
         XCTAssertTrue(authListener.startAuthCalled)
     }
-
-    func testAuthButtonWithInsecureChannel() {
-        XCTAssertFalse(authViewController.authenticationButton.isHidden)
-        authListener.pinningFailure = true
-        authViewController.onAuthButtonTapped(UIButton())
-        XCTAssertFalse(authListener.startAuthCalled)
-        XCTAssertTrue(authViewController.authenticationButton.isHidden)
-        XCTAssertTrue(authViewController.logoImage.isHidden)
-        XCTAssertFalse(authViewController.dangerLogo.isHidden)
-        XCTAssertFalse(authViewController.certPinningError.isHidden)
-    }
 }
