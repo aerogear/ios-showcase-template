@@ -529,7 +529,7 @@
 				TargetAttributes = {
 					B3E21B3E1FAC956E00082CF7 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -939,7 +939,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-showcase-template/ios-showcase-template.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = "ios-showcase-template/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -960,9 +960,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-showcase-template/ios-showcase-template.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GHPBX39444;
 				INFOPLIST_FILE = "ios-showcase-template/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
