@@ -22,7 +22,6 @@
 		AB3E12041FC3307400B7302C /* StorageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E12031FC3307400B7302C /* StorageInteractor.swift */; };
 		AB3E12061FC331CB00B7302C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E12051FC331CB00B7302C /* StorageService.swift */; };
 		AB3E12081FC3376500B7302C /* StorageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E12071FC3376500B7302C /* StorageBuilder.swift */; };
-		AB73E11B1FFBCF30007BBDF5 /* CertPinningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73E11A1FFBCF30007BBDF5 /* CertPinningService.swift */; };
 		ABEDBC7C1FD040490027066A /* DeviceTrustService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDBC7B1FD040490027066A /* DeviceTrustService.swift */; };
 		ABEDBC911FD04AF90027066A /* DeviceTrustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDBC901FD04AF90027066A /* DeviceTrustViewController.swift */; };
 		ABEDBC931FD04B820027066A /* DeviceTrustRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDBC921FD04B820027066A /* DeviceTrustRouter.swift */; };
@@ -108,7 +107,6 @@
 		AB3E12031FC3307400B7302C /* StorageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageInteractor.swift; sourceTree = "<group>"; };
 		AB3E12051FC331CB00B7302C /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		AB3E12071FC3376500B7302C /* StorageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBuilder.swift; sourceTree = "<group>"; };
-		AB73E11A1FFBCF30007BBDF5 /* CertPinningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertPinningService.swift; sourceTree = "<group>"; };
 		ABEDBC7B1FD040490027066A /* DeviceTrustService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTrustService.swift; sourceTree = "<group>"; };
 		ABEDBC901FD04AF90027066A /* DeviceTrustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTrustViewController.swift; sourceTree = "<group>"; };
 		ABEDBC921FD04B820027066A /* DeviceTrustRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTrustRouter.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				B32CBD2D1FD0B61F008CFEF1 /* ViewHelper.swift */,
 				AB3E12051FC331CB00B7302C /* StorageService.swift */,
 				ABEDBC7B1FD040490027066A /* DeviceTrustService.swift */,
-				AB73E11A1FFBCF30007BBDF5 /* CertPinningService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -748,7 +745,6 @@
 				B36F5F471FFB9A3200CAB771 /* AccessControlRouter.swift in Sources */,
 				88821BCD20A451DF00AC4B6E /* PushBuilder.swift in Sources */,
 				EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */,
-				AB73E11B1FFBCF30007BBDF5 /* CertPinningService.swift in Sources */,
 				B32CBD2E1FD0B61F008CFEF1 /* ViewHelper.swift in Sources */,
 				88821BCB20A451B400AC4B6E /* PushViewController.swift in Sources */,
 				B30BEBC01FB368D50008A171 /* AuthenticationInteractor.swift in Sources */,
