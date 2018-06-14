@@ -33,7 +33,9 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
 
         // Do any additional setup after loading the view.
         userInfoView.dataSource = self
+        userInfoView.delegate = self
         userRolesView.dataSource = self
+        userRolesView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,7 +108,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
                 let profileImage = UIImage(named: "ic_person")?.withRenderingMode(.alwaysTemplate)
                 let userProfileImageView = cell.contentView.viewWithTag(3) as! UIImageView
                 userProfileImageView.image = profileImage
-                userProfileImageView.tintColor = UIColor(named: "Primary")
+                userProfileImageView.tintColor = UIColor(named: "Primary")!
                 let fullNameLabel = cell.contentView.viewWithTag(2) as! UILabel
                 fullNameLabel.text = self.currentUser!.fullName
             case 1:
@@ -120,17 +122,17 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
             case 3:
                 cell = tableView.dequeueReusableCell(withIdentifier: "otpEnabledCell")!
                 //hard coded for now, need to fix this in the future once the info is available from the auth sdk
-                let enabledLabel = cell.contentView.viewWithTag(1) as! UILabel
-                enabledLabel.isEnabled = true
-                enabledLabel.text = "X"
-                enabledLabel.textColor = UIColor(named: "Red")
+                let closeImage = UIImage(named: "ic_close")?.withRenderingMode(.alwaysTemplate)
+                let enabledImageView = cell.contentView.viewWithTag(1) as! UIImageView
+                enabledImageView.image = closeImage
+                enabledImageView.tintColor = UIColor(named: "Red")!
             case 4:
                 cell = tableView.dequeueReusableCell(withIdentifier: "emailVerifiedCell")!
                 //hard coded for now, need to fix this in the future once the info is available from the auth sdk
-                let enabledLabel = cell.contentView.viewWithTag(1) as! UILabel
-                enabledLabel.isEnabled = true
-                enabledLabel.text = "X"
-                enabledLabel.textColor = UIColor(named: "Red")
+                let closeImage = UIImage(named: "ic_close")?.withRenderingMode(.alwaysTemplate)
+                let enabledImageView = cell.contentView.viewWithTag(1) as! UIImageView
+                enabledImageView.image = closeImage
+                enabledImageView.tintColor = UIColor(named: "Red")!
             default:
                 cell = UITableViewCell(style: .default, reuseIdentifier: nil)
             }
@@ -159,6 +161,7 @@ class AuthenticationDetailsViewController: UIViewController, UITableViewDataSour
         }
         
         if tableView == self.userRolesView {
+            print("\(self.currentUser!.realmRoles.count)")
             return self.currentUser!.realmRoles.count + 1
         }
         

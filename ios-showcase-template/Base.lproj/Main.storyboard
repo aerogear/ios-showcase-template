@@ -551,23 +551,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP 2FA Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFN-8C-T7h">
-                                                    <rect key="frame" x="11" y="18.5" width="134" height="21"/>
+                                                    <rect key="frame" x="11" y="19" width="134" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-gR-al2">
-                                                    <rect key="frame" x="288" y="18.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lj-C1-VKN">
+                                                    <rect key="frame" x="295" y="11.5" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="2jn-jE-hWC"/>
+                                                        <constraint firstAttribute="width" constant="35" id="9Rj-YB-ftf"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="VFN-8C-T7h" firstAttribute="centerY" secondItem="PtC-73-L4s" secondAttribute="centerY" id="6Ho-Ud-ZeN"/>
-                                                <constraint firstItem="Vj1-gR-al2" firstAttribute="baseline" secondItem="VFN-8C-T7h" secondAttribute="baseline" id="AvU-7J-Tl6"/>
                                                 <constraint firstItem="VFN-8C-T7h" firstAttribute="leading" secondItem="PtC-73-L4s" secondAttribute="leadingMargin" constant="-4" id="MvS-Hg-Q4H"/>
-                                                <constraint firstItem="Vj1-gR-al2" firstAttribute="trailing" secondItem="PtC-73-L4s" secondAttribute="trailingMargin" id="qo4-pP-6DB"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Lj-C1-VKN" secondAttribute="trailing" constant="15" id="blp-q4-avi"/>
+                                                <constraint firstItem="8Lj-C1-VKN" firstAttribute="centerY" secondItem="VFN-8C-T7h" secondAttribute="centerY" id="hHc-d7-l2F"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -580,23 +581,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sJ-EG-5qR">
-                                                    <rect key="frame" x="11" y="18.5" width="104" height="21"/>
+                                                    <rect key="frame" x="11" y="19" width="104" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nni-pl-MLh">
-                                                    <rect key="frame" x="288" y="18.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qcj-Ik-251">
+                                                    <rect key="frame" x="295" y="11.5" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="toz-Bw-JJA"/>
+                                                        <constraint firstAttribute="width" constant="35" id="zE8-qJ-o7V"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Nni-pl-MLh" firstAttribute="trailing" secondItem="02U-bT-D83" secondAttribute="trailingMargin" id="J0F-OA-f8s"/>
-                                                <constraint firstItem="Nni-pl-MLh" firstAttribute="baseline" secondItem="5sJ-EG-5qR" secondAttribute="baseline" id="YHZ-vR-rsy"/>
                                                 <constraint firstItem="5sJ-EG-5qR" firstAttribute="leading" secondItem="02U-bT-D83" secondAttribute="leadingMargin" constant="-4" id="YVu-gj-gGC"/>
+                                                <constraint firstItem="Qcj-Ik-251" firstAttribute="centerY" secondItem="5sJ-EG-5qR" secondAttribute="centerY" id="biy-Ft-LrQ"/>
                                                 <constraint firstItem="5sJ-EG-5qR" firstAttribute="centerY" secondItem="02U-bT-D83" secondAttribute="centerY" id="n6Q-Ej-ukr"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qcj-Ik-251" secondAttribute="trailing" constant="15" id="unr-P3-PKV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
