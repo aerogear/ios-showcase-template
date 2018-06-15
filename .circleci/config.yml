@@ -9,6 +9,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "bd:3b:c1:a0:9d:28:6f:f6:d7:ae:3a:be:18:78:b5:b6"
+            - "25:18:52:a8:d6:f6:5d:ea:cd:59:39:c0:07:15:13:5d"
       - checkout
       - run:
           name: Install lint
