@@ -6,6 +6,9 @@ jobs:
       xcode: "9.3.0"
     shell: /bin/bash --login -eo pipefail
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "bd:3b:c1:a0:9d:28:6f:f6:d7:ae:3a:be:18:78:b5:b6"
       - checkout
       - run:
           name: Install lint
@@ -47,7 +50,7 @@ jobs:
 
       - run:
             name: Push IPA file to Kryptowire for scanning
-            command: curl -X POST "https://emm.kryptowire.com/api/submit" -F app=ios-showcase-template.ipa -F key=$KRYPTOWIRE_API_KEY -F platform=ios
+            command: curl -X POST "https://emm.kryptowire.com/api/submit" -F app=@ios-showcase-template.ipa -F key=$KRYPTOWIRE_API_KEY -F platform=ios
 
       # Collect XML test results data to show in the UI,
       # and save the same XML files under test-results folder
