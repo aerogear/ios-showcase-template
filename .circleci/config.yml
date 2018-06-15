@@ -32,12 +32,20 @@ jobs:
           command: bundle exec fastlane setup
 
       # Build the app and run tests
+    #   - run:
+    #       name: Build and run tests
+    #       command: bundle exec fastlane test
+    #       environment:
+    #         SCAN_DEVICE: iPhone 7
+    #         SCAN_SCHEME: ios-showcase-template
+
       - run:
-          name: Build and run tests
-          command: bundle exec fastlane test
-          environment:
-            SCAN_DEVICE: iPhone 7
-            SCAN_SCHEME: ios-showcase-template
+          name: add private key
+          command: echo $private_key > ~/.ssh/id_rsa
+    
+      - run:
+          name: change permission
+          command: chmod 400 ~/.ssh/id_rsa
 
       - run:
           name: add git user
