@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="116" width="265" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" id="izj-RU-BVy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" id="izj-RU-BVy">
                                         <rect key="frame" x="0.0" y="22" width="265" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="izj-RU-BVy" id="THY-oy-nXm">
@@ -887,7 +887,6 @@ www.aerogear.org/community#guides</string>
         <image name="aerogear_menu_icon" width="256" height="256"/>
         <image name="background-pattern" width="452" height="732"/>
         <image name="background-push" width="320" height="480"/>
-        <image name="ic_cracked_lock" width="100" height="100"/>
         <image name="ic_openid_connect" width="192" height="192"/>
         <image name="ic_person" width="24" height="24"/>
         <image name="ic_warning_white" width="24" height="24"/>
