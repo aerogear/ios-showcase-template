@@ -8,7 +8,7 @@ jobs:
     steps:
       - run:
           name: check git user
-          command: ssh -T ssh -T git@github.com
+          command: ssh -T git@github.com
       - checkout
       - run:
           name: Install lint
