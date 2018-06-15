@@ -29,7 +29,7 @@ jobs:
       # Build the app and run tests
       - run:
           name: Build and run tests
-          command: fastlane test
+          command: bundle exec fastlane test
           environment:
             SCAN_DEVICE: iPhone 7
             SCAN_SCHEME: ios-showcase-template
@@ -38,7 +38,7 @@ jobs:
       # the signning credentials will be setup using fastlane match
       - run:
             name: Generate IPA for distribution
-            command: fastlane enterprise
+            command: bundle exec fastlane enterprise
 
       - run:
             name: Push IPA file to Kryptowire for scanning
