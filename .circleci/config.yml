@@ -6,6 +6,9 @@ jobs:
       xcode: "9.3.0"
     shell: /bin/bash --login -eo pipefail
     steps:
+      - run:
+          name: check git user
+          command: ssh -T ssh -T git@github.com
       - checkout
       - run:
           name: Install lint
@@ -38,7 +41,6 @@ jobs:
           environment:
             SCAN_DEVICE: iPhone 7
             SCAN_SCHEME: ios-showcase-template
-    
       # Generate ipa file using enterprise signing credentials
       # the signning credentials will be setup using fastlane match
       - run:
