@@ -60,9 +60,9 @@ class RootRouterImpl: RootRouter {
 
     func launchAuthenticationView() {
         if self.authenticationRouter == nil {
-            self.authenticationRouter = AuthenticationBuilder(appComponents: self.appComponents).build()
+            let authViewOptions = AuthenticationViewOptions(authLoginNavigationTitle: RootViewController.MENU_ITEM_TITLE_IDM_AUTH, authDetailsNavigationTitle: RootViewController.SUBMENU_ITEM_TITLE_IDM_AUTH_DETAILS, titleViewController: self.rootViewController)
+            self.authenticationRouter = AuthenticationBuilder(appComponents: self.appComponents, authViewOptions).build()
         }
-        self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_IDM_AUTH
         self.rootViewController.presentViewController(self.authenticationRouter!.initialViewController(user: self.resolveCurrentUser()), true)
     }
 

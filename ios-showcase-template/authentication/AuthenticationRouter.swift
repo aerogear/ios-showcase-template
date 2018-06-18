@@ -20,15 +20,18 @@ protocol AuthenticationRouter {
 class AuthenticationRouterImpl: AuthenticationRouter {
     let viewController: AuthenticationViewController
     let detailsViewController: AuthenticationDetailsViewController
+    let options: AuthenticationViewOptions
 
-    init(viewController: AuthenticationViewController, detailsViewController: AuthenticationDetailsViewController) {
+    init(viewController: AuthenticationViewController, detailsViewController: AuthenticationDetailsViewController, _ options: AuthenticationViewOptions) {
         self.viewController = viewController
         self.detailsViewController = detailsViewController
+        self.options = options
     }
 
     func navigateToUserDetailsView(withIdentify user: User?, andError error: Error?) {
         if let identityInfo = user {
             Logger.info("got user identity: \(identityInfo)")
+            self.options.titleViewController.title = self.options.authDetailsNavigationTitle
             self.detailsViewController.displayUserDetails(from: self.viewController, user: identityInfo)
         } else if let err = error {
             Logger.info("authentication failed with error \(err.localizedDescription)")
@@ -42,15 +45,16 @@ class AuthenticationRouterImpl: AuthenticationRouter {
             self.detailsViewController.showError(title: "Logout Failed", error: err)
         } else {
             Logger.debug("user logged out successfully")
+            self.options.titleViewController.title = self.options.authLoginNavigationTitle
             self.detailsViewController.removeView()
         }
     }
 
     func initialViewController(user: User?) -> UIViewController {
+        self.options.titleViewController.title = self.options.authLoginNavigationTitle
         if let userIdentity = user {
             // if the user is already logged in, add the details atop of the authentication view
-            self.detailsViewController.currentUser = userIdentity
-            ViewHelper.showChildViewController(parentViewController: self.viewController, childViewController: self.detailsViewController)
+            self.navigateToUserDetailsView(withIdentify: userIdentity, andError: nil)
         }
         return self.viewController
     }
