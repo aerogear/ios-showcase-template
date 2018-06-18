@@ -56,7 +56,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" id="izj-RU-BVy">
-                                        <rect key="frame" x="0.0" y="22" width="265" height="54"/>
+                                        <rect key="frame" x="0.0" y="22" width="724" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="izj-RU-BVy" id="THY-oy-nXm">
                                             <rect key="frame" x="0.0" y="0.0" width="724" height="53.5"/>
@@ -622,6 +622,40 @@
             </objects>
             <point key="canvasLocation" x="4024.6376811594205" y="213.58695652173915"/>
         </scene>
+        <!--Web view Controller-->
+        <scene sceneID="pLx-qC-2if">
+            <objects>
+                <viewController storyboardIdentifier="WebviewViewController" title="Web view Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZTl-Tr-8xp" customClass="WebviewViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aep-Xn-3Di">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMr-1r-Niv">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tMr-1r-Niv" firstAttribute="top" secondItem="aep-Xn-3Di" secondAttribute="top" id="CZ1-fv-t2i"/>
+                            <constraint firstItem="tMr-1r-Niv" firstAttribute="leading" secondItem="aep-Xn-3Di" secondAttribute="leading" id="jkR-fK-ch8"/>
+                            <constraint firstItem="tMr-1r-Niv" firstAttribute="bottom" secondItem="2Ml-pc-5gF" secondAttribute="bottom" id="ta9-BF-lUz"/>
+                            <constraint firstAttribute="trailing" secondItem="tMr-1r-Niv" secondAttribute="trailing" id="vmi-VM-a6g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ml-pc-5gF"/>
+                    </view>
+                    <connections>
+                        <outlet property="wkWebView" destination="tMr-1r-Niv" id="Bsk-R0-fbf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrQ-Fd-oHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4780" y="244.22788605697153"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="ku8-pY-PYa">
             <objects>
@@ -855,7 +889,6 @@ www.aerogear.org/community#guides</string>
         <image name="aerogear_logo" width="600" height="189"/>
         <image name="aerogear_menu_icon" width="256" height="256"/>
         <image name="background-pattern" width="452" height="732"/>
-        <image name="background-push" width="320" height="480"/>
         <image name="ic_openid_connect" width="192" height="192"/>
         <image name="ic_person" width="24" height="24"/>
         <image name="ic_warning_white" width="24" height="24"/>

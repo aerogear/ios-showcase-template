@@ -60,6 +60,9 @@
 		B3E21B4D1FAC956E00082CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21B4C1FAC956E00082CF7 /* Assets.xcassets */; };
 		B3E21B501FAC956E00082CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E21B4E1FAC956E00082CF7 /* LaunchScreen.storyboard */; };
 		B3E21B5B1FAC956E00082CF7 /* secure_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */; };
+		B3F525EF20D9619100428DB2 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525EE20D9619100428DB2 /* WebviewViewController.swift */; };
+		B3F525F120D961A800428DB2 /* WebviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525F020D961A800428DB2 /* WebviewRouter.swift */; };
+		B3F525F320D961BA00428DB2 /* WebviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525F220D961BA00428DB2 /* WebviewBuilder.swift */; };
 		EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958520D112470083E2F2 /* MetricsViewController.swift */; };
 		EF37958820D112570083E2F2 /* MetricsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958720D112570083E2F2 /* MetricsRouter.swift */; };
 		EF37958A20D1126C0083E2F2 /* MetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */; };
@@ -147,6 +150,9 @@
 		B3E21B561FAC956E00082CF7 /* ios-showcase-templateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-showcase-templateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E21B5A1FAC956E00082CF7 /* secure_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secure_ios_appTests.swift; sourceTree = "<group>"; };
 		B3E21B5C1FAC956E00082CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F525EE20D9619100428DB2 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
+		B3F525F020D961A800428DB2 /* WebviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewRouter.swift; sourceTree = "<group>"; };
+		B3F525F220D961BA00428DB2 /* WebviewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewBuilder.swift; sourceTree = "<group>"; };
 		BE92F9E3F9D3C5BEBF24DA86 /* Pods_secure_ios_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB29BB07BFAFFA62B9AE8B2 /* Pods-secure-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-app/Pods-secure-ios-app.release.xcconfig"; sourceTree = "<group>"; };
 		EF37958520D112470083E2F2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +381,7 @@
 		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
+				B3F525ED20D9616700428DB2 /* webview */,
 				EF37958420D111A10083E2F2 /* metrics */,
 				8838658520A47043002E7B72 /* ios-showcase-template.entitlements */,
 				88821BC720A4518500AC4B6E /* push */,
@@ -414,6 +421,16 @@
 				B3E21B5C1FAC956E00082CF7 /* Info.plist */,
 			);
 			path = "ios-showcase-templateTests";
+			sourceTree = "<group>";
+		};
+		B3F525ED20D9616700428DB2 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				B3F525EE20D9619100428DB2 /* WebviewViewController.swift */,
+				B3F525F020D961A800428DB2 /* WebviewRouter.swift */,
+				B3F525F220D961BA00428DB2 /* WebviewBuilder.swift */,
+			);
+			path = webview;
 			sourceTree = "<group>";
 		};
 		CBA54E12DCD79F72333AD07B /* Pods */ = {
@@ -710,6 +727,7 @@
 				B37C63891FC323F300D52CD4 /* AuthenticationDetailsViewController.swift in Sources */,
 				AB3E12081FC3376500B7302C /* StorageBuilder.swift in Sources */,
 				B30BEBB81FB364550008A171 /* HomeRouter.swift in Sources */,
+				B3F525EF20D9619100428DB2 /* WebviewViewController.swift in Sources */,
 				ABEDBC7C1FD040490027066A /* DeviceTrustService.swift in Sources */,
 				ABEDBC911FD04AF90027066A /* DeviceTrustViewController.swift in Sources */,
 				B3E21B4B1FAC956E00082CF7 /* ios_showcase_template.xcdatamodeld in Sources */,
@@ -725,6 +743,8 @@
 				AB3E12021FC324D000B7302C /* StorageViewController.swift in Sources */,
 				AB3E12061FC331CB00B7302C /* StorageService.swift in Sources */,
 				AB3E12041FC3307400B7302C /* StorageInteractor.swift in Sources */,
+				B3F525F120D961A800428DB2 /* WebviewRouter.swift in Sources */,
+				B3F525F320D961BA00428DB2 /* WebviewBuilder.swift in Sources */,
 				88821BCF20A451F300AC4B6E /* PushRouter.swift in Sources */,
 				B30BEBA11FB20F3F0008A171 /* AppConfiguration.swift in Sources */,
 				B342DF381FB0CA9900BBA05B /* AuthenticationViewController.swift in Sources */,

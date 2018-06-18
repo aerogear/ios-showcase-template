@@ -19,6 +19,18 @@ protocol RootInteractor: MenuListener {
     var router: RootRouter? { get set }
 }
 
+enum DocsURL: String {
+    case idmDoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html"
+    case idmSSODoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1"
+    case deviceSecurityDoc = "https://docs.aerogear.org/aerogear/latest/security/index.html"
+    case pushDoc = "https://docs.aerogear.org/aerogear/latest/push/index.html"
+    case mericsDoc = "https://docs.aerogear.org/aerogear/latest/metrics/index.html"
+    
+    func toURL() -> URL {
+        return URL(string: self.rawValue)!
+    }
+}
+
 class RootInteractorImpl: RootInteractor {
     var router: RootRouter?
 
@@ -32,13 +44,13 @@ class RootInteractorImpl: RootInteractor {
         case MenuItemType.identityManagementAuth:
             router?.launchAuthenticationView()
         case MenuItemType.identityManagementDocs:
-            print("Open auth documentation using router?.launchURL(String)")
+            router?.openDocsPage(withLink: DocsURL.idmDoc, andTitle: RootViewController.MENU_ITEM_TITLE_IDM_DOCS)
         case MenuItemType.identityManagementSSO:
-            print("Open documentation page about using SSO in an iOS app")
+            router?.openDocsPage(withLink: DocsURL.idmSSODoc, andTitle: RootViewController.MENU_ITEM_TITLE_IDM_SSO)
         case MenuItemType.deviceSec:
             print("Open device security page")
         case MenuItemType.deviceSecDocs:
-            print("Open device security documentation using router?.launchURL(String)")
+            router?.openDocsPage(withLink: DocsURL.deviceSecurityDoc, andTitle: RootViewController.MENU_ITEM_TITLE_SEC_DOCS)
         case MenuItemType.deviceSecStorage:
             router?.launchStorageView()
         case MenuItemType.deviceSecTrust:
@@ -46,13 +58,13 @@ class RootInteractorImpl: RootInteractor {
         case MenuItemType.push:
             print("Open Push description page")
         case MenuItemType.pushDocs:
-            print("Open push documentation using router?.launchURL(String)")
+            router?.openDocsPage(withLink: DocsURL.pushDoc, andTitle: RootViewController.MENU_ITEM_TITLE_PUSH_DOCS)
         case MenuItemType.pushMessage:
             router?.launchPushView()
         case MenuItemType.metrics:
             router?.launchMetricsView()
         case MenuItemType.metricsDocs:
-            print("Open metrics documentation using router?.launchURL(String)")
+            router?.openDocsPage(withLink: DocsURL.mericsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
         case MenuItemType.metricsTrust:
             print("Open metrics trust page")
         case MenuItemType.metricsProfile:
