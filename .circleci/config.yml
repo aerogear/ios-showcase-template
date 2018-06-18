@@ -42,11 +42,7 @@ jobs:
       # the signning credentials will be setup using fastlane match
       - run:
             name: Generate IPA for distribution
-            command: |
-              echo $FASTLANE_PASSWORD_Base64
-              export FASTLANE_PASSWORD=$(echo $FASTLANE_PASSWORD_Base64 | base64 --decode)
-              echo $FASTLANE_PASSWORD
-              FASTLANE_PASSWORD=$FASTLANE_PASSWORD bundle exec fastlane enterprise
+            command: bundle exec fastlane enterprise
 
       - run:
             name: Push IPA file to Kryptowire for scanning
