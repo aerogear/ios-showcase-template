@@ -28,7 +28,10 @@ jobs:
       # Setup circle ci first
       - run:
           name: Setup CircleCI
-          command: bundle exec fastlane setup
+          command: |
+            bundle install
+            bundle update fastlane 
+            bundle exec fastlane setup
 
       # Build the app and run tests
       - run:
@@ -42,7 +45,7 @@ jobs:
       # the signning credentials will be setup using fastlane match
       - run:
             name: Generate IPA for distribution
-            command: bundle exec fastlane enterprise
+            command: bundle exec fastlane enterprise --verbose
 
       - run:
             name: Push IPA file to Kryptowire for scanning
