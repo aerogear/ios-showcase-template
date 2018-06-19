@@ -6,6 +6,7 @@
 //
 
 import AGSAuth
+import AGSCore
 import AGSPush
 import CoreData
 import TrustKit
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var authService: AgsAuth?
     var pushHelper = PushHelper()
+    var appComponents: AppComponents?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -47,9 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configDict = NSDictionary(contentsOfFile: configFilePath)!
         let appConfiguration = AppConfiguration(configDict)
 
-        let appComponents = AppComponents(appConfiguration: appConfiguration)
+        self.appComponents = AppComponents(appConfiguration: appConfiguration)
 
-        let rootBuilder = RootBuilder(components: appComponents)
+        let rootBuilder = RootBuilder(components: self.appComponents!)
         let rootRouter = rootBuilder.build()
         rootRouter.launchFromWindow(window: window!)
 
@@ -105,7 +107,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        pushHelper.registerUPS(deviceToken)
+        AgsCore.logger.info("Registered for notifications with token")
+        self.appComponents?.registerPushService(deviceToken)
     }
 
     func application(_ application: UIApplication,

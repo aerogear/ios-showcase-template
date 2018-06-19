@@ -6,6 +6,7 @@
 //
 
 import AGSAuth
+import AGSPush
 import Foundation
 import UIKit
 
@@ -49,6 +50,39 @@ class RootRouterImpl: RootRouter {
         self.navViewController = navViewController
         self.rootViewController = viewController
         self.appComponents = appComponents
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showServiceConfigNotFoundDialog(notification:)), name: .serviceConfigMissing, object: nil)
+    }
+    
+    @objc func showServiceConfigNotFoundDialog(notification: Notification) {
+        var serviceName = ""
+        var docsTitle: String?
+        var docsUrl: DocsURL?
+    
+        if let serviceType = notification.object as? ServiceType {
+            switch serviceType {
+            case .auth:
+                serviceName = "identity management"
+                docsTitle = RootViewController.SUBMENU_ITEM_TITLE_IDM_SHOWCASE_DOCS
+                docsUrl = DocsURL.idmClientAppDoc
+            case .push:
+                serviceName = "push"
+                docsTitle = RootViewController.SUBMENU_ITEM_TITLE_PUSH_SHOWCASE_DOCS
+                docsUrl = DocsURL.pushClientAppDoc
+            }
+        }
+        
+        // Construct the modal containing the error message and display it immediately.
+        let alert = UIAlertController(title: "Feature Not Configured", message: "The service \(serviceName) does not have a configuration in mobile-services.json. Refer to the documentation for instructions on how to configure this service.", preferredStyle: .alert)
+        if let documentationUrl = docsUrl, let documentationTitle = docsTitle {
+            let docsAction = UIAlertAction(title: "Show Documentation", style: .default) { action in
+                self.openDocsPage(withLink: documentationUrl, andTitle: documentationTitle)
+            }
+            alert.addAction(docsAction)
+        }
+        let exitAction = UIAlertAction(title: "Close", style: .cancel)
+        alert.addAction(exitAction)
+        self.rootViewController.present(alert, animated: true, completion: nil)
     }
 
     func launchFromWindow(window: UIWindow) {
@@ -65,11 +99,19 @@ class RootRouterImpl: RootRouter {
     }
 
     func launchAuthenticationView() {
-        if self.authenticationRouter == nil {
-            let authViewOptions = AuthenticationViewOptions(authLoginNavigationTitle: RootViewController.MENU_ITEM_TITLE_IDM_AUTH, authDetailsNavigationTitle: RootViewController.SUBMENU_ITEM_TITLE_IDM_AUTH_DETAILS, titleViewController: self.rootViewController)
-            self.authenticationRouter = AuthenticationBuilder(appComponents: self.appComponents, authViewOptions).build()
+        do {
+            let authService = try self.appComponents.resolveAuthService()
+            if self.authenticationRouter == nil {
+                let authViewOptions = AuthenticationViewOptions(authLoginNavigationTitle: RootViewController.MENU_ITEM_TITLE_IDM_AUTH, authDetailsNavigationTitle: RootViewController.SUBMENU_ITEM_TITLE_IDM_AUTH_DETAILS, titleViewController: self.rootViewController)
+                self.authenticationRouter = AuthenticationBuilder(authService: authService, authViewOptions).build()
+            }
+            self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_IDM_AUTH
+            self.rootViewController.presentViewController(self.authenticationRouter!.initialViewController(user: try self.resolveCurrentUser()), true)
+        } catch AgsAuth.Errors.noServiceConfigurationFound {
+            NotificationCenter.default.post(name: .serviceConfigMissing, object: ServiceType.auth)
+        } catch {
+            print("Unexpected error")
         }
-        self.rootViewController.presentViewController(self.authenticationRouter!.initialViewController(user: self.resolveCurrentUser()), true)
     }
 
     // Storage View
@@ -91,6 +133,10 @@ class RootRouterImpl: RootRouter {
     }
 
     func launchPushView() {
+        if self.appComponents.isPushMissingConfig() {
+            NotificationCenter.default.post(name: .serviceConfigMissing, object: ServiceType.push)
+            return
+        }
         if self.pushRouter == nil {
             self.pushRouter = PushBuilder().build()
         }
@@ -112,9 +158,9 @@ class RootRouterImpl: RootRouter {
         }
     }
 
-    func resolveCurrentUser() -> User? {
-        let authService = self.appComponents.resolveAuthService()
-        return try! authService.currentUser()
+    func resolveCurrentUser() throws -> User? {
+        let authService = try self.appComponents.resolveAuthService()
+        return try authService.currentUser()
     }
     
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String) {

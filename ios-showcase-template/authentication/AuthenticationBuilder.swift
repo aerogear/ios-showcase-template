@@ -5,6 +5,7 @@
 //  Created by Wei Li on 08/11/2017.
 //
 
+import AGSAuth
 import Foundation
 import UIKit
 
@@ -19,11 +20,11 @@ struct AuthenticationViewOptions {
  This class should be used to build the authentication module, and the caller should be able to pass the required dependencies to it.
  */
 class AuthenticationBuilder {
-    let appComponents: AppComponents
+    let authService: AgsAuth
     let options: AuthenticationViewOptions
 
-    init(appComponents: AppComponents, _ options: AuthenticationViewOptions) {
-        self.appComponents = appComponents
+    init(authService: AgsAuth, _ options: AuthenticationViewOptions) {
+        self.authService = authService
         self.options = options
     }
 
@@ -33,7 +34,7 @@ class AuthenticationBuilder {
         let detailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticationDetailsViewController") as! AuthenticationDetailsViewController
 
         let authenticationRouter = AuthenticationRouterImpl(viewController: viewController, detailsViewController: detailsViewController, options)
-        let authenticationInteractor = AuthenticationInteractorImpl(authService: self.appComponents.resolveAuthService())
+        let authenticationInteractor = AuthenticationInteractorImpl(authService: self.authService)
         authenticationInteractor.router = authenticationRouter
 
         viewController.authListener = authenticationInteractor

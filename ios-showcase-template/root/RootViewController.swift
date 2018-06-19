@@ -67,6 +67,8 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
     static let MENU_ITEM_TITLE_METRICS_TRUST = "Trust Check Info"
     
     static let SUBMENU_ITEM_TITLE_IDM_AUTH_DETAILS = "Identity Profile"
+    static let SUBMENU_ITEM_TITLE_IDM_SHOWCASE_DOCS = "Documentation"
+    static let SUBMENU_ITEM_TITLE_PUSH_SHOWCASE_DOCS = "Documentation"
     
     static let MENU_ITEMS = [
         MenuItem(MenuItemType.home, MENU_ITEM_TITLE_HOME, "ic_home"),
@@ -105,7 +107,7 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
         }
         
         showFirstChild()
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

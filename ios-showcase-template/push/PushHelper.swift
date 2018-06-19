@@ -9,6 +9,8 @@ import UserNotifications
 */
 public class PushHelper {
     
+    
+    
     /**
       Called when push message was received.
       Presents dialog with message
@@ -26,28 +28,6 @@ public class PushHelper {
 
         // No additioanl data to fetch
         fetchCompletionHandler(UIBackgroundFetchResult.noData)
-    }
-
-    /**
-      Example for AgsPush SDK registration
-    */
-    public func registerUPS(_ deviceToken: Data) {
-        AgsCore.logger.info("Registered for notifications with token")
-
-        var config = UnifiedPushConfig()
-        config.alias = "Example App"
-        config.categories = ["iOS", "Example"]
-
-        AgsPush.instance.register(
-            deviceToken,
-            config,
-            success: {
-                AgsCore.logger.info("Successfully registered to Unified Push Server")
-            },
-            failure: { (error: Error!) in
-                AgsCore.logger.error("Failure to register for on Unified Push Server: \(error)")
-            }
-        )
     }
 
     /**
