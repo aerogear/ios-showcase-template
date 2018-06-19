@@ -22,7 +22,6 @@ protocol RootRouter {
     func launchAuthenticationView()
     func launchStorageView()
     func launchDeviceTrustView()
-    func launchAccessControlView()
     func launchPushView()
     func launchMetricsView()
     func launchURL(_ urlString: String)
@@ -37,7 +36,6 @@ class RootRouterImpl: RootRouter {
     var authenticationRouter: AuthenticationRouter?
     var storageRouter: StorageRouter?
     var deviceTrustRouter: DeviceTrustRouter?
-    var accessControlRouter: AccessControlRouter?
     var pushRouter: PushRouter?
     var metricsRouter: MetricsRouter?
 
@@ -84,21 +82,6 @@ class RootRouterImpl: RootRouter {
         }
         self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_SEC_TRUST
         self.rootViewController.presentViewController(self.deviceTrustRouter!.viewController, true)
-    }
-
-    func launchAccessControlView() {
-        let currentUser = self.resolveCurrentUser()
-        if currentUser != nil {
-            if self.accessControlRouter == nil {
-                self.accessControlRouter = AccessControlBuilder(appComponents: self.appComponents).build()
-            }
-            let acVC = self.accessControlRouter!.viewController
-            self.rootViewController.title = RootViewController.MENU_ITEM_TITLE_IDM_SSO
-            self.rootViewController.presentViewController(acVC, true)
-            acVC.userIdentity = currentUser
-        } else {
-            launchAuthenticationView()
-        }
     }
 
     func launchPushView() {
