@@ -945,8 +945,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aerogear.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b2367087-0909-4b18-abfb-4612b8df1890";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "246119e0-0882-4d3c-9942-4b5be2ca7e9d";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development org.aerogear.ios-showcase-template";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ios-showcase-template/ios-showcase-template-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -967,8 +967,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aerogear.ios-showcase-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b2367087-0909-4b18-abfb-4612b8df1890";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "cff102ff-c079-4ed6-a8cb-27f8ec14cbd8";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse org.aerogear.ios-showcase-template";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ios-showcase-template/ios-showcase-template-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
