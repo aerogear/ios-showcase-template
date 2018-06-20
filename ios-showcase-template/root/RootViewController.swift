@@ -66,6 +66,8 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
     static let MENU_ITEM_TITLE_METRICS_PROFILE = "Device Profile Info"
     static let MENU_ITEM_TITLE_METRICS_TRUST = "Trust Check Info"
     
+    static let SUBMENU_ITEM_TITLE_IDM_AUTH_DETAILS = "Identity Profile"
+    
     static let MENU_ITEMS = [
         MenuItem(MenuItemType.home, MENU_ITEM_TITLE_HOME, "ic_home"),
         
