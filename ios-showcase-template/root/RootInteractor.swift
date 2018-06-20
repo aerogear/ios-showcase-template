@@ -31,16 +31,73 @@ enum DocsURL: String {
     }
 }
 
+struct ServiceDesciption {
+    let header: String
+    let contentList: [String]
+    var footer: String?
+}
+
+//enum ServiceIntroductions: ServiceDesciption {
+//    case idmService = ServiceDesciption
+//    """
+//    <h1></h1>
+//    <br />
+//    <ul style="list-style-type: disc">
+//    <li>
+//    </ul>
+//    """
+//    case pushSerivce = """
+//
+//    * Code once and send push notifications to iOS and Android
+//    * Push notifications to defined groups
+//    * Push notifications to either iOS only or Android only
+//    * Push notifications to different variants of a mobile app
+//    * Push notifications from different back-end apps to the same mobile app
+//    """
+//    case metricsService = """
+//
+//
+//    """
+//    case deviceSecurityService = """
+//    The security service allows you to easily configure and manage device security, and trust checks for your mobile app
+//
+//    """
+//}
+
 class RootInteractorImpl: RootInteractor {
     var router: RootRouter?
 
+    let idmServiceDescription = ServiceDesciption(header: "The identity service allows you to add authentication and authorization to your mobile app.", contentList: [
+        "Secure your mobile app using the industry standard OpenID Connect protocol",
+        "Add access control to your app based on user’s group membership",
+        "Easily implement SSO, multi factor authentication and Social Login support",
+        "Back end support for identity brokering and user federation"
+        ], footer: nil)
+    
+    let deviceSecDescription = ServiceDesciption(header: "The security service allows you to easily configure and manage device security, and trust checks for your mobile app", contentList: [
+       "Perform a range of device trust checks on the mobile device, such as checking if the device is rooted, and allows you take proactive action based on the results",
+        "Distribute SSL certificates with a mobile app to create a direct chain of trust (certificate pinning)"
+    ], footer: nil)
+    
+    let pushServiceDescription = ServiceDesciption(header: "The push notification service allows you send native push notifications to different mobile operating systems.", contentList: [
+       "Code once and send push notifications to iOS and Android",
+       "Push notifications to defined groups",
+       "Push notifications to either iOS only or Android only",
+       "Push notifications to different variants of a mobile app",
+       "Push notifications from different back-end apps to the same mobile app"
+    ], footer: nil)
+    
+    let metricsServiceDescription = ServiceDesciption(header: "The metrics service allows you gather metrics on mobile apps, device versions, device security checks and back-end mobile service usage.", contentList: [
+      "Monitor usage by version of mobile app, platform and SDK",
+      "Monitor interactions with the Identity Management service"
+    ], footer: nil)
 
     func onMenuItemSelected(_ item: MenuItem) {
         switch item.type {
         case MenuItemType.home:
             router?.launchHomeView()
         case MenuItemType.identityManagement:
-            print("Open IDM description page")
+            router?.launchLandingPageView(withTitle: RootViewController.MENU_ITEM_TITLE_IDM, andContent: idmServiceDescription)
         case MenuItemType.identityManagementAuth:
             router?.launchAuthenticationView()
         case MenuItemType.identityManagementDocs:
@@ -48,7 +105,7 @@ class RootInteractorImpl: RootInteractor {
         case MenuItemType.identityManagementSSO:
             router?.openDocsPage(withLink: DocsURL.idmSSODoc, andTitle: RootViewController.MENU_ITEM_TITLE_IDM_SSO)
         case MenuItemType.deviceSec:
-            print("Open device security page")
+            router?.launchLandingPageView(withTitle: RootViewController.MENU_ITEM_TITLE_SEC, andContent: deviceSecDescription)
         case MenuItemType.deviceSecDocs:
             router?.openDocsPage(withLink: DocsURL.deviceSecurityDoc, andTitle: RootViewController.MENU_ITEM_TITLE_SEC_DOCS)
         case MenuItemType.deviceSecTrust:
@@ -58,13 +115,13 @@ class RootInteractorImpl: RootInteractor {
         case MenuItemType.deviceSecPinning:
             router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_SEC_PINNING)
         case MenuItemType.push:
-            print("Open Push description page")
+            router?.launchLandingPageView(withTitle: RootViewController.MENU_ITEM_TITLE_PUSH, andContent: pushServiceDescription)
         case MenuItemType.pushDocs:
             router?.openDocsPage(withLink: DocsURL.pushDoc, andTitle: RootViewController.MENU_ITEM_TITLE_PUSH_DOCS)
         case MenuItemType.pushMessage:
             router?.launchPushView()
         case MenuItemType.metrics:
-            router?.launchMetricsView()
+            router?.launchLandingPageView(withTitle: RootViewController.MENU_ITEM_TITLE_METRICS, andContent: metricsServiceDescription)
         case MenuItemType.metricsDocs:
             router?.openDocsPage(withLink: DocsURL.mericsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
         case MenuItemType.metricsProfile:

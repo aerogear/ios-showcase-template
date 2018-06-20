@@ -27,6 +27,7 @@ protocol RootRouter {
     func launchURL(_ urlString: String)
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String)
     func launchUnderconstructionView(_ viewTitle: String)
+    func launchLandingPageView(withTitle title: String, andContent content: ServiceDesciption)
 }
 
 class RootRouterImpl: RootRouter {
@@ -42,6 +43,7 @@ class RootRouterImpl: RootRouter {
     var metricsRouter: MetricsRouter?
     var webviewRouter: WebviewRouter?
     var underconstructionRouter: UnderconstructionRouter?
+    var landingPageRouter: LandingPagesRouter?
 
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -130,5 +132,14 @@ class RootRouterImpl: RootRouter {
         }
         self.rootViewController.title = viewTitle
         self.rootViewController.presentViewController(self.underconstructionRouter!.viewController, true)
+    }
+    
+    func launchLandingPageView(withTitle title: String, andContent content: ServiceDesciption) {
+        if self.landingPageRouter == nil {
+            self.landingPageRouter = LandingPagesBuilder().build()
+        }
+        self.rootViewController.title = title
+        self.rootViewController.presentViewController(self.landingPageRouter!.viewController, true)
+        self.landingPageRouter?.viewController.loadText(header: content.header, contentList: content.contentList, footer: content.footer)
     }
 }

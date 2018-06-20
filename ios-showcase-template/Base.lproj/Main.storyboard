@@ -934,6 +934,76 @@ www.aerogear.org/community#guides</string>
             </objects>
             <point key="canvasLocation" x="-1746" y="803"/>
         </scene>
+        <!--Landing Pages View Controller-->
+        <scene sceneID="xfO-ip-2tc">
+            <objects>
+                <viewController storyboardIdentifier="LandingPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rbK-aS-Ffg" customClass="LandingPagesViewController" customModule="ios_showcase_template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73T-te-cbo">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="227" verticalHuggingPriority="251" image="aerogear_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4qf-nL-mTR" userLabel="aerogear">
+                                <rect key="frame" x="117" y="105" width="600" height="70"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="W5V-zG-pB4"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-A5-80h">
+                                <rect key="frame" x="20" y="215" width="794" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="80" id="wvs-hb-hOO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-Pr-Y5Q">
+                                <rect key="frame" x="20" y="305" width="794" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="100" id="Uze-Lk-SZZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" misplaced="YES" scrollEnabled="NO" editable="NO" text="For further information, visit www.aerogear.org" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgt-QJ-DzI">
+                                <rect key="frame" x="50" y="511" width="734" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="40" id="Wan-9M-m9L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xgt-QJ-DzI" firstAttribute="leading" secondItem="Y6u-Tl-Sxk" secondAttribute="leading" constant="20" id="0Fw-PK-Jry"/>
+                            <constraint firstItem="4qf-nL-mTR" firstAttribute="centerX" secondItem="Y6u-Tl-Sxk" secondAttribute="centerX" id="3qy-nR-cwW"/>
+                            <constraint firstItem="4qf-nL-mTR" firstAttribute="centerY" secondItem="Y6u-Tl-Sxk" secondAttribute="top" constant="120" id="4x7-yy-d9x"/>
+                            <constraint firstItem="Y6u-Tl-Sxk" firstAttribute="trailing" secondItem="A8V-A5-80h" secondAttribute="trailing" constant="20" id="6dY-4C-g5b"/>
+                            <constraint firstItem="Xgt-QJ-DzI" firstAttribute="top" secondItem="Zbl-Pr-Y5Q" secondAttribute="bottom" constant="10" id="AGb-G5-dLi"/>
+                            <constraint firstItem="Zbl-Pr-Y5Q" firstAttribute="leading" secondItem="Y6u-Tl-Sxk" secondAttribute="leading" constant="20" id="Byg-7w-Kdl"/>
+                            <constraint firstItem="Y6u-Tl-Sxk" firstAttribute="trailing" secondItem="Zbl-Pr-Y5Q" secondAttribute="trailing" constant="20" id="DNk-R4-tSe"/>
+                            <constraint firstItem="Zbl-Pr-Y5Q" firstAttribute="top" secondItem="A8V-A5-80h" secondAttribute="bottom" constant="10" id="GEw-JQ-Sjd"/>
+                            <constraint firstItem="A8V-A5-80h" firstAttribute="leading" secondItem="Y6u-Tl-Sxk" secondAttribute="leading" constant="20" id="ivX-UQ-yBx"/>
+                            <constraint firstItem="Y6u-Tl-Sxk" firstAttribute="trailing" secondItem="Xgt-QJ-DzI" secondAttribute="trailing" constant="20" id="s1I-4B-kjc"/>
+                            <constraint firstItem="A8V-A5-80h" firstAttribute="top" secondItem="4qf-nL-mTR" secondAttribute="bottom" constant="40" id="yvh-j8-76l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y6u-Tl-Sxk"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Zbl-Pr-Y5Q" id="Gw7-dK-25E"/>
+                        <outlet property="footerText" destination="Xgt-QJ-DzI" id="9hn-GA-NJW"/>
+                        <outlet property="headerTextView" destination="A8V-A5-80h" id="Bgi-Ci-3At"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufg-jx-BcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4138.84892086331" y="-1027.3381294964029"/>
+        </scene>
     </scenes>
     <resources>
         <image name="aerogear_logo" width="600" height="189"/>
