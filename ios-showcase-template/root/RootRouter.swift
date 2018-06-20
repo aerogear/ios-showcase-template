@@ -25,6 +25,7 @@ protocol RootRouter {
     func launchPushView()
     func launchMetricsView()
     func launchURL(_ urlString: String)
+    func openDocsPage(withLink docUrl: DocsURL, andTitle title: String)
 }
 
 class RootRouterImpl: RootRouter {
@@ -38,6 +39,7 @@ class RootRouterImpl: RootRouter {
     var deviceTrustRouter: DeviceTrustRouter?
     var pushRouter: PushRouter?
     var metricsRouter: MetricsRouter?
+    var webviewRouter: WebviewRouter?
 
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -109,5 +111,14 @@ class RootRouterImpl: RootRouter {
     func resolveCurrentUser() -> User? {
         let authService = self.appComponents.resolveAuthService()
         return try! authService.currentUser()
+    }
+    
+    func openDocsPage(withLink docUrl: DocsURL, andTitle title: String) {
+        if self.webviewRouter == nil {
+            self.webviewRouter = WebviewBuilder().build()
+        }
+        self.rootViewController.title = title
+        self.rootViewController.presentViewController(self.webviewRouter!.viewController, true)
+        self.webviewRouter?.viewController.loadUrl(docUrl.toURL())
     }
 }

@@ -107,5 +107,3 @@ AGExampleService
 
 docs/api
 *.bak
-
-Gemfile.lock

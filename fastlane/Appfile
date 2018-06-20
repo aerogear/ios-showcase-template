@@ -1,0 +1,9 @@
+app_identifier "org.aerogear.ios-showcase-template" # The bundle identifier of your app
+# we should change this to a team apple account at some point
+apple_id "fh.team.eng-group@redhat.com" # Your Apple email address
+
+team_id "GHPBX39444" # Developer Portal Team ID
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
