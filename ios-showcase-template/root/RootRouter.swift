@@ -26,6 +26,7 @@ protocol RootRouter {
     func launchMetricsView()
     func launchURL(_ urlString: String)
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String)
+    func launchUnderconstructionView(_ viewTitle: String)
 }
 
 class RootRouterImpl: RootRouter {
@@ -40,6 +41,7 @@ class RootRouterImpl: RootRouter {
     var pushRouter: PushRouter?
     var metricsRouter: MetricsRouter?
     var webviewRouter: WebviewRouter?
+    var underconstructionRouter: UnderconstructionRouter?
 
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -120,5 +122,13 @@ class RootRouterImpl: RootRouter {
         self.rootViewController.title = title
         self.rootViewController.presentViewController(self.webviewRouter!.viewController, true)
         self.webviewRouter?.viewController.loadUrl(docUrl.toURL())
+    }
+    
+    func launchUnderconstructionView(_ viewTitle: String) {
+        if self.underconstructionRouter == nil {
+            self.underconstructionRouter = UnderconstructionBuilder().build()
+        }
+        self.rootViewController.title = viewTitle
+        self.rootViewController.presentViewController(self.underconstructionRouter!.viewController, true)
     }
 }

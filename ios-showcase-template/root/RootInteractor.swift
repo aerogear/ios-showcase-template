@@ -51,10 +51,12 @@ class RootInteractorImpl: RootInteractor {
             print("Open device security page")
         case MenuItemType.deviceSecDocs:
             router?.openDocsPage(withLink: DocsURL.deviceSecurityDoc, andTitle: RootViewController.MENU_ITEM_TITLE_SEC_DOCS)
-        case MenuItemType.deviceSecStorage:
-            router?.launchStorageView()
         case MenuItemType.deviceSecTrust:
             router?.launchDeviceTrustView()
+        case MenuItemType.deviceSecStorage:
+            router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_SEC_STORAGE)
+        case MenuItemType.deviceSecPinning:
+            router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_SEC_PINNING)
         case MenuItemType.push:
             print("Open Push description page")
         case MenuItemType.pushDocs:
@@ -65,10 +67,10 @@ class RootInteractorImpl: RootInteractor {
             router?.launchMetricsView()
         case MenuItemType.metricsDocs:
             router?.openDocsPage(withLink: DocsURL.mericsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
-        case MenuItemType.metricsTrust:
-            print("Open metrics trust page")
         case MenuItemType.metricsProfile:
-            print("Open metrics profile page")
+            router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_METRICS_PROFILE)
+        case MenuItemType.metricsTrust:
+            router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_METRICS_TRUST)
         default:
             print("no view to show")
         }

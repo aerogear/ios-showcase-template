@@ -28,7 +28,7 @@ platform :ios do
 
   desc "Enterprise build"
   lane :enterprise do
-    match(type: "enterprise")
+    match(type: "enterprise", keychain_name: "fastlane_tmp_keychain")
     gym(export_method: "enterprise")
   end
 end
