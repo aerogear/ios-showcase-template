@@ -65,6 +65,12 @@ jobs:
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
             LOCAL_DIR=./sdk pod install
+      # Install fastlane and setup
+      - run:
+          name: Setup CircleCI
+          command: |
+            bundle install
+            bundle update fastlane
       # Build the release app
       - run:
             name: Generate IPA for distribution
