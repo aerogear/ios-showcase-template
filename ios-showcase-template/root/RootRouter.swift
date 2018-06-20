@@ -113,11 +113,18 @@ class RootRouterImpl: RootRouter {
         return try! authService.currentUser()
     }
     
+<<<<<<< HEAD
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String) {
         if self.webviewRouter == nil {
             self.webviewRouter = WebviewBuilder().build()
         }
         self.rootViewController.title = title
+=======
+    func openDocsPage(withLink docUrl: DocsURL) {
+        if self.webviewRouter == nil {
+            self.webviewRouter = WebviewBuilder().build()
+        }
+>>>>>>>  ✨ adding the new view for documentation pages
         self.rootViewController.presentViewController(self.webviewRouter!.viewController, true)
         self.webviewRouter?.viewController.loadUrl(docUrl.toURL())
     }
