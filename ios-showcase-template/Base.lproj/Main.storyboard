@@ -345,10 +345,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" estimatedRowHeight="58" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="fUv-ym-c9I">
-                                <rect key="frame" x="15" y="35" width="804" height="290"/>
+                                <rect key="frame" x="15" y="35" width="804" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="290" id="LrR-0U-1nf"/>
+                                    <constraint firstAttribute="height" constant="180" id="LrR-0U-1nf"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -470,7 +470,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="otpEnabledCell" id="NRc-74-ddx">
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="otpEnabledCell" id="NRc-74-ddx">
                                         <rect key="frame" x="0.0" y="175" width="804" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NRc-74-ddx" id="PtC-73-L4s">
@@ -500,15 +500,15 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailVerifiedCell" id="A2V-8P-RlM">
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailVerifiedCell" id="A2V-8P-RlM">
                                         <rect key="frame" x="0.0" y="233" width="804" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A2V-8P-RlM" id="02U-bT-D83">
-                                            <rect key="frame" x="0.0" y="0.0" width="804" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="804" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sJ-EG-5qR">
-                                                    <rect key="frame" x="11" y="19" width="104" height="21"/>
+                                                    <rect key="frame" x="4" y="19" width="104" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -533,8 +533,22 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-kw-s6h">
+                                <rect key="frame" x="0.0" y="1062" width="834" height="50"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="d4F-jo-GQz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" name="Text Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="OWc-q8-PoD" eventType="touchDown" id="wSk-VN-FEd"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-8n-6se" userLabel="User Roles View">
-                                <rect key="frame" x="15" y="340" width="804" height="45"/>
+                                <rect key="frame" x="15" y="223" width="804" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="e8z-zs-BPm"/>
@@ -583,20 +597,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-kw-s6h">
-                                <rect key="frame" x="0.0" y="1062" width="834" height="50"/>
-                                <color key="backgroundColor" name="Primary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="d4F-jo-GQz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" name="Text Color"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutTapped:" destination="OWc-q8-PoD" eventType="touchDown" id="wSk-VN-FEd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="LightPrimary"/>
                         <constraints>
@@ -607,7 +607,7 @@
                             <constraint firstItem="GtF-8n-6se" firstAttribute="leading" secondItem="fUv-ym-c9I" secondAttribute="leading" id="Yjx-ye-bNK"/>
                             <constraint firstItem="fUv-ym-c9I" firstAttribute="trailing" secondItem="3Z0-H9-QkC" secondAttribute="trailing" constant="-15" id="Zgf-Zt-GXL"/>
                             <constraint firstItem="fUv-ym-c9I" firstAttribute="top" secondItem="3Z0-H9-QkC" secondAttribute="top" constant="15" id="crG-uW-Bcu"/>
-                            <constraint firstItem="GtF-8n-6se" firstAttribute="top" secondItem="fUv-ym-c9I" secondAttribute="bottom" constant="15" id="ilS-9W-mde"/>
+                            <constraint firstItem="GtF-8n-6se" firstAttribute="top" secondItem="fUv-ym-c9I" secondAttribute="bottom" constant="8" id="ilS-9W-mde"/>
                             <constraint firstItem="uyt-kw-s6h" firstAttribute="centerX" secondItem="GtF-8n-6se" secondAttribute="centerX" id="pkg-VA-YaE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Z0-H9-QkC"/>
@@ -620,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWS-gM-bNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4024.6376811594205" y="213.58695652173915"/>
+            <point key="canvasLocation" x="4024.4604316546765" y="213.12949640287769"/>
         </scene>
         <!--Web view Controller-->
         <scene sceneID="pLx-qC-2if">

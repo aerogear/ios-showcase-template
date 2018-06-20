@@ -51,8 +51,6 @@ class RootInteractorImpl: RootInteractor {
             print("Open device security page")
         case MenuItemType.deviceSecDocs:
             router?.openDocsPage(withLink: DocsURL.deviceSecurityDoc, andTitle: RootViewController.MENU_ITEM_TITLE_SEC_DOCS)
-        case MenuItemType.deviceSecStorage:
-            router?.launchStorageView()
         case MenuItemType.deviceSecTrust:
             router?.launchDeviceTrustView()
         case MenuItemType.deviceSecStorage:
@@ -69,8 +67,6 @@ class RootInteractorImpl: RootInteractor {
             router?.launchMetricsView()
         case MenuItemType.metricsDocs:
             router?.openDocsPage(withLink: DocsURL.mericsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
-        case MenuItemType.metricsTrust:
-            print("Open metrics trust page")
         case MenuItemType.metricsProfile:
             router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_METRICS_PROFILE)
         case MenuItemType.metricsTrust:
