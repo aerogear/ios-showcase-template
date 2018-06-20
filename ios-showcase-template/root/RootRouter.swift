@@ -26,6 +26,7 @@ protocol RootRouter {
     func launchMetricsView()
     func launchURL(_ urlString: String)
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String)
+    func launchUnderconstructionView(_ viewTitle: String)
 }
 
 class RootRouterImpl: RootRouter {
@@ -40,6 +41,7 @@ class RootRouterImpl: RootRouter {
     var pushRouter: PushRouter?
     var metricsRouter: MetricsRouter?
     var webviewRouter: WebviewRouter?
+    var underconstructionRouter: UnderconstructionRouter?
 
     init(navViewController: UINavigationController, viewController: RootViewController, appComponents: AppComponents) {
         self.navViewController = navViewController
@@ -113,19 +115,20 @@ class RootRouterImpl: RootRouter {
         return try! authService.currentUser()
     }
     
-<<<<<<< HEAD
     func openDocsPage(withLink docUrl: DocsURL, andTitle title: String) {
         if self.webviewRouter == nil {
             self.webviewRouter = WebviewBuilder().build()
         }
         self.rootViewController.title = title
-=======
-    func openDocsPage(withLink docUrl: DocsURL) {
-        if self.webviewRouter == nil {
-            self.webviewRouter = WebviewBuilder().build()
-        }
->>>>>>>  ✨ adding the new view for documentation pages
         self.rootViewController.presentViewController(self.webviewRouter!.viewController, true)
         self.webviewRouter?.viewController.loadUrl(docUrl.toURL())
+    }
+    
+    func launchUnderconstructionView(_ viewTitle: String) {
+        if self.underconstructionRouter == nil {
+            self.underconstructionRouter = UnderconstructionBuilder().build()
+        }
+        self.rootViewController.title = viewTitle
+        self.rootViewController.presentViewController(self.underconstructionRouter!.viewController, true)
     }
 }
