@@ -67,27 +67,27 @@ struct ServiceDesciption {
 class RootInteractorImpl: RootInteractor {
     var router: RootRouter?
 
-    let idmServiceDescription = ServiceDesciption(header: "The identity service allows you to add authentication and authorization to your mobile app.", contentList: [
+    let idmServiceDescription = ServiceDesciption(header: "The Identity Management service allows you to add authentication and authorization to your mobile app.", contentList: [
         "Secure your mobile app using the industry standard OpenID Connect protocol",
         "Add access control to your app based on user’s group membership",
         "Easily implement SSO, multi factor authentication and Social Login support",
         "Back end support for identity brokering and user federation"
         ], footer: nil)
     
-    let deviceSecDescription = ServiceDesciption(header: "The security service allows you to easily configure and manage device security, and trust checks for your mobile app", contentList: [
-       "Perform a range of device trust checks on the mobile device, such as checking if the device is rooted, and allows you take proactive action based on the results",
+    let deviceSecDescription = ServiceDesciption(header: "The Device Security service allows you to easily configure and manage device security, and trust checks for your mobile app", contentList: [
+        "Perform a range of device trust checks on the mobile device, such as checking if the device is rooted, and allows you take proactive action based on the results",
         "Distribute SSL certificates with a mobile app to create a direct chain of trust (certificate pinning)"
     ], footer: nil)
     
-    let pushServiceDescription = ServiceDesciption(header: "The push notification service allows you send native push notifications to different mobile operating systems.", contentList: [
-       "Code once and send push notifications to iOS and Android",
-       "Push notifications to defined groups",
-       "Push notifications to either iOS only or Android only",
-       "Push notifications to different variants of a mobile app",
-       "Push notifications from different back-end apps to the same mobile app"
+    let pushServiceDescription = ServiceDesciption(header: "The Push Notification service allows you send native push notifications to different mobile operating systems.", contentList: [
+        "Code once and send push notifications to iOS and Android",
+        "Push notifications to defined groups",
+        "Push notifications to either iOS only or Android only",
+        "Push notifications to different variants of a mobile app",
+        "Push notifications from different back-end apps to the same mobile app"
     ], footer: nil)
     
-    let metricsServiceDescription = ServiceDesciption(header: "The metrics service allows you gather metrics on mobile apps, device versions, device security checks and back-end mobile service usage.", contentList: [
+    let metricsServiceDescription = ServiceDesciption(header: "The Mobile Metrics service allows you gather metrics on mobile apps, device versions, device security checks and back-end mobile service usage.", contentList: [
       "Monitor usage by version of mobile app, platform and SDK",
       "Monitor interactions with the Identity Management service"
     ], footer: nil)

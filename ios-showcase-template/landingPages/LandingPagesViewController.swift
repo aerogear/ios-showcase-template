@@ -29,19 +29,8 @@ class LandingPagesViewController: UIViewController {
             headerTextView.layoutIfNeeded()
         }
         if let contentTextView = self.contentView, let contentTextList = contentList {
-            let fullAttributedString = NSMutableAttributedString(string: "", attributes: [NSAttributedStringKey.font: contentTextView.font!])
-            
-            for string: String in contentTextList
-            {
-                let bulletPoint: String = "\u{2022}"
-                let formattedString: String = "\(bulletPoint) \(string)\n"
-                let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: formattedString)
-                
-                let paragraphStyle = createParagraphAttribute()
-                attributedString.addAttributes([NSAttributedStringKey.paragraphStyle: paragraphStyle], range: NSMakeRange(0, attributedString.length))
-                fullAttributedString.append(attributedString)
-            }
-            
+            let systemFont = contentTextView.font
+            let fullAttributedString = createBulletListView(font: systemFont!, contentList: contentTextList)
             contentTextView.attributedText = fullAttributedString
             contentTextView.layoutIfNeeded()
         }
@@ -51,14 +40,29 @@ class LandingPagesViewController: UIViewController {
         }
     }
     
-    func createParagraphAttribute() -> NSParagraphStyle
-    {
+    func createBulletListView(font: UIFont, contentList: [String]) -> NSAttributedString {
+        let fullAttributedString = NSMutableAttributedString(string: "", attributes: [NSAttributedStringKey.font: font])
+        
+        for string: String in contentList
+        {
+            let bulletPoint: String = "\u{2022}"
+            let formattedString: String = "\(bulletPoint) \(string)\n"
+            let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: formattedString, attributes: [NSAttributedStringKey.font: font])
+            
+            let paragraphStyle = createParagraphAttribute()
+            attributedString.addAttributes([NSAttributedStringKey.paragraphStyle: paragraphStyle], range: NSMakeRange(0, attributedString.length))
+            fullAttributedString.append(attributedString)
+        }
+        return fullAttributedString
+    }
+    
+    func createParagraphAttribute() -> NSParagraphStyle {
         var paragraphStyle: NSMutableParagraphStyle
         paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.tabStops = [NSTextTab(textAlignment: .left, location: 15, options: [:])]
         paragraphStyle.defaultTabInterval = 15
         paragraphStyle.firstLineHeadIndent = 0
-        paragraphStyle.headIndent = 8
+        paragraphStyle.headIndent = 10
         paragraphStyle.paragraphSpacing = 5
         
         return paragraphStyle
