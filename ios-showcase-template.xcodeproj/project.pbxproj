@@ -66,6 +66,9 @@
 		B3F525F620DA4F0200428DB2 /* UnderconstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525F520DA4F0200428DB2 /* UnderconstructionViewController.swift */; };
 		B3F525F820DA4F1B00428DB2 /* UnderconstructionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525F720DA4F1B00428DB2 /* UnderconstructionRouter.swift */; };
 		B3F525FA20DA4F2F00428DB2 /* UnderconstructionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525F920DA4F2F00428DB2 /* UnderconstructionBuilder.swift */; };
+		B3F525FD20DA9B9100428DB2 /* LandingPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525FC20DA9B9100428DB2 /* LandingPagesViewController.swift */; };
+		B3F525FF20DA9BB800428DB2 /* LandingPagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F525FE20DA9BB800428DB2 /* LandingPagesRouter.swift */; };
+		B3F5260120DA9BCB00428DB2 /* LandingPagesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5260020DA9BCB00428DB2 /* LandingPagesBuilder.swift */; };
 		EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958520D112470083E2F2 /* MetricsViewController.swift */; };
 		EF37958820D112570083E2F2 /* MetricsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958720D112570083E2F2 /* MetricsRouter.swift */; };
 		EF37958A20D1126C0083E2F2 /* MetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */; };
@@ -159,6 +162,9 @@
 		B3F525F520DA4F0200428DB2 /* UnderconstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderconstructionViewController.swift; sourceTree = "<group>"; };
 		B3F525F720DA4F1B00428DB2 /* UnderconstructionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderconstructionRouter.swift; sourceTree = "<group>"; };
 		B3F525F920DA4F2F00428DB2 /* UnderconstructionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderconstructionBuilder.swift; sourceTree = "<group>"; };
+		B3F525FC20DA9B9100428DB2 /* LandingPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPagesViewController.swift; sourceTree = "<group>"; };
+		B3F525FE20DA9BB800428DB2 /* LandingPagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPagesRouter.swift; sourceTree = "<group>"; };
+		B3F5260020DA9BCB00428DB2 /* LandingPagesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPagesBuilder.swift; sourceTree = "<group>"; };
 		BE92F9E3F9D3C5BEBF24DA86 /* Pods_secure_ios_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB29BB07BFAFFA62B9AE8B2 /* Pods-secure-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-app/Pods-secure-ios-app.release.xcconfig"; sourceTree = "<group>"; };
 		EF37958520D112470083E2F2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +393,7 @@
 		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
+				B3F525FB20DA9A5D00428DB2 /* landingPages */,
 				B3F525F420DA4EAE00428DB2 /* underconstruction */,
 				B3F525ED20D9616700428DB2 /* webview */,
 				EF37958420D111A10083E2F2 /* metrics */,
@@ -448,6 +455,16 @@
 				B3F525F920DA4F2F00428DB2 /* UnderconstructionBuilder.swift */,
 			);
 			path = underconstruction;
+			sourceTree = "<group>";
+		};
+		B3F525FB20DA9A5D00428DB2 /* landingPages */ = {
+			isa = PBXGroup;
+			children = (
+				B3F525FC20DA9B9100428DB2 /* LandingPagesViewController.swift */,
+				B3F525FE20DA9BB800428DB2 /* LandingPagesRouter.swift */,
+				B3F5260020DA9BCB00428DB2 /* LandingPagesBuilder.swift */,
+			);
+			path = landingPages;
 			sourceTree = "<group>";
 		};
 		CBA54E12DCD79F72333AD07B /* Pods */ = {
@@ -528,7 +545,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Wei Li";
 				TargetAttributes = {
 					B3E21B3E1FAC956E00082CF7 = {
@@ -714,6 +731,8 @@
 				B30BEBB81FB364550008A171 /* HomeRouter.swift in Sources */,
 				B3F525EF20D9619100428DB2 /* WebviewViewController.swift in Sources */,
 				ABEDBC7C1FD040490027066A /* DeviceTrustService.swift in Sources */,
+				B3F525FF20DA9BB800428DB2 /* LandingPagesRouter.swift in Sources */,
+				B3F525FD20DA9B9100428DB2 /* LandingPagesViewController.swift in Sources */,
 				ABEDBC911FD04AF90027066A /* DeviceTrustViewController.swift in Sources */,
 				B3F525FA20DA4F2F00428DB2 /* UnderconstructionBuilder.swift in Sources */,
 				B3E21B4B1FAC956E00082CF7 /* ios_showcase_template.xcdatamodeld in Sources */,
@@ -728,6 +747,7 @@
 				88821BCA20A451B400AC4B6E /* PushHelper.swift in Sources */,
 				B30BEBB61FB3556B0008A171 /* RootInteractor.swift in Sources */,
 				AB3E12021FC324D000B7302C /* StorageViewController.swift in Sources */,
+				B3F5260120DA9BCB00428DB2 /* LandingPagesBuilder.swift in Sources */,
 				AB3E12061FC331CB00B7302C /* StorageService.swift in Sources */,
 				AB3E12041FC3307400B7302C /* StorageInteractor.swift in Sources */,
 				B3F525F120D961A800428DB2 /* WebviewRouter.swift in Sources */,
@@ -814,6 +834,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -821,6 +842,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -871,6 +893,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -878,6 +901,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
