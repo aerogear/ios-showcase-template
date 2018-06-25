@@ -22,8 +22,10 @@ protocol RootInteractor: MenuListener {
 enum DocsURL: String {
     case idmDoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html"
     case idmSSODoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1"
+    case idmClientAppDoc = "https://docs.aerogear.org/aerogear/latest/showcase/idm.html"
     case deviceSecurityDoc = "https://docs.aerogear.org/aerogear/latest/security/index.html"
     case pushDoc = "https://docs.aerogear.org/aerogear/latest/push/index.html"
+    case pushClientAppDoc = "https://docs.aerogear.org/aerogear/latest/showcase/push.html"
     case mericsDoc = "https://docs.aerogear.org/aerogear/latest/metrics/index.html"
     
     func toURL() -> URL {

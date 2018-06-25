@@ -7,42 +7,75 @@
 
 import AGSAuth
 import AGSCore
+import AGSPush
 import Foundation
 import SwiftKeychainWrapper
+
+extension Notification.Name {
+    static let serviceConfigMissing = Notification.Name("serviceConfigMissing")
+}
+
+enum ServiceType {
+    case auth
+    case push
+}
 
 class AppComponents {
     let appConfiguration: AppConfiguration
     let kcWrapper: KeychainWrapper
 
     var authService: AgsAuth?
-
+    var pushService: AgsPush?
+    
     var storageService: StorageService?
     let REALM_STORAGE_KEYCHAIN_ALIAS = "realm-db-keychain"
     var deviceTrustService: DeviceTrustService?
-
+    var missingPushConfig = false
+    
     init(appConfiguration: AppConfiguration) {
         self.appConfiguration = appConfiguration
         self.kcWrapper = KeychainWrapper.standard
     }
 
     // tag::initAuthService[]
-    func resolveAuthService() -> AgsAuth {
+    func resolveAuthService() throws -> AgsAuth {
         if self.authService == nil {
+            let authConfig = AuthenticationConfig(redirectURL: "org.aerogear.ios-showcase-template:/callback")
+            try AgsAuth.instance.configure(authConfig: authConfig)
             self.authService = AgsAuth.instance
-            do {
-                let authConfig = AuthenticationConfig(redirectURL: "org.aerogear.ios-showcase-template:/callback")
-                try authService!.configure(authConfig: authConfig)
-            } catch AgsAuth.Errors.noServiceConfigurationFound {
-                print("No Service Configuration Found")
-            } catch {
-                fatalError("\(error)")
-            }
         }
         return self.authService!
     }
-
     // end::initAuthService[]
 
+    func resolvePushService() -> AgsPush {
+        if self.pushService == nil {
+            self.pushService = AgsPush.instance
+        }
+        return self.pushService!
+    }
+    
+    func isPushMissingConfig() -> Bool {
+        return missingPushConfig;
+    }
+    
+    func registerPushService(_ deviceToken: Data) {
+        var config = UnifiedPushConfig()
+        config.alias = "Example App"
+        config.categories = ["iOS", "Example"]
+        do {
+            try self.resolvePushService().register(deviceToken, config,
+              success: {
+                AgsCore.logger.info("Successfully registered to Unified Push Server")
+            },
+                failure: { (error: Error!) in
+                AgsCore.logger.error("Failure to register for on Unified Push Server: \(error)")
+            })
+        } catch {
+            self.missingPushConfig = true
+        }
+    }
+    
     // Setup the Storage Service
     func resolveStorageService() -> StorageService {
         if self.storageService == nil {
