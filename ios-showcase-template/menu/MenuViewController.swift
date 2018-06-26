@@ -111,10 +111,17 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         imgIcon.image = nil
         lblTitle.text = nil
+        lblTitle.text = arrayMenuOptions[indexPath.row].title
         if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
             imgIcon.image = UIImage(named: menuItemIcon)
+        } else {
+            //no icon, it is submenu item
+            lblTitle.font = lblTitle.font.withSize(15)
+            var layouMargin = cell.layoutMargins
+            layouMargin.left = 25
+            cell.layoutMargins = layouMargin
         }
-        lblTitle.text = arrayMenuOptions[indexPath.row].title
+        
 
         return cell
     }
