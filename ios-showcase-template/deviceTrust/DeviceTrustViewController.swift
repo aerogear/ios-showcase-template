@@ -19,6 +19,11 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
     let RED_COLOR = UIColor(named: "Red")
     let GREEN_COLOR = UIColor(named: "Green")
     
+    let CHECKS_RESULT = [DeviceLockCheck().name: [true: "Device Lock Enabled", false: "No Device Lock Enabled"],
+                         NonDebugCheck().name: [true: "No Debugger Detected", false: "Debugger Detected"],
+                         NonEmulatorCheck().name: [true: "No Emulator Detected", false: "Emulator Detected"],
+                         NonJailbrokenCheck().name: [true: "No Jailbreak Detected", false: "Jailbreak Detected"]]
+    
     let SECURE_SCORE_THREASHOLD = 70
     
     var deviceTrustListener: DeviceTrustListener?
@@ -111,15 +116,14 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
         let imageView = cell.imageView!
         let textView = cell.textLabel!
         textView.isEnabled = true
+        textView.text = CHECKS_RESULT[detection.name]?[detection.passed]
         
         // set the text colouring
         if detection.passed {
-            textView.text = detection.result.capitalized
             textView.textColor = GREEN_COLOR
             imageView.image = UIImage(named: "ic_verified_user_white")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
             imageView.tintColor = GREEN_COLOR
         } else {
-            textView.text = detection.result.capitalized
             textView.textColor = RED_COLOR
             imageView.image = UIImage(named: "ic_warning_white")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
             imageView.tintColor = RED_COLOR
