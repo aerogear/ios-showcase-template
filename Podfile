@@ -12,9 +12,9 @@ target 'ios-showcase-template' do
     pod 'AGSPush', :path => ENV['LOCAL_DIR']
     pod 'AGSSecurity', :path => ENV['LOCAL_DIR']
   else
-    pod 'AGSAuth', '~> 1.0.0-alpha.1'
-    pod 'AGSPush', '~> 1.0.0-alpha.1'
-    pod 'AGSSecurity', '~> 1.0.0-alpha.1'
+    pod 'AGSAuth', '~> 1.0.0-alpha.2'
+    pod 'AGSPush', '~> 1.0.0-alpha.2'
+    pod 'AGSSecurity', '~> 1.0.0-alpha.2'
   end
 
   pod 'SwiftKeychainWrapper'
