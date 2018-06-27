@@ -116,7 +116,7 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
         let imageView = cell.imageView!
         let textView = cell.textLabel!
         textView.isEnabled = true
-        textView.text = CHECKS_RESULT[detection.name]![detection.passed]!
+        textView.text = CHECKS_RESULT[detection.name]?[detection.passed]
         
         // set the text colouring
         if detection.passed {

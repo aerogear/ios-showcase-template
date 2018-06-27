@@ -11,7 +11,7 @@ import AGSSecurity
 
 class FakeDeviceTrustListener: DeviceTrustListener {
     func performTrustChecks() -> [SecurityCheckResult] {
-        let result = SecurityCheckResult("test", false, "test")
+        let result = SecurityCheckResult("test", false)
         return [result]
     }
 }
@@ -39,6 +39,6 @@ class DeviceTrustViewControllerTest: XCTestCase {
         XCTAssertEqual(deviceTrustVCToTest.deviceTrustScoreLabel.text, "0%")
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = deviceTrustVCToTest.deviceTrustTableView.cellForRow(at: indexPath)
-        XCTAssertEqual(cell?.textLabel?.text?.lowercased(), "test")
+        XCTAssertNotNil(cell)
     }
 }
