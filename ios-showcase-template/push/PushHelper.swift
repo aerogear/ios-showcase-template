@@ -52,11 +52,4 @@ public class PushHelper {
             UIApplication.shared.registerUserNotificationSettings(settings)
         }
     }
-
-    /**
-        Called when Apple registration failed
-    */
-    public func onRegistrationFailed(_ error: Error) {
-        AgsCore.logger.error("Failure to register for notifications: \(error)")
-    }
 }

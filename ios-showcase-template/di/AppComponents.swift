@@ -13,6 +13,7 @@ import SwiftKeychainWrapper
 
 extension Notification.Name {
     static let serviceConfigMissing = Notification.Name("serviceConfigMissing")
+    static let pushServiceRegistrationFailure = Notification.Name("pushServiceRegistrationFailure")
 }
 
 enum ServiceType {
@@ -31,6 +32,7 @@ class AppComponents {
     let REALM_STORAGE_KEYCHAIN_ALIAS = "realm-db-keychain"
     var deviceTrustService: DeviceTrustService?
     var missingPushConfig = false
+    var failedPushRegistrationError: Error?
     
     init(appConfiguration: AppConfiguration) {
         self.appConfiguration = appConfiguration
@@ -74,6 +76,10 @@ class AppComponents {
         } catch {
             self.missingPushConfig = true
         }
+    }
+    
+    func failPushServiceRegistration(_ error: Error) {
+        self.failedPushRegistrationError = error
     }
     
     // Setup the Storage Service

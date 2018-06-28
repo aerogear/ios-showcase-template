@@ -5,6 +5,7 @@
 //  Created by Wei Li on 08/11/2017.
 //
 
+import AGSSecurity
 import AGSAuth
 import AGSPush
 import Foundation
@@ -52,6 +53,7 @@ class RootRouterImpl: RootRouter {
         self.appComponents = appComponents
         
         NotificationCenter.default.addObserver(self, selector: #selector(showServiceConfigNotFoundDialog(notification:)), name: .serviceConfigMissing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showPushNotRegisteredDialog(notification:)), name: .pushServiceRegistrationFailure, object: nil)
     }
     
     @objc func showServiceConfigNotFoundDialog(notification: Notification) {
@@ -85,6 +87,13 @@ class RootRouterImpl: RootRouter {
         self.rootViewController.present(alert, animated: true, completion: nil)
     }
 
+    @objc func showPushNotRegisteredDialog(notification: Notification) {
+        let pushError = notification.object as? Error
+        let alert = UIAlertController(title: "Push Not Registered", message: "The push service failed to register.\n\n Details: \(pushError?.localizedDescription ?? "No details available.")", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+        self.rootViewController.present(alert, animated: true, completion: nil)
+    }
+    
     func launchFromWindow(window: UIWindow) {
         window.rootViewController = self.navViewController
         window.makeKeyAndVisible()
@@ -133,6 +142,10 @@ class RootRouterImpl: RootRouter {
     }
 
     func launchPushView() {
+        if self.appComponents.failedPushRegistrationError != nil {
+            NotificationCenter.default.post(name: .pushServiceRegistrationFailure, object: self.appComponents.failedPushRegistrationError)
+            return
+        }
         if self.appComponents.isPushMissingConfig() {
             NotificationCenter.default.post(name: .serviceConfigMissing, object: ServiceType.push)
             return
