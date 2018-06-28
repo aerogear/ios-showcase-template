@@ -89,7 +89,6 @@ class RootViewController: BaseViewController, DrawerMenuDelegate {
         MenuItem(MenuItemType.pushMessage, MENU_ITEM_TITLE_PUSH_MESSAGE,nil),
         
         MenuItem(MenuItemType.metrics, MENU_ITEM_TITLE_METRICS, "ic_metrics"),
-        // NOTE: These should be added back in when the metrics pages are created
         MenuItem(MenuItemType.metricsDocs, MENU_ITEM_TITLE_METRICS_DOCS, nil),
         MenuItem(MenuItemType.metricsProfile, MENU_ITEM_TITLE_METRICS_PROFILE, nil),
         MenuItem(MenuItemType.metricsTrust, MENU_ITEM_TITLE_METRICS_TRUST, nil)
