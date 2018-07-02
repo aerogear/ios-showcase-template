@@ -131,6 +131,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             imgIcon.image = iconImage
             imgIcon.tintColor = imageColor
+            let currentFontSize = lblTitle.font.pointSize
+            lblTitle.font = UIFont.boldSystemFont(ofSize: currentFontSize)
         } else {
             //no icon, it is submenu item
             lblTitle.font = lblTitle.font.withSize(14)
