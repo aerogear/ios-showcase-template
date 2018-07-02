@@ -116,9 +116,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             imgIcon.image = UIImage(named: menuItemIcon)
         } else {
             //no icon, it is submenu item
-            lblTitle.font = lblTitle.font.withSize(15)
+            lblTitle.font = lblTitle.font.withSize(14)
             var layouMargin = cell.layoutMargins
-            layouMargin.left = 25
+            layouMargin.left = 20
             cell.layoutMargins = layouMargin
         }
         
