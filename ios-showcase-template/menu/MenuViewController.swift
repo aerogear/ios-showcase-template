@@ -118,6 +118,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         imgIcon.image = nil
         lblTitle.text = nil
         lblTitle.text = arrayMenuOptions[indexPath.row].title
+        var textColor = UIColor.black
+        if self.selectedIndexPath == indexPath {
+            textColor = UIColor.orange
+        }
+        lblTitle.textColor = textColor
         if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
             let iconImage = UIImage(named: menuItemIcon)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
             var imageColor = UIColor.black
@@ -132,11 +137,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             var layouMargin = cell.layoutMargins
             layouMargin.left = 20
             cell.layoutMargins = layouMargin
-            var textColor = UIColor.black
-            if self.selectedIndexPath == indexPath {
-                textColor = UIColor.orange
-            }
-            lblTitle.textColor = textColor
         }
         
         return cell
@@ -149,7 +149,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     /*
      // MARK: - UITableViewDelegate protocol
      */
