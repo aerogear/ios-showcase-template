@@ -109,7 +109,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         if self.selectedIndexPath == indexPath {
-             cell.backgroundColor = UIColor.lightGray
+             cell.backgroundColor = UIColor.init(named: "Lightgrey")!
         }
 
         let lblTitle: UILabel = cell.contentView.viewWithTag(titleViewTag) as! UILabel
@@ -120,14 +120,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         lblTitle.text = arrayMenuOptions[indexPath.row].title
         var textColor = UIColor.black
         if self.selectedIndexPath == indexPath {
-            textColor = UIColor.orange
+            textColor = UIColor.init(named: "Orange")!
         }
         lblTitle.textColor = textColor
         if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
             let iconImage = UIImage(named: menuItemIcon)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
             var imageColor = UIColor.black
             if self.selectedIndexPath == indexPath {
-                imageColor = UIColor.orange
+                imageColor = UIColor.init(named: "Orange")!
             }
             imgIcon.image = iconImage
             imgIcon.tintColor = imageColor
