@@ -66,11 +66,12 @@ class BaseViewController: UIViewController {
 
         sender.isEnabled = false
         sender.tag = 10
-
-        menuVC = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        menuVC.setMenuItems(arrayMenuOptions)
-        menuVC.btnMenu = sender
-        menuVC.delegate = self.menuDelegate
+        if self.menuVC == nil {
+            menuVC = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+            menuVC.setMenuItems(arrayMenuOptions)
+            menuVC.btnMenu = sender
+            menuVC.delegate = self.menuDelegate
+        }
         self.view.addSubview(menuVC.view)
         self.addChildViewController(menuVC)
         menuVC.view.layoutIfNeeded()

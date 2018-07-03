@@ -26,6 +26,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     /** Delegate of the MenuVC */
     var delegate: DrawerMenuDelegate?
+    
+    var selectedIndexPath: IndexPath = IndexPath(row: 0, section: 0)
 
     /** If the menu is visible. Read-only **/
     private(set) var isOpen: Bool = false
@@ -101,21 +103,44 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let imageViewTag = 1
         let titleViewTag = 2
 
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
         cell.layoutMargins = UIEdgeInsets.zero
         cell.preservesSuperviewLayoutMargins = false
         cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        if self.selectedIndexPath == indexPath {
+             cell.backgroundColor = UIColor.init(named: "Lightgrey")!
+        }
 
         let lblTitle: UILabel = cell.contentView.viewWithTag(titleViewTag) as! UILabel
         let imgIcon: UIImageView = cell.contentView.viewWithTag(imageViewTag) as! UIImageView
 
         imgIcon.image = nil
         lblTitle.text = nil
-        if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
-            imgIcon.image = UIImage(named: menuItemIcon)
-        }
         lblTitle.text = arrayMenuOptions[indexPath.row].title
-
+        var textColor = UIColor.black
+        if self.selectedIndexPath == indexPath {
+            textColor = UIColor.init(named: "Orange")!
+        }
+        lblTitle.textColor = textColor
+        if let menuItemIcon = arrayMenuOptions[indexPath.row].iconName {
+            let iconImage = UIImage(named: menuItemIcon)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+            var imageColor = UIColor.black
+            if self.selectedIndexPath == indexPath {
+                imageColor = UIColor.init(named: "Orange")!
+            }
+            imgIcon.image = iconImage
+            imgIcon.tintColor = imageColor
+            let currentFontSize = lblTitle.font.pointSize
+            lblTitle.font = UIFont.boldSystemFont(ofSize: currentFontSize)
+        } else {
+            //no icon, it is submenu item
+            lblTitle.font = lblTitle.font.withSize(14)
+            var layouMargin = cell.layoutMargins
+            layouMargin.left = 20
+            cell.layoutMargins = layouMargin
+        }
+        
         return cell
     }
 
@@ -126,11 +151,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     /*
      // MARK: - UITableViewDelegate protocol
      */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
         let btn = UIButton(type: UIButtonType.custom)
         btn.tag = indexPath.row
         self.onCloseMenuClick(btn)
