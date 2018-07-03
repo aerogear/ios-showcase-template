@@ -20,13 +20,13 @@ protocol RootInteractor: MenuListener {
 }
 
 enum DocsURL: String {
-    case idmDoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html#nochrome"
-    case idmSSODoc = "https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1#nochrome"
-    case idmClientAppDoc = "https://docs.aerogear.org/aerogear/latest/showcase/idm.html#nochrome"
-    case deviceSecurityDoc = "https://docs.aerogear.org/aerogear/latest/security/index.html#nochrome"
-    case pushDoc = "https://docs.aerogear.org/aerogear/latest/push/index.html#nochrome"
-    case pushClientAppDoc = "https://docs.aerogear.org/aerogear/latest/showcase/push.html#nochrome"
-    case mericsDoc = "https://docs.aerogear.org/aerogear/latest/metrics/index.html#nochrome"
+    case idmDoc = "https://docs.aerogear.org/external/showcase/ios/idm.html"
+    case idmSSODoc = "https://docs.aerogear.org/external/showcase/ios/idmsso.html"
+    case idmClientAppDoc = "https://docs.aerogear.org/external/showcase/ios/idmclient.html"
+    case deviceSecurityDoc = "https://docs.aerogear.org/external/showcase/ios/security.html"
+    case pushDoc = "https://docs.aerogear.org/external/showcase/ios/push.html"
+    case pushClientAppDoc = "https://docs.aerogear.org/external/showcase/ios/pushclient.html"
+    case metricsDoc = "https://docs.aerogear.org/external/showcase/ios/metrics.html"
     
     func toURL() -> URL {
         return URL(string: self.rawValue)!
@@ -125,7 +125,7 @@ class RootInteractorImpl: RootInteractor {
         case MenuItemType.metrics:
             router?.launchLandingPageView(withTitle: RootViewController.MENU_ITEM_TITLE_METRICS, andContent: metricsServiceDescription)
         case MenuItemType.metricsDocs:
-            router?.openDocsPage(withLink: DocsURL.mericsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
+            router?.openDocsPage(withLink: DocsURL.metricsDoc, andTitle: RootViewController.MENU_ITEM_TITLE_METRICS_DOCS)
         case MenuItemType.metricsProfile:
             router?.launchUnderconstructionView(RootViewController.MENU_ITEM_TITLE_METRICS_PROFILE)
         case MenuItemType.metricsTrust:
