@@ -1,47 +1,82 @@
+= Aerogear Services iOS Showcase Application Template
+
 image:https://circleci.com/gh/aerogear/ios-showcase-template.svg?style=svg["CircleCI", link="https://circleci.com/gh/aerogear/ios-showcase-template"]
 image:https://img.shields.io/badge/Swift%20Version-4.0-green.svg[]
 
-= Aerogear Services iOS Showcase Application Template
 
-A Native iOS Application that demonstrates features of the Aerogear iOS SDK.
+[width="85%"]
+|===========================================================================================================
+|                 | *Project Info*                                                                            
+| License:        | Apache License, Version 2.0                                                             
+| Build:          | NPM                                                                                     
+| End User Documentation:  | link:https://docs.aerogear.org[]                                                 
+| Community Documentation: | link:https://www.aerogear.org[]                                                      
+| Issue tracker:  | link:https://issues.jboss.org/browse/AEROGEAR[] 
+| Mailing lists:  | link:https://groups.google.com/forum/#!forum/aerogear[aerogear-dev] 
+|===========================================================================================================
+
+A Native iOS Application that demonstrates features of the link:https://github.com/aerogear/aerogear-ios-sdk[Aerogear iOS SDK].
 
 == Features
-- OpenID Connect Authentication
-- Single Sign-on
-- Mobile Access Control
-- Client Cert Authentication
-- Certificate Pinning
-- Secure Data Storage
-- Buffer Overflow Protections
-- Device Trust Checks (Jailbreak, latest OS etc)
-- iOS Snapshot Caching Protection
-- Binary Protections (Automatic Reference Counting, ASLR, Stack Smashing Protection)
-- 2FA with OTP (via Keycloak)
-- Authentication Brute Force Detection (via Keycloak)
-- Account Lockout Policies (via Keycloak)
-- Authentication/Access Control Auditing & Logging (via Keycloak)
-- Authenticated Calls to Protected Endpoints (via Keycloak)
-- Push notifications with UPS server
+* link:https://docs.aerogear.org/aerogear/latest/identity-management.html[AeroGear Identity Management Service]
+* link:https://docs.aerogear.org/aerogear/latest/device-security.html[Device Security Checks]
+* link:https://docs.aerogear.org/aerogear/latest/mobile-metrics.html[Mobile Metrics]
+* link:https://docs.aerogear.org/aerogear/latest/push-notifications.html[Push Notifications]
 
-== Work with Self-signed Certificate
+== Pre-requisites
+To run this application, the following is required:
 
-The easiest way to support self-signed certificate is to install the CA certificate that is used to sign the certificate onto the device/simulator.
+* link:https://developer.apple.com/xcode/[Xcode]
+* link:https://guides.cocoapods.org/using/getting-started.html[Cocoapods]
 
-1. Get the CA certificate of the server. You can use this command:
-+
-[source, bash]
-----
-openssl s_client -showcerts -connect host:port
----- 
-+
-It will print out the full certificate chain of the server and you should save the content of the root certificate into a PEM file.
+== Build Instructions
 
-2. Install the CA certificate onto the device.
-+
-To install onto an iOS simulator, you can simply drag & drop the certificate file over it.
-+
-To install on an actual device, you can use a file sharing service or send the certificate file as an email attachment.
+=== Cloning the application
 
-3. Ensure the newly installed CA certificate is trusted. 
-+
-On the device/simulator, go to `Settings -> General -> About -> Certificate Trust Settings` and enable full trust for the certificate.
+```
+git clone git@github.com:aerogear/ios-showcase-template.git && cd ios-showcase-template
+```
+
+=== Installing Dependencies
+To install all pods, run the following command:
+
+```
+pod install
+```
+
+=== Running the Application
+To run the application open the `ios-showcase-template.xcworkspace` file in Xcode. Then choose your desired device and press run.
+
+
+=== Troubleshooting
+
+==== Enabling Push Capabilites
+
+If you wish to use push on the showcase application you will need to enable the push capability. 
+To do this, go to ios-showcase-template and under `Capabilities` enable `Remote Notifications`
+
+NOTE: You will need an Apple developer account with the push capability for this.
+
+NOTE: Currently, it is not possible to use push notifications with a simulator.
+
+==== Running on a real device
+If you are running the application on a real device you will need to create a provisioning 
+profile. To do this, go to ios-showcase-template and under `General` and then `Signing` select your desired 
+profile if you already have one, and if not click `Add an Account` to create one.
+
+==== Work with Self-signed Certificate
+
+To use self-signed certificates, see the guide here: link:https://docs.aerogear.org/aerogear/latest/getting-started.html#using-self-signed-certificates-in-mobile-apps[]
+
+==== License
+
+See link:https://github.com/aerogear/cordova-showcase-template/blob/master/LICENSE[LICENSE file]
+
+==== Questions?
+
+Join our link:https://groups.google.com/forum/#!forum/aerogear[user mailing list] for any questions or help! We really hope you enjoy app development with AeroGear!
+
+==== Found a bug?
+
+If you found a bug please create a ticket for us on link:https://issues.jboss.org/browse/AEROGEAR[Jira] with some steps to reproduce it.
+
