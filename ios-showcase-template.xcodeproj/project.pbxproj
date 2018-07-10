@@ -72,6 +72,7 @@
 		EF37958620D112470083E2F2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958520D112470083E2F2 /* MetricsViewController.swift */; };
 		EF37958820D112570083E2F2 /* MetricsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958720D112570083E2F2 /* MetricsRouter.swift */; };
 		EF37958A20D1126C0083E2F2 /* MetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */; };
+		EF81890A20F4C2B500DB4398 /* CertificateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81890920F4C2B500DB4398 /* CertificateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		EF37958520D112470083E2F2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
 		EF37958720D112570083E2F2 /* MetricsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRouter.swift; sourceTree = "<group>"; };
 		EF37958920D1126C0083E2F2 /* MetricsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsBuilder.swift; sourceTree = "<group>"; };
+		EF81890920F4C2B500DB4398 /* CertificateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateHelper.swift; sourceTree = "<group>"; };
 		F6CB8BA2824140238CE2CF40 /* Pods_secure_ios_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secure_ios_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE619E485F0C1EE98228BEE1 /* Pods_ios_showcase_template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_showcase_template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -291,6 +293,7 @@
 		B30BEBE41FB4A72E0008A171 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				EF81890920F4C2B500DB4398 /* CertificateHelper.swift */,
 				B30BEBEA1FB5B40D0008A171 /* Logger.swift */,
 				B32CBD2D1FD0B61F008CFEF1 /* ViewHelper.swift */,
 				AB3E12051FC331CB00B7302C /* StorageService.swift */,
@@ -787,6 +790,7 @@
 				88821BCF20A451F300AC4B6E /* PushRouter.swift in Sources */,
 				B3F525F620DA4F0200428DB2 /* UnderconstructionViewController.swift in Sources */,
 				B30BEBA11FB20F3F0008A171 /* AppConfiguration.swift in Sources */,
+				EF81890A20F4C2B500DB4398 /* CertificateHelper.swift in Sources */,
 				B342DF381FB0CA9900BBA05B /* AuthenticationViewController.swift in Sources */,
 				B39FDB0B1FB2012F00C1EC0F /* MenuViewController.swift in Sources */,
 				B30BEBBC1FB367C80008A171 /* AuthenticationRouter.swift in Sources */,

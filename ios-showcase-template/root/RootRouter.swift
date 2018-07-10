@@ -54,6 +54,7 @@ class RootRouterImpl: RootRouter {
         
         NotificationCenter.default.addObserver(self, selector: #selector(showServiceConfigNotFoundDialog(notification:)), name: .serviceConfigMissing, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showPushNotRegisteredDialog(notification:)), name: .pushServiceRegistrationFailure, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showInvalidClientCertificateDialog(notification:)), name: .invalidCertificateFound, object: nil)
     }
     
     @objc func showServiceConfigNotFoundDialog(notification: Notification) {
@@ -90,6 +91,15 @@ class RootRouterImpl: RootRouter {
     @objc func showPushNotRegisteredDialog(notification: Notification) {
         let pushError = notification.object as? Error
         let alert = UIAlertController(title: "Push Not Registered", message: "The push service failed to register.\n\n Details: \(pushError?.localizedDescription ?? "No details available.")", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+        self.rootViewController.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func showInvalidClientCertificateDialog(notification: Notification) {        
+        let alert = UIAlertController(title: "Certificate Error", message: "You may be using self signed certificates that will prevent the showcase from running properly. Please review the documentation and configure your certificates.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Show Documentation", style: .default) { action in
+            self.openDocsPage(withLink: DocsURL.selfSignedCertDoc, andTitle: "Self Signed Certs")
+        })
         alert.addAction(UIAlertAction(title: "Close", style: .cancel))
         self.rootViewController.present(alert, animated: true, completion: nil)
     }
