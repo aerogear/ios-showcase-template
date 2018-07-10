@@ -11,6 +11,7 @@ import AGSPush
 import CoreData
 import TrustKit
 import UIKit
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -57,6 +58,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         pushHelper.setupPush()
 
+        if let mobileServicesConfigURL = Bundle.main.url(forResource: "mobile-services", withExtension: "json") {
+            do {
+                let mobileServicesConfigData = try Data(contentsOf: mobileServicesConfigURL)
+                let mobileServicesConfigJSON = try JSON(data: mobileServicesConfigData)
+                CertificateHelper.checkCertificates(mobileServicesConfigJSON)
+            } catch {
+                Logger.error("An error occurred while reading mobile-services.json. Details: \(error)")
+            }
+        }
+        
         return true
     }
 

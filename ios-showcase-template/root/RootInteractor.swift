@@ -27,6 +27,7 @@ enum DocsURL: String {
     case pushDoc = "https://docs.aerogear.org/external/showcase/ios/push.html"
     case pushClientAppDoc = "https://docs.aerogear.org/external/showcase/ios/pushclient.html"
     case metricsDoc = "https://docs.aerogear.org/external/showcase/ios/metrics.html"
+    case selfSignedCertDoc = "https://docs.aerogear.org/external/cert/self-signed-cert.html"
     
     func toURL() -> URL {
         return URL(string: self.rawValue)!
