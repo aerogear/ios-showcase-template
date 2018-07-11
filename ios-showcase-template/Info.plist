@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>org.aerogear.ios-showcase-template:/callback</string>
+				<string>org.aerogear.ios-showcase-template</string>
 			</array>
 		</dict>
 	</array>
