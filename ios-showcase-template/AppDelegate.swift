@@ -16,7 +16,6 @@ import SwiftyJSON
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var authService: AgsAuth?
     var pushHelper = PushHelper()
     var appComponents: AppComponents?
 
@@ -73,9 +72,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         do {
-            return try authService!.resumeAuth(url: url as URL)
+            guard let resumeAuthSuccess = try self.appComponents?.resolveAuthService().resumeAuth(url: url as URL) else {
+                print("Could not resume auth process")
+                return false
+            }
+            return resumeAuthSuccess
         } catch AgsAuth.Errors.serviceNotConfigured {
-            print("Aerogear auth servie is not configured")
+            print("Aerogear auth service is not configured")
         } catch {
             fatalError("Unexpected error: \(error)")
         }
