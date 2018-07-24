@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015D05D721078E1B00C62CC1 /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 015D05D621078E1B00C62CC1 /* mobile-services.json */; };
 		117FC228206CE562002FDC0E /* RealmRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FC227206CE562002FDC0E /* RealmRole.swift */; };
-		117FC22A206CEB69002FDC0E /* mobile-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 117FC229206CEB68002FDC0E /* mobile-services.json */; };
 		4D0F173022C5831068DE8F00 /* Pods_ios_showcase_templateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98424858080741EB3E5AECC5 /* Pods_ios_showcase_templateTests.framework */; };
 		534C7C9176EE7AF144393CB0 /* Pods_ios_showcase_template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE619E485F0C1EE98228BEE1 /* Pods_ios_showcase_template.framework */; };
 		88821BCA20A451B400AC4B6E /* PushHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88821BC820A451B400AC4B6E /* PushHelper.swift */; };
@@ -86,8 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015D05D621078E1B00C62CC1 /* mobile-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mobile-services.json"; sourceTree = SOURCE_ROOT; };
 		117FC227206CE562002FDC0E /* RealmRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRole.swift; sourceTree = "<group>"; };
-		117FC229206CEB68002FDC0E /* mobile-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mobile-services.json"; sourceTree = "<group>"; };
 		1CC981158E5DAAFB21E6BCD6 /* Pods-ios-showcase-templateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-showcase-templateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-showcase-templateUITests/Pods-ios-showcase-templateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2392B0780F8D7BA4A4D335FE /* Pods-secure-ios-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-appUITests/Pods-secure-ios-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36FF52DDEE3C668FB9D641CA /* Pods-secure-ios-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secure-ios-appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-secure-ios-appUITests/Pods-secure-ios-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -396,13 +396,13 @@
 		B3E21B411FAC956E00082CF7 /* ios-showcase-template */ = {
 			isa = PBXGroup;
 			children = (
+				015D05D621078E1B00C62CC1 /* mobile-services.json */,
 				B3F525FB20DA9A5D00428DB2 /* landingPages */,
 				B3F525F420DA4EAE00428DB2 /* underconstruction */,
 				B3F525ED20D9616700428DB2 /* webview */,
 				EF37958420D111A10083E2F2 /* metrics */,
 				8838658520A47043002E7B72 /* ios-showcase-template.entitlements */,
 				88821BC720A4518500AC4B6E /* push */,
-				117FC229206CEB68002FDC0E /* mobile-services.json */,
 				B30BEBEC1FB5B7290008A171 /* model */,
 				B30BEBE41FB4A72E0008A171 /* services */,
 				B30BEBE11FB4A7100008A171 /* di */,
@@ -594,7 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30BEBA61FB229C40008A171 /* AppConfig.plist in Resources */,
-				117FC22A206CEB69002FDC0E /* mobile-services.json in Resources */,
+				015D05D721078E1B00C62CC1 /* mobile-services.json in Resources */,
 				B3E21B501FAC956E00082CF7 /* LaunchScreen.storyboard in Resources */,
 				B3E21B4D1FAC956E00082CF7 /* Assets.xcassets in Resources */,
 				B3E21B481FAC956E00082CF7 /* Main.storyboard in Resources */,
