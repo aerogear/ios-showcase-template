@@ -17,17 +17,16 @@ protocol DeviceTrustInteractor: DeviceTrustListener {
 class DeviceTrustInteractorImpl: DeviceTrustInteractor {
     var deviceTrustService: DeviceTrustService
     var router: DeviceTrustRouter?
-
+    
     init(deviceTrustService: DeviceTrustService) {
         self.deviceTrustService = deviceTrustService
     }
-
+    
     /**
      - Perform the device trust checks in the device trust service.
-
      - Returns SecurityCheckResult: A list of security check results
      */
-    func performTrustChecks() -> [SecurityCheckResult] {
+    func performTrustChecks() -> [DeviceCheckResult] {
         return self.deviceTrustService.performTrustChecks()
     }
 }
