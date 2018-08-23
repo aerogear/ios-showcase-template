@@ -10,24 +10,26 @@ import Foundation
 import Floaty
 
 protocol DeviceTrustListener {
-    func performTrustChecks() -> [SecurityCheckResult]
+    func performTrustChecks() -> [DeviceCheckResult]
 }
 
 /* The view controller for the device trust view. */
 class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FloatyDelegate {
     
+    static let SECURE_WHEN_FALSE = "SecureWhenFalse";
+    
     let RED_COLOR = UIColor(named: "Red")
     let GREEN_COLOR = UIColor(named: "Green")
     
-    let CHECKS_RESULT = [DeviceLockCheck().name: [true: "Device Lock Enabled", false: "No Device Lock Enabled"],
-                         NonDebugCheck().name: [true: "No Debugger Detected", false: "Debugger Detected"],
-                         NonEmulatorCheck().name: [true: "No Emulator Detected", false: "Emulator Detected"],
-                         NonJailbrokenCheck().name: [true: "No Jailbreak Detected", false: "Jailbreak Detected"]]
+    var CHECKS_RESULT = [DeviceLockEnabledCheck().name: [true: "Device Lock Enabled", false: "No Device Lock Enabled", SECURE_WHEN_FALSE: false],
+                         DebuggerAttachedCheck().name: [false: "No Debugger Detected", true: "Debugger Detected", SECURE_WHEN_FALSE: true],
+                         IsEmulatorCheck().name: [false: "No Emulator Detected", true: "Emulator Detected", SECURE_WHEN_FALSE: true],
+                         JailbrokenDeviceCheck().name: [false: "No Jailbreak Detected", true: "Jailbreak Detected", SECURE_WHEN_FALSE: true]]
     
     let SECURE_SCORE_THREASHOLD = 70
     
     var deviceTrustListener: DeviceTrustListener?
-    var deviceChecks = [SecurityCheckResult]()
+    var deviceChecks = [DeviceCheckResult]()
     var currentScore = 0
     
     @IBOutlet var deviceTrustScore: UILabel!
@@ -36,8 +38,7 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var deviceTrustRerunButton: UIButton!
     
     @IBOutlet weak var deviceTrustTableView: UITableView!
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +50,7 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
         // perform the detection checks
         self.performTrustChecks()
     }
-
+    
     /**
      - Run the device trust checks in the service and refresh the table view with the results.
      */
@@ -73,12 +74,16 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
         floaty.fabDelegate = self
         self.view.addSubview(floaty)
     }
-
+    
+    func isSecure(deviceCheckResult: DeviceCheckResult) -> Bool {
+        return CHECKS_RESULT[deviceCheckResult.name]?[DeviceTrustViewController.SECURE_WHEN_FALSE] as? Bool != deviceCheckResult.passed;
+    }
+    
     /**
      - Set the trust score header value in the UI.
      */
     func setTrustScore() {
-        let totalTestPassed = self.deviceChecks.filter { $0.passed }.count
+        let totalTestPassed = self.deviceChecks.filter { isSecure(deviceCheckResult: $0) }.count
         self.deviceTrustTestsNumberLabel?.text = "(\(totalTestPassed) out of \(self.deviceChecks.count) Checks Passing)"
         currentScore = Int(Double(totalTestPassed) / Double(deviceChecks.count) * 100)
         self.deviceTrustScoreLabel?.text = "\(currentScore)%"
@@ -116,10 +121,10 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
         let imageView = cell.imageView!
         let textView = cell.textLabel!
         textView.isEnabled = true
-        textView.text = CHECKS_RESULT[detection.name]?[detection.passed]
+        textView.text = CHECKS_RESULT[detection.name]?[detection.passed] as? String
         
         // set the text colouring
-        if detection.passed {
+        if isSecure(deviceCheckResult: detection) {
             textView.textColor = GREEN_COLOR
             imageView.image = UIImage(named: "ic_verified_user_white")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
             imageView.tintColor = GREEN_COLOR
@@ -148,6 +153,6 @@ class DeviceTrustViewController: UIViewController, UITableViewDataSource, UITabl
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
     
 }

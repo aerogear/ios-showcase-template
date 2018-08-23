@@ -10,8 +10,8 @@ import XCTest
 import AGSSecurity
 
 class FakeDeviceTrustListener: DeviceTrustListener {
-    func performTrustChecks() -> [SecurityCheckResult] {
-        let result = SecurityCheckResult("test", false)
+    func performTrustChecks() -> [DeviceCheckResult] {
+        let result = DeviceCheckResult("test", false)
         return [result]
     }
 }
@@ -25,6 +25,7 @@ class DeviceTrustViewControllerTest: XCTestCase {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         deviceTrustVCToTest = mainStoryboard.instantiateViewController(withIdentifier: "DeviceTrustViewController") as! DeviceTrustViewController
         deviceTrustVCToTest.deviceTrustListener = FakeDeviceTrustListener()
+        deviceTrustVCToTest.CHECKS_RESULT = ["test": [true: "test", false: "test", DeviceTrustViewController.SECURE_WHEN_FALSE: false]];
         UIApplication.shared.keyWindow!.rootViewController = deviceTrustVCToTest
         _ = deviceTrustVCToTest.view
     }

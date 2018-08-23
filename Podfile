@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+SdkVersion = '~> 2.0.0'
+
 target 'ios-showcase-template' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -12,9 +14,9 @@ target 'ios-showcase-template' do
     pod 'AGSPush', :path => ENV['LOCAL_DIR']
     pod 'AGSSecurity', :path => ENV['LOCAL_DIR']
   else
-    pod 'AGSAuth', '~> 1.0.0'
-    pod 'AGSPush', '~> 1.0.0'
-    pod 'AGSSecurity', '~> 1.0.0'
+    pod 'AGSAuth', SdkVersion
+    pod 'AGSPush', SdkVersion
+    pod 'AGSSecurity', SdkVersion
   end
 
   pod 'Alamofire', '~> 4.7'
