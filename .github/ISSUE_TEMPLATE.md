@@ -1,5 +1,5 @@
 ## Description
-<!-- Add a brief and meaningful description. ( E.g the issue ` https://github.com/aerogear/ios-showcase-template/{}`) -->
+<!-- Add a brief and meaningful description. -->
 
 ## Expected Behavior
 <!-- Describe the expected behaviour. -->
